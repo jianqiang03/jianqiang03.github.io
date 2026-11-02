@@ -1,0 +1,273 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="DM0.5 技术博客与开源实现深读：历史记忆、具身语义监督、动态动作对齐、数据与训练基础设施。"><title>DM0.5 深读 · 观行</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:#f5f2eb;color:#23323b;font:17px/1.85 system-ui,-apple-system,"Noto Sans CJK SC",sans-serif}aside{position:fixed;width:235px;inset:0 auto 0 0;padding:40px 22px;background:#183d43;color:white;overflow:auto}aside b{font-size:24px}aside small{display:block;color:#bad1cf;margin:12px 0 30px}aside a{display:block;color:#d5e5e2;text-decoration:none;font-size:14px;margin:16px 0}main{max-width:1090px;margin-left:235px;padding:54px 65px 100px}h1{font-size:42px;line-height:1.3;letter-spacing:-1px;margin:0 0 24px}h2{font-size:29px;border-top:2px solid #b7c8c1;padding-top:36px;margin-top:62px;color:#174e50}h3{font-size:22px;margin-top:36px;line-height:1.5}p{margin:18px 0}a{color:#166b76;text-underline-offset:3px}strong{color:#174e50}blockquote{margin:28px 0;padding:12px 24px;border-left:5px solid #bb7a35;background:#f0e7d6}img{max-width:100%;height:auto;display:block;border:1px solid #ddd9cd;border-radius:8px;cursor:zoom-in;margin:24px auto;background:white}table{width:100%;border-collapse:collapse;font-size:15px;display:block;overflow:auto;margin:25px 0}th,td{border-bottom:1px solid #d8ded8;text-align:left;padding:12px;min-width:150px;vertical-align:top}th{background:#e0e9e3}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#183d43;color:#ecf5ef;padding:25px;border-radius:10px;font-size:14px}li{margin:10px 0}dialog{border:0;padding:10px;width:96vw;max-width:1600px;background:white}dialog::backdrop{background:#000b}dialog img{max-height:88vh;width:auto;border:0;margin:auto;cursor:zoom-out}dialog button{float:right;padding:8px 15px}footer{border-top:1px solid #ccc;margin-top:50px;font-size:13px;color:#666}@media(max-width:950px){aside{position:static;width:auto;padding:20px}aside small{margin:5px 0}aside a{display:inline-block;margin:5px 14px 5px 0}main{margin:0;padding:30px 24px}h1{font-size:32px}h2{font-size:25px}}@media print{aside,dialog{display:none}main{margin:0;padding:0;max-width:none}h2,h3{break-after:avoid}img{max-height:70vh;object-fit:contain}body{font-size:11pt;background:white}}
+/* Balanced reading layout */
+body{padding-left:248px;background:#f5f3ed}
+aside{width:248px;padding:32px 24px;background:#203f36;border-right:1px solid #dce2d8}
+aside b{letter-spacing:1px}aside small{line-height:1.8;margin-bottom:28px}
+aside a{padding:10px 12px;margin:5px -12px;border-radius:6px;line-height:1.6;transition:background .15s}
+aside a:hover,aside a:focus-visible{background:#ffffff14;color:#fff}
+aside .home-link{font-size:12px;margin-bottom:32px;color:#c7d6c7}
+main{width:100%;max-width:1240px;margin:0 auto;padding:64px clamp(28px,4vw,72px) 100px}
+main>h1{max-width:1000px;margin:0 auto 28px;font-size:clamp(32px,2.8vw,46px);line-height:1.45;letter-spacing:-.8px}
+main>p,main>h2,main>h3,main>ul,main>ol,main>pre,main>blockquote,main>footer{max-width:880px;margin-left:auto;margin-right:auto}
+main>p{margin-top:22px;margin-bottom:22px;line-height:1.95;overflow-wrap:anywhere}
+main>h1+p{font-size:13px;color:#718075;max-width:1000px;line-height:1.9}
+main>h2{padding-top:38px;margin-top:76px;margin-bottom:30px;font-size:30px;border-top:1px solid #aebdaf}
+main>h3{margin-top:42px;margin-bottom:22px;font-size:23px;line-height:1.6}
+main>blockquote{margin-top:32px;margin-bottom:40px;padding:14px 26px;border-left:4px solid #ba7748;border-radius:0 8px 8px 0}
+main>p:has(>img){max-width:1100px;margin:30px auto 34px;padding:12px;background:#fff;border:1px solid #e1e3db;border-radius:12px;box-shadow:0 6px 22px #293e2c08}
+main img{width:100%;margin:0;border:0;border-radius:5px}
+main>table{max-width:1100px;margin:30px auto 36px;background:#fff;border:1px solid #dce2d8;border-radius:8px;font-size:15px;line-height:1.8}
+th,td{padding:16px 18px;min-width:155px}th{background:#e7ede4}
+main>pre{line-height:1.85;padding:26px 30px;background:#203f36}
+main>footer{line-height:1.9;padding-top:24px}
+a:focus-visible,button:focus-visible{outline:2px solid #bd7a4a;outline-offset:4px}
+dialog{max-width:1700px;border-radius:10px}dialog img{max-width:100%;object-fit:contain}
+@media(min-width:1700px){body{font-size:18px}main{padding-top:76px}}
+@media(max-width:1100px) and (min-width:951px){body{padding-left:216px}aside{width:216px;padding:30px 20px}main{padding-left:30px;padding-right:30px}}
+@media(max-width:950px){body{padding-left:0}aside{position:relative;width:100%;padding:22px 24px;border:0}aside .home-link{display:inline-block;margin:0 0 14px;padding:0}aside b{display:block;font-size:21px}aside small{margin:8px 0 14px;font-size:12px}aside>a:not(.home-link){display:inline-block;font-size:12px;margin:3px 5px 3px 0;padding:7px 10px;background:#ffffff0d}main{margin:auto;padding:38px 26px 70px}main>h1{font-size:34px}main>h2{font-size:27px;margin-top:55px}}
+@media(max-width:520px){body{font-size:16px}main{padding:30px 20px 60px}main>h1{font-size:29px;line-height:1.5}main>h2{font-size:25px}main>h3{font-size:21px}main>p{line-height:1.9}main>p:has(>img){padding:4px;margin:24px auto;border-radius:7px}main>blockquote{padding:10px 18px}main>pre{font-size:12px;padding:20px 16px}th,td{padding:12px;font-size:13px}aside{padding:20px}aside>a:not(.home-link){font-size:11px}}
+@media print{body{padding:0}main{max-width:none;padding:0}main>p:has(>img){box-shadow:none;break-inside:avoid}main>h2,main>h3{break-after:avoid}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}aside a{transition:none}}
+main>h1{text-wrap:balance}main>p{text-wrap:pretty}
+main>h1{font-size:clamp(30px,2.7vw,44px)}main>h4{max-width:880px;margin:30px auto 12px;font-size:20px}main>table{font-size:14px}main img{height:auto}dialog img{max-height:84vh;object-fit:contain}dialog .full-image{display:block;text-align:center;padding:8px;font-size:13px}main .ltx{font-size:14px}
+</style></head><body><aside><a class="home-link" href="../../">← 返回观行主页</a><b>DM0.5</b><small>记忆 × 语义 × 动作<br>技术博客与代码深读</small><a href="#s1">1 核心思想一句话总结</a><a href="#s2">2 论文背景与动机</a><a href="#s3">3 核心方法/模型详解</a><a href="#s4">4 实验与结果分析</a><a href="#s5">5 论文的贡献与影响</a><a href="#s6">6 结论</a></aside><main><h1>DM0.5 深读：记住过去，理解阶段，对齐动作</h1>
+<p>Dexmal · 官方技术博客与开源实现解读 · 核验日期：2026-11-02</p>
+<blockquote>
+<p><strong>先看重点</strong>：DM0.5 最值得研究的不是一个平均成功率，而是三个监督接口：历史如何进入模型、任务阶段如何成为学习目标、快慢不同的示教如何对齐。结果展示了潜力，但博客没有给出完整的预训练资源清单和三项设计的独立消融。</p>
+</blockquote>
+<h2 id="s1">1 核心思想一句话总结</h2>
+<p>用历史上下文、具身语义监督和动态轨迹对齐，让动作策略适应更长、更复杂的任务。</p>
+<h2 id="s2">2 论文背景与动机</h2>
+<h3>先确认来源：这是技术博客，不是独立论文</h3>
+<p>本页主要依据 <a href="https://www.dexmal.com/blog/dm0.5">DM0.5 官方博客</a>，辅以固定提交的 OpenDM 代码。截至核验时，未查到 DM0.5 独立的 arXiv 论文；官方仓库的发布入口指向技术博客。前代 <a href="https://arxiv.org/abs/2602.14974">DM0 论文</a>可以帮助理解研究背景，但它的训练阶段、梯度策略和数据配置不能直接当作 DM0.5 的事实。</p>
+<p>技术博客会更新，公开代码也持续变化。本页区分“博客宣称”“当前公开实现”和“本文分析”，不会把不同日期、不同 checkpoint 的信息拼成一套完整预训练配方。下文图号为本页编排编号，原博客没有统一编号。</p>
+<h3>为什么只看当前画面不够？</h3>
+<p>设想指令是“把杯子挪开，擦桌子，再把杯子放回原位”。擦完后，当前画面能看到杯子在哪里，却未必能知道最初在哪里。这是<strong>部分可观测</strong>问题：决定正确动作所需的信息没有全部出现在当前观测中。模型需要历史，而不仅是更准确的当前物体检测。</p>
+<p>另一个问题是时间：两名示教者完成同一动作，一个快、一个慢。如果强制第十个预测动作只能匹配第十个示教动作，就可能惩罚运动路径正确、进度不同的预测。第三个问题是语义：同样是伸手接近杯子，可能处于“准备拿走”或“准备放回”的不同任务阶段。视觉相似并不意味着下一步动作相同。</p>
+<h3>必要概念与术语</h3>
+<p><strong>VLA（视觉—语言—动作模型）</strong>把图像、文字和机器人状态映射为动作；<strong>VLM（视觉语言模型）</strong>负责联合理解图像与文字；<strong>动作专家</strong>负责生成连续控制量。DM0.5 沿这条路线扩展上下文与监督。它没有像 VPP2 那样把未来视频生成作为主线，因此不能把两者仅按参数量直接比较。</p>
+<table>
+<thead>
+<tr>
+<th>旧问题</th>
+<th>DM0.5 的变化</th>
+<th>付出的代价与风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单帧丢失过去的信息</td>
+<td>历史采样与上下文压缩</td>
+<td>采样可能漏掉短事件，历史增加计算</td>
+</tr>
+<tr>
+<td>动作标签缺少任务阶段语义</td>
+<td>11 类具身自回归任务</td>
+<td>标注质量决定监督是否可靠</td>
+</tr>
+<tr>
+<td>示教速度不同造成逐帧错位</td>
+<td>动态动作匹配与连续性约束</td>
+<td>对齐过于宽松可能掩盖真正的控制错误</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3">3 核心方法/模型详解</h2>
+<h3>图2：先读完整的数据流</h3>
+<p><strong>阅读任务</strong>：从左侧视觉、状态与文本输入出发，沿 VLM 到动作专家的连接读图，再观察历史信息和训练任务的位置。</p>
+<p><img alt="图2：DM0.5 模型架构" height="938" loading="lazy" src="assets/figure-2.png" tabindex="0" width="2012"/></p>
+<p><strong>关键观察</strong>：博客描述 4B VLM 与 680M 动作专家。视觉语言表示通过 KV cache 供动作模块使用；KV 是注意力计算中的键和值，缓存让相同条件不必在每一步动作生成中重新完整编码。</p>
+<p><strong>推理桥</strong>：语义理解与连续控制有不同输出空间，把它们连接起来，可以让动作生成受语言与视觉条件约束。历史、状态和控制模式也是输入契约的一部分，不能只准备一张图片就默认复现完整能力。</p>
+<p><strong>证据边界</strong>：架构图不是完整运行配置；历史槽数、压缩细节、任务混合比例和训练预算不能从箭头推算出来。<a href="https://www.dexmal.com/blog/dm0.5">原图与说明</a></p>
+<h3>一个例子走通机制：挪杯、擦桌、复位</h3>
+<p>起点是当前多视角图像、机器人状态和任务指令。历史模块保存之前看见杯子原位置的证据；语言相关监督帮助模型区分“挪开”“擦拭”“复位”等阶段；动作专家生成下一段关节或末端动作。机器人执行后重新观测，下一轮根据变化继续预测。</p>
+<p>训练时，假如示教者擦得更慢，轨迹匹配允许预测的进度对应示教中不同的时间索引，但仍要求先后顺序正确、连接合理。推理时没有真实未来示教供它匹配：这是训练标签的对齐机制，不是部署时查询答案。</p>
+<p>删除历史，就可能无法确定原位；删除阶段语义监督，模型仍可能通过动作学习完成任务，但失去一种结构化学习信号；删除动态匹配，同一合法动作的不同执行速度更容易造成监督冲突。后两点是机制分析，博客没有用严格消融逐一量化它们。最终成功必须检查杯子回到原位置且擦拭完成，不能只看末端运动是否平滑。</p>
+<h3>历史上下文：记忆的内容如何进入模型？</h3>
+<p>Context Abstraction Layer（上下文抽象层）对历史进行时间采样和空间压缩，以固定视觉 token 预算表示历史槽。token 是模型处理的表示单元；压缩降低计算，却也丢失部分细节。博客概述最长约60秒的上下文，并通过随机历史长度和增强适应历史缺失或不完整的情况。</p>
+<p>这不表示把60秒连续原始视频逐帧塞进模型，也不保证任何短暂事件都会被记住。例如电池只出现0.2秒，低频采样可能完全错过；关键帧保留策略是否能解决，需要专门测试。有限历史窗口也不等于无限持久记忆。</p>
+<p><strong>公开实现补充</strong>：固定提交的 MEM SFT 文档提供实际入口：从 <code>Dexmal/DM05-MEM</code> 初始化，按1 FPS请求32个主视角历史槽，数据集必须登记 <code>fps</code>。demo 共300帧、登记25 fps，后段约能提供10张非空历史；填满32槽约需800帧。这个 demo 配置不能反推博客所有实验都使用32秒历史，也不能把重复引用的 demo 图片当作真实记忆能力验证。</p>
+<h3>具身 CoT：学习任务阶段，不等于每步都要输出长篇推理</h3>
+<p>CoT 指用中间语义步骤表达任务推理。博客的 Embodiment CoT Tasks 包含11个自回归任务，按任务规划、事件/环境预测、动作生成三类组织。自回归指按顺序预测下一个符号或片段。阶段、下一步、进度、状态变化和动作语义等监督，使表示不仅描述“画面有什么”，还关联“事情进行到哪里”。</p>
+<p>例如“杯子已移走，接下来擦拭”比单独描述“桌上有布”更接近动作决策所需的信息。但博客没有完整列出11项的标签模板、采样比例及损失权重。不能自行补出任务清单，也不能把这种训练监督等同于部署时每个动作 chunk 都生成显式推理文字。</p>
+<p><strong>本文分析</strong>：语言标签可能提供有用的阶段结构，也可能引入标注错误。看见模型生成合理的解释，并不能证明该解释忠实反映动作因果过程；需要改变阶段标签而保持视觉相同的对照实验。</p>
+<h3>动态动作匹配：对齐的是进度，不能丢掉接触过程</h3>
+<p>Trajectory Alignment Layer（轨迹对齐层）将固定长度预测动作与更密集的真实轨迹匹配。博客描述以动态规划寻找误差较小的对应关系，匹配索引严格单调，并加入片段间连续性约束。动态规划把全局最优路径问题拆成可复用的子问题，避免枚举所有组合。</p>
+<p>用一个<strong>本文构造的标量例子</strong>解释：预测为 <code>[0.10, 0.55, 0.90]</code>，示教为 <code>[0, 0.10, 0.10, 0.50, 0.55, 0.90]</code>。如果固定匹配索引1、2、3，平方误差为0 + 0.45² + 0.40² = 0.3625；若按进度匹配索引1、4、5，三个位置误差为0。这里索引从0开始，数字仅用于说明，不是原文实验。</p>
+<p>但误差为0并不一定是合法控制：跨过中间抓取、闭合夹爪或接触阶段，可能导致真实任务失败。因此顺序与连续性约束具有实质作用。博客没有披露精确代价函数、转移范围和约束权重，本页不把示意过程冒充作者的完整数学算法。仅凭这一段无法复现原训练层。</p>
+<h3>连续动作如何生成：流匹配的代码证据</h3>
+<p><strong>动作 chunk</strong>是一次输出的一段连续动作。<strong>流匹配</strong>训练网络把噪声逐渐变成动作，网络预测的是生成过程中的变化方向。固定代码提交的 <code>dm05_arch.py</code> 使用以下约定，注意这来自公开 SFT 实现：</p>
+<pre><code class="language-text">x_t = t · ε + (1 − t) · a
+目标速度 u_t = ε − a
+训练误差：预测速度与 u_t 的平方误差，结合动作 mask 汇总
+</code></pre>
+<p>a 是真实动作序列，ε 是同形状高斯噪声，t 是生成过程的时间，不是机械臂物理执行时间。t=1 对应噪声端，t=0 对应数据端；推理从1向0积分。取标量 a=2、ε=−1、t=0.4，则 x_t=0.8、目标速度为−3。因为积分时间向下走，沿这个方向最终抵达数据端。这里的符号约定与一些从0向1生成的论文相反，不能混用。</p>
+<p>公开 forward 返回流匹配损失，并不自动证明博客描述的11项自回归任务和动态匹配都包含在该 SFT 路径中。完整预训练目标与用于下游微调的代码入口是两个不同层次。</p>
+<h3>数据：多源覆盖不等于已经披露规模</h3>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>博客描述的内容</th>
+<th>主要作用与缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>机器人操作</td>
+<td>ALOHA、Galaxea R1 Lite、AgiBot G1、Franka、UR5、ARX5、Dexmal 双臂等</td>
+<td>学可执行动作；各形态小时数与采样权重未披露</td>
+</tr>
+<tr>
+<td>导航</td>
+<td>开放视觉语言导航及自建三维场景相关数据</td>
+<td>学指令、路径和空间决策；与操作数据的混合比例未知</td>
+</tr>
+<tr>
+<td>人类第一视角</td>
+<td>日常操作视频</td>
+<td>提供时序与任务先验；不天然具有机器人动作标签</td>
+</tr>
+<tr>
+<td>通用多模态与合成数据</td>
+<td>图像、视频、空间定位、后果与反事实相关监督</td>
+<td>保留语义与空间能力；生成、过滤及去重规模未知</td>
+</tr>
+</tbody>
+</table>
+<p><strong>目前不能确认 DM0.5 的预训练数据达到100k小时。</strong> 博客没有给出足以核验的总小时数、去重后规模、训练样本呈现次数及来源占比。模型大小、支持机型数、训练步数都不能替代数据时长。</p>
+<p>清洗包括物理异常过滤、视觉—状态—动作一致性检查、静止段处理、无关或失败动作筛除、等价关节构型规整及跨模态重标注。它们直接改变监督分布。本文的工程提醒是：有效等待和接触保持也可能是静止段；删除后若不保留时间信息，会改变动作节奏。多个逆运动学解也可能代表有用的避障姿态，去重需要任务条件，不能机械地认为只保留一种一定更好。</p>
+<h3>训练与基础设施：已知什么，仍缺什么？</h3>
+<p>博客描述机器人动作、视觉语言、导航、视频理解等联合训练，并对主干与动作模块使用分组学习率，结合混合精度和分布式训练。混合精度用较低位宽加速部分计算；分布式训练把工作分到多个设备。但 GPU 数量、互联、预训练总步数、全局 batch、吞吐、GPU 小时与数据管线瓶颈未完整披露，因此无法据此估算完整预训练成本。</p>
+<p>公开 MEM demo 则明确提供学习率2.5×10⁻⁵、每设备 batch 8、50,000步、chunk 50、最大序列长度2048，以及8进程启动示例。这是<strong>微调入口</strong>，不是预训练账单。归一化统计随 checkpoint 保存为 <code>norm_stats.json</code>；训练推理不一致会改变动作数值的物理含义。</p>
+<p>当前代码已有 MEM 微调与推理支持，不应根据较早 issue 说“记忆尚未开源”。但默认入口绑定 DOS-W1/demo 的14维、joint 控制及动作转换，替换数据集名称不足以支持任意机器人。RoboDojo 的 <code>cover_blocks</code> 又是单任务入口，不能把跑通它等同于复现整个 generalist 排行榜。</p>
+<h3>推理速度：10 Hz究竟是什么？</h3>
+<p>博客报告默认10次生成迭代，输出50步动作；优化后单张 RTX 4090 约10 Hz、H100约20 Hz。合理的阅读方式是策略推理频率，而非直接断言执行器控制频率。一次预测50步不表示每次全部执行，再与10 Hz相乘得到500 Hz；执行窗口、重规划和重叠机制尚需完整部署协议。</p>
+<p>公开 fast backend 使用 TensorRT 视觉编码、Triton 优化内核、FlexAttention 与 CUDA Graph 等路径。CUDA Graph 将重复的 GPU 执行流程记录下来以减少调度开销；不同输入长度需要对应执行配置。首次构建、预热与稳定运行的时延应分开。可选 FP8 前缀 MLP 需要离线准备与校准，视觉编码仍用 FP16，不能统称“全模型 FP8”。</p>
+<p>复现速度时至少同时记录历史帧数、视角数、输入 token 长度、动作维度、生成步数、backend、精度、预热方式，以及是否计入图像预处理和通信。本文没有运行模型，也没有对10/20 Hz做本地性能认证。</p>
+<h2 id="s4">4 实验与结果分析</h2>
+<h3>图3：零样本测试改善在哪，也退步在哪？</h3>
+<p><strong>阅读任务</strong>：先区分 Franka 的 DROID 配方对照和 Dexmal Mirror 的 DM0/DM0.5 对照，再分别读基础动作与指令约束面板。</p>
+<p><img alt="图3：基础动作与指令约束零样本比较" height="2542" loading="lazy" src="assets/figure-3.png" tabindex="0" width="4417"/></p>
+<p><strong>关键观察</strong>：测试覆盖8种基础动作与7类约束，多数项目改善；但 Franka 的 State 约束柱并未提升，Mirror 的 Sequence 项仍明显偏低。不能把总体进步改写成“所有能力都增强”。</p>
+<p><strong>推理桥</strong>：基础动作与语义约束分开评估，比单一平均分更能揭示开放指令问题。能拿起物体，不等于能根据状态、顺序和相对位置拿对物体。</p>
+<p><strong>证据边界</strong>：不同机器人之间不是控制变量实验；博客未完整给出每项样本量、置信区间和训练重叠审计。zero-shot 需要按该测试协议理解，不能扩大成任意新机型无需适配。<a href="https://www.dexmal.com/blog/dm0.5">官方结果</a></p>
+<h3>图4：高分的仿真与仍困难的真实任务</h3>
+<p><strong>阅读任务</strong>：左边读 LIBERO 的分项和平均值，右边读 RoboTwin 的 Clean/Randomized 两列，别把不同基准的百分数混为同一种难度。</p>
+<p><img alt="图4：LIBERO 与 RoboTwin 微调结果" height="1148" loading="lazy" src="assets/figure-4.png" tabindex="0" width="2040"/></p>
+<p><strong>关键观察</strong>：DM0.5 的 LIBERO 平均99.0%，四项为99.0、99.8、99.6、97.4；与图中 Being-H0 的98.9%仅相差0.1个百分点。Long项并非最高。RoboTwin为93.6%/93.3%，平均93.5%，相对图中 LingBot-VA 的92.2%高1.3个百分点。</p>
+<p><strong>推理桥</strong>：随机化后仍保持相近成绩，支持受测环境扰动下的适应性；LIBERO接近饱和则提醒我们，平均分对模型差异可能不再敏感。</p>
+<p><strong>证据边界</strong>：这些是基准微调成绩，不是未经适配的零样本。不同基线训练预算和数据协议是否完全一致、差异是否统计显著，不能只凭表格确定。<a href="https://www.dexmal.com/blog/dm0.5">官方结果</a></p>
+<p>真实 RoboChallenge Table30 V2 中，博客报告每种形态一个 generalist 模型，成功率43%、得分54.42。成功率表示任务完整成功的比例，得分可能计入部分完成；54.42不是54.42%的完整成功率。43%也意味着受测任务仍有过半未完全成功。该结果应按博客的配方引用，不能与后来 KDDI 基于 DM0.5 微调的模型自动视为同一版本。</p>
+<h3>图5：导航扩展说明了什么？</h3>
+<p><strong>阅读任务</strong>：分开看 R2R 与 RxR，先确认每个指标的方向，尤其 NE 越低越好。</p>
+<p><img alt="图5：导航模型在 R2R 和 RxR 的结果" height="826" loading="lazy" src="assets/figure-5.png" tabindex="0" width="2044"/></p>
+<p><strong>关键观察</strong>：DM0.5-Nav 在 R2R 的 NE=4.8、OS=69.5、SR=59.7、SPL=48.6；SPL并未超过表中的 StreamVLN 51.9。RxR 的 NE=4.8、SR=65.5、SPL=51.0、nDTW=64.2，在所列模型中领先。</p>
+<p><strong>推理桥</strong>：NE是终点到目标距离，越小越好；SR是成功率；OS表示途中是否曾到达成功区域；SPL综合成功与路径效率；nDTW衡量轨迹与参考路径的相似性，后三类得分通常越高越好。到达、最终停对、路径高效是不同能力，单看一个指标会漏掉权衡。</p>
+<p><strong>证据边界</strong>：这是导航专门配方 DM0.5-Nav，不能据此声称同一操作 checkpoint 无需训练就能导航；具体成功阈值与评估协议应随基准一起核对。<a href="https://www.dexmal.com/blog/dm0.5">官方结果</a></p>
+<h3>记忆演示：给出能力样例，没有给出独立因果证明</h3>
+<p>博客展示“挪杯—擦桌—复位”与“根据此前人类示范放置电池”。前者需要保存初始空间信息，后者需要保存过去展示的任务条件。视频对理解任务很有帮助，但选定成功演示不能替代成功率统计；本次只抽查了视频的部分帧，没有逐帧审核完整试验。</p>
+<p>博客概述约60秒历史，案例文字又提到超过一分钟；在缺少统一历史设置、原始时间戳和消融时，不把这两种说法合并成已验证的任意长记忆。根据示范改变行为也不意味着在线更新模型权重，它可以只是利用上下文条件。</p>
+<h3>图6：相机移动后仍能工作，但谁在提供稳定信息？</h3>
+<p><strong>阅读任务</strong>：看左、右外部相机的3×3位置组合，再看右侧九种配置的成功率；腕部相机保持不变。</p>
+<p><img alt="图6：外部相机位姿扰动测试" height="1144" loading="lazy" src="assets/figure-6.png" tabindex="0" width="2034"/></p>
+<p><strong>关键观察</strong>：九项成功率为100、90、80、90、90、90、80、90、90%。等权算术平均约88.9%，但由于每项试验数未披露，不能擅自将它当作全部试验合并成功率。</p>
+<p><strong>推理桥</strong>：受测位置没有出现完全失效，支持一定的相机位姿鲁棒性。固定腕部相机可能提供稳定的近场信息，这是合理替代解释，需要关闭腕部视角才能区分。</p>
+<p><strong>证据边界</strong>：九组离散位置不等于任意视角不变性；没有样本量与误差范围，也无法判断10个百分点的差异是否稳定。人手遮挡、移动物体等其他视频同样只是定性案例，不构成系统安全保证。<a href="https://www.dexmal.com/blog/dm0.5">官方结果</a></p>
+<h3>把主张与证据强度分开</h3>
+<table>
+<thead>
+<tr>
+<th>主张</th>
+<th>当前证据</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多项操作与约束能力改善</td>
+<td>同平台分项柱图</td>
+<td>有支持，非全项提升，统计细节不足</td>
+</tr>
+<tr>
+<td>微调后仿真表现较强</td>
+<td>LIBERO、RoboTwin表</td>
+<td>支持受测配方，不支持任意部署</td>
+</tr>
+<tr>
+<td>能利用过去信息</td>
+<td>记忆任务示范及已发布 MEM 接口</td>
+<td>有实例与实现支持，缺严格机制消融</td>
+</tr>
+<tr>
+<td>动态匹配独立带来收益</td>
+<td>方法叙述</td>
+<td>尚缺单变量比较</td>
+</tr>
+<tr>
+<td>已达到100k小时预训练</td>
+<td>未披露可核验总时长</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>完整预训练可以直接复现</td>
+<td>开源下游代码与权重</td>
+<td>不充分，缺数据与完整训练配置</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s5">5 论文的贡献与影响</h2>
+<h3>可借鉴的不是口号，而是三个接口</h3>
+<p>第一，历史预算应围绕任务的信息需求设计。不是历史帧越多就一定越好：初始目标、关键接触事件、最近运动分别需要不同时间分辨率。第二，任务阶段可以作为监督结构，帮助把语义理解接到动作生成，但必须检查标注噪声。第三，轨迹比较应容许合理的进度差异，同时保留真实控制约束；只让离线误差变小并不够。</p>
+<h3>最小验证方案：先回答因果问题</h3>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>可执行的最小对照</th>
+<th>应记录的结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>历史是否真正有用？</td>
+<td>当前图像相似、初始目标位置不同；正确/打乱/删除历史</td>
+<td>复位误差、成功率、历史延迟与token成本</td>
+</tr>
+<tr>
+<td>语义监督贡献多少？</td>
+<td>固定数据、预算，开关阶段类辅助监督</td>
+<td>阶段切换错误、顺序遵循、闭环成功</td>
+</tr>
+<tr>
+<td>对齐是否仅降低训练损失？</td>
+<td>固定匹配/动态匹配/去掉连续性约束</td>
+<td>速度变化下成功率、接触遗漏、动作平滑度</td>
+</tr>
+<tr>
+<td>相机鲁棒性来自哪里？</td>
+<td>外部相机扰动交叉腕部视角开关</td>
+<td>各配置试验数、置信区间与失败类型</td>
+</tr>
+<tr>
+<td>fast速度是否有收益且不伤精度？</td>
+<td>固定checkpoint、输入与种子，对比后端和精度</td>
+<td>稳态及首请求时延、动作差异、闭环成功</td>
+</tr>
+</tbody>
+</table>
+<p>这些是本文提出的验证方案，没有在本次任务中运行。涉及真实机器人时，先核对动作归一化、坐标与控制模式，再讨论模型能力；数值接口错误会让任何架构比较失去意义。</p>
+<h3>复现顺序与缺口</h3>
+<p>先选择目标：基本 SFT、MEM、LIBERO、RoboTwin 或 RoboDojo；不同入口并不共享所有默认值。再固定权重、代码提交、数据fps、历史长度、动作维数、chunk长度和统计文件。先验证输入输出契约，再做小规模闭环与性能测量。</p>
+<p>公开工程已经提供有价值的入口；仍缺完整预训练数据规模、混合比例、预算和三项核心设计的独立消融。后续若发布独立论文，应优先补这些缺口，而非仅追加排行榜名次。</p>
+<h2 id="s6">6 结论</h2>
+<p><strong>最终判断：值得精读机制，也适合从已公开的微调入口做有边界的验证。</strong> DM0.5 将历史、阶段语义和轨迹进度三个容易被忽略的问题放到同一套动作学习系统中。多项结果支持其潜力；目前证据还不足以把全部提升归因于某一个模块，也不足以复原完整预训练工程。</p>
+<h3>来源与核验范围</h3>
+<ul>
+<li><a href="https://www.dexmal.com/blog/dm0.5">DM0.5 官方技术博客</a>：方法描述、数据类别、主要图表与速度声明。</li>
+<li><a href="https://github.com/dexmal/opendm/tree/fe1ed79a22d81cc1bfbeb2b4418bbb79fc75fc50">OpenDM 固定提交</a>：当前代码证据，重点核对 MEM SFT、推理指南、RoboDojo指南与动作损失实现。</li>
+<li><a href="https://github.com/dexmal/opendm/blob/fe1ed79a22d81cc1bfbeb2b4418bbb79fc75fc50/docs/zh/dm05_mem_sft.md">MEM SFT 指南</a>、<a href="https://github.com/dexmal/opendm/blob/fe1ed79a22d81cc1bfbeb2b4418bbb79fc75fc50/docs/zh/dm05_inference.md">推理指南</a>、<a href="https://github.com/dexmal/opendm/blob/fe1ed79a22d81cc1bfbeb2b4418bbb79fc75fc50/opendm/model/dm05/dm05_arch.py">模型代码</a>。</li>
+<li><a href="https://arxiv.org/abs/2602.14974">DM0 前代论文</a>：背景入口，本页未将其独有训练细节外推到DM0.5。</li>
+</ul>
+<p>原博客6张静态内容图中，封面为非关键装饰，其余5张均嵌入并解读；10段演示视频作为补充材料，其中两段记忆演示抽样核查，未进行完整试验审核。本文没有运行训练或推理。原图版权归原作者，最小数值例子与批判性分析为本文教学补充。</p>
+<p>返回<a href="../../">观行主页</a>，继续阅读<a href="../vpp2/">VPP2</a>与<a href="../dyna-2/">Dyna-2</a>。</p><footer>5张关键原图均可点击放大。博客与代码证据分别标注。</footer></main><dialog id="zoom"><button onclick="this.parentNode.close()">关闭 ×</button><img alt="放大的论文图表"/><a class="full-image" rel="noopener" target="_blank">在新窗口查看原尺寸 ↗</a></dialog><script>const d=document.querySelector('#zoom');document.querySelectorAll('main img').forEach(i=>{function show(){d.querySelector('img').src=i.src;d.querySelector('img').alt=i.alt;d.querySelector('.full-image').href=i.src;d.showModal()}i.onclick=show;i.onkeydown=e=>{if(e.key==='Enter')show()}});d.querySelector('img').onclick=()=>d.close();</script></body></html>
