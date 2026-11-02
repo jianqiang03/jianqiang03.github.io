@@ -1,0 +1,25 @@
+README.md
+  s_3bab766aaf626e::t_c0ce1a89c9d5d2 7-11
+index.html
+  s_3bab766aaf626e::t_cccc892a8e1a38 1-7
+notes/vpp2/index.html
+  s_3bab766aaf626e::t_de453da4f6c97f 1-371
+style.css
+  s_3bab766aaf626e::t_779895a130524c 2-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "abdcbb640fe7cdfc9e70079b20f5f362607b8953",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
