@@ -1,0 +1,19 @@
+notes/dm05/index.html
+  s_3bab766aaf626e::t_3eb510a10feb2c 33-34,37-38,42,45,48,77,83,87,91,95,99,107-174,208,212-267,272,278,285,291,294,300,343,345-347,385,389-390
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8b37a0c45a2b623a8a681294ac2e7b7e42821dc0",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
