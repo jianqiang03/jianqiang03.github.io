@@ -4,6 +4,10 @@ jianqiang03 的个人研究笔记网站，关注机器人学习、数据与训�
 
 **[访问网站](https://jianqiang03.github.io/)** · **[阅读建站教程](docs/github-pages-guide.md)** · **[Dyna-2 深读](https://jianqiang03.github.io/notes/dyna-2/)**
 
+## 新增论文解读
+
+阅读 **[新增论文解读完整流程](docs/adding-paper-notes.md)**：包含可复制的 AI 任务模板、原文与图表核验、HTML 制作、首页接入、本地检查、发布及后续更正。当前网站需要手动添加文章 HTML 和首页入口，不会自动把 Markdown 变成网页。
+
 ## 本地运行
 
 ```bash
@@ -22,6 +26,7 @@ python -m http.server 8080 --bind 127.0.0.1
 | [style.css](style.css) | 首页样式与响应式布局 |
 | [notes/dyna-2/index.html](notes/dyna-2/index.html) | 论文页，CSS 与图片内嵌在 HTML 中 |
 | [docs/github-pages-guide.md](docs/github-pages-guide.md) | 从制作、预览到发布和维护的中文教程 |
+| [docs/adding-paper-notes.md](docs/adding-paper-notes.md) | 新增论文解读的完整操作流程 |
 | [.nojekyll](.nojekyll) | 让 Pages 直接发布静态文件 |
 
 ## 发布与维护
