@@ -1,0 +1,19 @@
+notes/dyna-2/index.html
+  s_3bab766aaf626e::t_80b679dc7a9951 1-33,72,109,117,123,129,135,141,147,153,159,165,171,177,229,235,241,247,253,259,265,271,277,283,342
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7fce07041e747527d4f8a7f7a581817471654c21",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
