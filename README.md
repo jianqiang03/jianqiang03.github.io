@@ -4,6 +4,11 @@ jianqiang03 的个人研究笔记网站，关注机器人学习、数据与训�
 
 **[访问网站](https://jianqiang03.github.io/)** · **[阅读建站教程](docs/github-pages-guide.md)** · **[Dyna-2 深读](https://jianqiang03.github.io/notes/dyna-2/)**
 
+## 已发布解读
+
+- [VPP2：先把未来预测对，再把动作学好](https://jianqiang03.github.io/notes/vpp2/)
+- [Dyna-2：百万小时视频如何变成机器人能力](https://jianqiang03.github.io/notes/dyna-2/)
+
 ## 新增论文解读
 
 阅读 **[新增论文解读完整流程](docs/adding-paper-notes.md)**：包含可复制的 AI 任务模板、原文与图表核验、HTML 制作、首页接入、本地检查、发布及后续更正。当前网站需要手动添加文章 HTML 和首页入口，不会自动把 Markdown 变成网页。
