@@ -1,25 +1,25 @@
-/* Taste Skill guided editorial layout: prose measure and evidence width are separate. */
+/* Taste Skill guided editorial layout. One reading axis, restrained slate/teal palette. */
 :root{
  --reading-width:900px;--evidence-width:var(--reading-width);--rail-width:208px;
- --paper:#fafaf7;--ink:#25312e;--muted:#58675e;--accent:#285c49;
- --rail:#edf1eb;--surface:#eef2ed;--body-size:18px
+ --paper:#ffffff;--ink:#263445;--muted:#58697c;--accent:#16687a;
+ --rail:#edf2f7;--surface:#edf5f8;--body-size:18px;--heading:#203b54;--code:#172c40;--table-head:#2a435b;--stripe:#f4f7fa
 }
 body{padding-left:var(--rail-width);background:var(--paper);color:var(--ink);font-size:var(--body-size);line-height:1.85}
 aside{width:var(--rail-width);padding:32px 20px;background:var(--rail);color:var(--ink);border:0}
 aside b{font-size:24px;letter-spacing:0;color:var(--accent)}
 aside small{color:var(--muted);font-size:13px;line-height:1.7;margin:10px 0 26px}
 aside a{color:var(--muted);font-size:14px;line-height:1.65;margin:4px -8px;padding:11px 8px;border-radius:3px}
-aside a:hover,aside a:focus-visible{background:#dce6da;color:var(--accent)}
+aside a:hover,aside a:focus-visible{background:#dae6ef;color:var(--accent)}
 aside .home-link{color:var(--muted);font-size:13px;margin-bottom:28px}
 main{width:100%;max-width:1116px;margin:0 auto;padding:52px 48px 96px}
 main>h1,main>h1+p,main>p,main>h2,main>h3,main>h4,
 main>ul,main>ol,main>pre,main>blockquote,main>footer,main>.training-map{
  max-width:var(--reading-width);margin-left:auto;margin-right:auto
 }
-main>h1{font-size:38px;line-height:1.45;letter-spacing:-.6px;margin-bottom:18px;color:var(--ink);text-wrap:balance}
+main>h1{font-size:40px;line-height:1.4;letter-spacing:-.6px;margin-bottom:18px;color:var(--ink);text-wrap:balance}
 main>h1+p{font-size:14px;color:var(--muted);line-height:1.8;margin-top:0;margin-bottom:30px}
 main>p{font-size:var(--body-size);line-height:1.85;margin-top:22px;margin-bottom:22px;overflow-wrap:break-word}
-main>h2{font-size:28px;line-height:1.5;border:0;padding-top:0;margin-top:72px;margin-bottom:24px;color:var(--accent)}
+main>h2{font-size:30px;line-height:1.5;border:0;padding-top:0;margin-top:72px;margin-bottom:24px;color:var(--accent)}
 main>h3{font-size:22px;line-height:1.6;margin-top:44px;margin-bottom:16px;color:var(--ink);scroll-margin-top:28px}
 main>h4{font-size:20px;margin-top:32px;margin-bottom:14px}
 main strong{color:var(--ink)}
@@ -29,8 +29,8 @@ main>blockquote p{font-size:17px;line-height:1.85;margin:0}
 main>p:has(>img){max-width:var(--evidence-width);padding:0;margin:28px auto 32px;background:white;border:0;border-radius:0;box-shadow:none}
 main img{width:100%;height:auto;max-width:100%;border:0;border-radius:0}
 main>table{max-width:var(--evidence-width);font-size:15px;line-height:1.75;margin:28px auto 32px;border:0;border-radius:0;background:var(--paper);font-variant-numeric:tabular-nums}
-th,td{padding:15px 18px;min-width:150px;border-bottom:1px solid #dce3da}th{background:var(--surface)}
-main>pre{font-size:14px;line-height:1.8;padding:24px 28px;background:#243f34;border-radius:3px}
+th,td{padding:15px 18px;min-width:150px;border-bottom:1px solid #e0e7ed}th{background:var(--surface)}
+main>pre{font-size:14px;line-height:1.8;padding:24px 28px;background:var(--code);border-radius:3px}
 main>.training-map{padding:0;margin-top:28px;margin-bottom:38px;background:none;border:0;border-radius:0}
 .training-map>b{font-size:17px;color:var(--ink)}
 .training-map p{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;row-gap:0;font-size:0;margin:12px 0 0;line-height:1.6}
@@ -48,3 +48,25 @@ main>.table-scroll{width:100%;max-width:var(--reading-width);margin:28px auto 32
 main>.table-scroll>table{display:table;width:100%;max-width:none;margin:0;border-collapse:collapse;border:0;border-radius:0;font-size:15px;line-height:1.75;font-variant-numeric:tabular-nums;background:var(--paper)}
 main>.table-scroll>table th,main>.table-scroll>table td{white-space:normal;overflow-wrap:break-word}
 @media(max-width:520px){main>.table-scroll>table{font-size:13px}}
+
+/* Hierarchy through typography and surface tone, without shifting the reading edges. */
+main>h1,main>h2,main>h3,main>h4{color:var(--heading)}
+main>h2{font-weight:700;letter-spacing:-.3px}
+main>h3{font-weight:650}
+main>blockquote{padding:24px 28px;background:var(--surface)}
+main>blockquote strong{color:var(--accent)}
+main>.table-scroll>table thead th{background:var(--table-head);color:#fff;font-weight:600;border:0}
+main>.table-scroll>table tbody tr:nth-child(even){background:var(--stripe)}
+main>.table-scroll>table tbody tr:hover{background:#eaf2f6}
+main>.table-scroll>table td{border-bottom-color:#e0e7ed}
+main>pre{color:#e9f1f7}
+main p>code,main li>code,main td>code{font-size:.91em;background:#eff3f7;color:#254d68;padding:.08em .25em;border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+main a:hover{color:#0b4555;text-decoration-thickness:2px}
+.training-map a{text-decoration:none;font-size:15px;padding:11px 0;line-height:1.65}
+.training-map a:hover{text-decoration:underline;text-underline-offset:5px}
+aside a{font-weight:450}
+::selection{background:#cee4ef;color:#172c40}
+/* taste-skill-ignore: shadow belongs to the actual image modal overlay. */
+dialog{background:#fff;box-shadow:0 16px 72px #172c4040} /* taste-skill-ignore: real modal overlay */
+dialog button{border:0;background:var(--table-head);color:#fff;border-radius:4px;cursor:pointer;font:inherit;padding:8px 16px}
+@media(max-width:520px){main>blockquote{padding:18px 20px}.training-map a{font-size:14px}main>h1{font-size:27px}main>h2{font-size:24px}}

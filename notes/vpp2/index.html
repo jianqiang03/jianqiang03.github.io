@@ -32,7 +32,7 @@ dialog{max-width:1700px;border-radius:10px}dialog img{max-width:100%;object-fit:
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}aside a{transition:none}}
 main>h1{text-wrap:balance}main>p{text-wrap:pretty}
 main>h1{font-size:clamp(30px,2.7vw,44px)}main>h4{max-width:880px;margin:30px auto 12px;font-size:20px}main>table{font-size:14px}main img{height:auto}dialog img{max-height:84vh;object-fit:contain}dialog .full-image{display:block;text-align:center;padding:8px;font-size:13px}main .ltx{font-size:14px}
-</style><link href="../reading.css?v=775b6e9ccfe6" rel="stylesheet"/></head><body><aside><a class="home-link" href="../../">← 返回观行主页</a><b>VPP2</b><small>事件 × 时间 × 动作<br/>arXiv v2 · 研究深读</small><a href="#s1">1 核心思想一句话总结</a><a href="#s2">2 论文背景与动机</a><a href="#s3">3 核心方法/模型详解</a><a href="#s4">4 实验与结果分析</a><a href="#s5">5 论文的贡献与影响</a><a href="#s6">6 结论</a></aside><main><h1>VPP2 深读：先把未来预测对，再把动作学好</h1>
+</style><link href="../reading.css?v=204d029a8945" rel="stylesheet"/></head><body><aside><a class="home-link" href="../../">← 返回观行主页</a><b>VPP2</b><small>事件 × 时间 × 动作<br/>arXiv v2 · 研究深读</small><a href="#s1">1 核心思想一句话总结</a><a href="#s2">2 论文背景与动机</a><a href="#s3">3 核心方法/模型详解</a><a href="#s4">4 实验与结果分析</a><a href="#s5">5 论文的贡献与影响</a><a href="#s6">6 结论</a></aside><main><h1>VPP2 深读：先把未来预测对，再把动作学好</h1>
 <p>Video Prediction Policy 2: Predict Better, Act Better · Yanjiang Guo 等 · arXiv:2610.10270v2 · 解读模式：explain</p>
 <blockquote>
 <p><strong>先看重点</strong>：VPP2 的关键是训练顺序和监督语义：完整事件让语言和未来对齐，固定时长让视频和动作对齐，单步蒸馏降低推理成本，再尽量保留视频先验地学习动作。最值得借鉴的是这条链，而不是把模型接上动作头之后的平均分。</p>
