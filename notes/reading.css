@@ -1,5 +1,5 @@
 /* Shared, restrained reading layout for research notes. */
-:root{--reading-width:740px}
+:root{--reading-width:840px}
 body{font-size:17px;padding-left:224px}
 aside{width:224px;padding:30px 22px}
 main{max-width:960px;padding:52px 40px 88px}
