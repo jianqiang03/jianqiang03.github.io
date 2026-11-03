@@ -1,0 +1,33 @@
+README.md
+  s_3bab766aaf626e::t_3105efa6c1656d 9
+docs/adding-paper-notes.md
+  s_3bab766aaf626e::t_230f9f1fa6d25c 271,294,297
+index.html
+  s_3bab766aaf626e::t_b23c347c0f6da1 6
+notes/epsilon4p/assets/visual_manifest.json
+  s_3bab766aaf626e::t_4fe326d0734c4b 1-182
+notes/epsilon4p/index.html
+  s_3bab766aaf626e::t_23eeea99bdbf9a 1-274
+notes/epsilon4p/report.md
+  s_3bab766aaf626e::t_249c3dad1c38b6 1-268
+notes/epsilon4p/source_map.json
+  s_3bab766aaf626e::t_449986a473b79d 1-182
+scripts/render-paper-note.py
+  s_3bab766aaf626e::t_79f93a26ed1070 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ba36b7a8bebe572c526ce2cb9011766fac629845",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
