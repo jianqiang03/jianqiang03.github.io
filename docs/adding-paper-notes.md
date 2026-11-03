@@ -268,7 +268,7 @@ gh run list --repo jianqiang03/jianqiang03.github.io --limit 3
 
 ## 十、以后修改或撤回文章
 
-修改正文：现有三篇以 `notes/<slug>/report.md` 为正文源文件，修改后运行 `python scripts/render-paper-note.py <slug>` 生成 HTML（依赖 `markdown`、`beautifulsoup4`）。同步更新同目录 `source_map.json` 中受影响的证据。渲染器保留当前页面外壳、共享样式和图片放大功能；不自动部署。新文章仍需先建立 HTML 外壳并在脚本中登记重点导航。若改了标题或摘要，同步首页卡片。调整图片时同步图注、alt 和宽高。保留必要的更正说明，不要悄悄让旧实验数据看起来像新结果。
+修改正文：现有四篇以 `notes/<slug>/report.md` 为正文源文件，修改后运行 `python scripts/render-paper-note.py <slug>` 生成 HTML（依赖 `markdown`、`beautifulsoup4`）。同步更新同目录 `source_map.json` 中受影响的证据。渲染器保留当前页面外壳、共享样式和图片放大功能；不自动部署。新文章仍需先建立 HTML 外壳并在脚本中登记重点导航。若改了标题或摘要，同步首页卡片。调整图片时同步图注、alt 和宽高。保留必要的更正说明，不要悄悄让旧实验数据看起来像新结果。
 
 修改网址会使旧链接失效，因此尽量在首次发布时确定 slug。发现已发布版本有问题时，可对特定提交执行 `git revert <commit>` 后正常推送；先检查该提交还改了什么，避免连带撤回无关内容。
 
@@ -291,10 +291,10 @@ gh run list --repo jianqiang03/jianqiang03.github.io --limit 3
 
 模型类解读沿一条样本讲清数据切片、张量与掩码、目标与损失归约、梯度流向和推理执行。每项核心设计解释如何改变信息、监督或优化，列出成立条件、失败情况与可区分的证据。官方代码固定到 commit，标明预训练、微调或推理阶段；公开微调实现不能补造未公开预训练细节。教学伪代码、本文推断和未披露项必须明确标注。
 
-现有三篇可一起渲染：
+现有四篇可一起渲染：
 
 ```bash
-python scripts/render-paper-note.py dyna-2 vpp2 dm05
+python scripts/render-paper-note.py dyna-2 vpp2 dm05 epsilon4p
 ```
 
 同时提交正文、证据映射、生成的 HTML 和新增图片。外部旧版生成器只作为历史工作材料，仓库中的 Markdown 与此渲染器是后续维护入口。

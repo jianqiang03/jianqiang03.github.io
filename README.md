@@ -6,6 +6,7 @@ jianqiang03 的个人研究笔记网站，关注机器人学习、数据与训�
 
 ## 已发布解读
 
+- [ε4P：不同精度的数据，怎样共同训练一个策略？](https://jianqiang03.github.io/notes/epsilon4p/)
 - [DM0.5：记住过去，理解阶段，对齐动作](https://jianqiang03.github.io/notes/dm05/)
 - [VPP2：先把未来预测对，再把动作学好](https://jianqiang03.github.io/notes/vpp2/)
 - [Dyna-2：百万小时视频如何变成机器人能力](https://jianqiang03.github.io/notes/dyna-2/)

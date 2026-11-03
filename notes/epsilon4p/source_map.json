@@ -1,0 +1,182 @@
+{
+  "schema_version": 5,
+  "paper": {
+    "title": "Imperfection for Precision: Upcycling Imperfect Data for High-Precision Robotic Manipulation",
+    "version": "arXiv:2609.26672v1",
+    "sources": [
+      {
+        "type": "pdf",
+        "location": "https://arxiv.org/pdf/2609.26672v1",
+        "sha256": "87b8209b1ceee2f9cf855b388ff0242f8b1472830febb5cafde0bea6435633c0",
+        "role": "primary"
+      },
+      {
+        "type": "pdf",
+        "location": "https://varepsilon4p.github.io/appendix.pdf",
+        "sha256": "dc2f08abbddb4a14738470f57bb17661a5e49d1f4adb141ae4886ff162796049",
+        "role": "supplementary webpage snapshot; version binding unverified"
+      }
+    ],
+    "page_convention": "1-based PDF pages; appendix separately counted"
+  },
+  "reader_profile": {
+    "domain": "computer-science-ai",
+    "audience": "broad-to-expert",
+    "goal": "understand",
+    "depth": "deep",
+    "language": "zh-CN",
+    "selected_lenses": [
+      "computer-science-ai",
+      "engineering-systems"
+    ],
+    "delivery": "explain",
+    "entry_level": "novice",
+    "technical_ceiling": "doctoral"
+  },
+  "explanation": {
+    "strategy": "intuition-to-precision",
+    "define_terms_on_first_use": true,
+    "report_structure": "six-section",
+    "key_visual_policy": "all-key-visuals"
+  },
+  "execution": {
+    "visual_mode": "visual",
+    "visual_verification": "complete",
+    "scope": "11 static visuals reviewed; no training, inference or robot execution"
+  },
+  "visual_coverage": {
+    "total_numbered": 11,
+    "key": 11,
+    "key_explained": 11
+  },
+  "claims": [
+    {
+      "id": "routing",
+      "claim": "按来源改变流时间准入，保持对照来源采样分布",
+      "status": "strong",
+      "evidence": [
+        {
+          "type": "paper-or-analysis",
+          "locator": "Main §III-D, Eq.8",
+          "note": "actual source probabilities not disclosed"
+        }
+      ],
+      "inference": false,
+      "caveats": [
+        "actual source probabilities not disclosed"
+      ]
+    },
+    {
+      "id": "classifier",
+      "claim": "低精度边界使用来源AUC接近0.5的判据",
+      "status": "strong",
+      "evidence": [
+        {
+          "type": "paper-or-analysis",
+          "locator": "Main §III-C Eq.6; appendix B",
+          "note": "operational classifier criterion, not distribution equality"
+        }
+      ],
+      "inference": false,
+      "caveats": [
+        "operational classifier criterion, not distribution equality"
+      ]
+    },
+    {
+      "id": "probe",
+      "claim": "异任务边界来自动作与条件替换敏感度",
+      "status": "partial",
+      "evidence": [
+        {
+          "type": "paper-or-analysis",
+          "locator": "Main Fig.3; appendix A,C",
+          "note": "readout structure, dependence on policy, potentially off-joint-distribution interventions"
+        }
+      ],
+      "inference": false,
+      "caveats": [
+        "readout structure, dependence on policy, potentially off-joint-distribution interventions"
+      ]
+    },
+    {
+      "id": "gain",
+      "claim": "受测任务中分区优于相同来源全区间混合",
+      "status": "strong",
+      "evidence": [
+        {
+          "type": "paper-or-analysis",
+          "locator": "Main Table III",
+          "note": "single platform, small data, 60 trials per task; training seed uncertainty"
+        }
+      ],
+      "inference": false,
+      "caveats": [
+        "single platform, small data, 60 trials per task; training seed uncertainty"
+      ]
+    },
+    {
+      "id": "opposite",
+      "claim": "反向窗口支持方向性但未完全隔离窗口宽度",
+      "status": "partial",
+      "evidence": [
+        {
+          "type": "paper-or-analysis",
+          "locator": "Main Table IV and Figure 5",
+          "note": "width and position jointly change"
+        }
+      ],
+      "inference": true,
+      "caveats": [
+        "width and position jointly change"
+      ]
+    },
+    {
+      "id": "replacement",
+      "claim": "辅助数据可替代新增部分高质量数据",
+      "status": "partial",
+      "evidence": [
+        {
+          "type": "paper-or-analysis",
+          "locator": "Main Table V",
+          "note": "retains high-quality target-task anchor; no equivalence test"
+        }
+      ],
+      "inference": false,
+      "caveats": [
+        "retains high-quality target-task anchor; no equivalence test"
+      ]
+    },
+    {
+      "id": "noise",
+      "claim": "加噪减小输入差异但目标偏差仍存在",
+      "status": "partial",
+      "evidence": [
+        {
+          "type": "paper-or-analysis",
+          "locator": "Derived from Main Eq.1 linear flow",
+          "note": "author of report derivation; not paper experiment"
+        }
+      ],
+      "inference": true,
+      "caveats": [
+        "author of report derivation; not paper experiment"
+      ]
+    }
+  ],
+  "discrepancies": [
+    {
+      "location": "Figure 2 upper-right headings",
+      "detail": "Task Context labels x; Noised Action labels c; use body equations and lower panel"
+    },
+    {
+      "location": "Project page metadata",
+      "detail": "Anonymous/coming-soon labels differ from named arXiv v1; appendix treated as separately retrieved supplement"
+    }
+  ],
+  "implementation_review": {
+    "date": "2026-11-03",
+    "scope": "Static source and report reading; no training/inference execution",
+    "reference": "paper-deep-reader/references/implementation-and-training.md",
+    "missing_details_explicit": true
+  }
+}
