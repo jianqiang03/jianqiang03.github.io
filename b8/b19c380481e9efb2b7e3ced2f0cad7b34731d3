@@ -1,0 +1,27 @@
+docs/adding-paper-notes.md
+  s_3bab766aaf626e::t_9d8b777977cdeb 280
+notes/dm05/index.html
+  s_3bab766aaf626e::t_3447b5c15ce466 36,52,77,112,141,177,207,216,257,303,343,350,385
+notes/dyna-2/index.html
+  s_3bab766aaf626e::t_307a6202c19f91 33,77,102,186,226,294,329
+notes/reading.css
+  s_3bab766aaf626e::t_2b51351b890172 3,45-50
+notes/vpp2/index.html
+  s_3bab766aaf626e::t_b2d2d5c76e4c05 2,35,59,94,169,204,211,252,318,353
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b8b19c380481e9efb2b7e3ced2f0cad7b34731d3",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
