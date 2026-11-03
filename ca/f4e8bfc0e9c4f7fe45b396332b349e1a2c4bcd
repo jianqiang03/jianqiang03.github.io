@@ -1,0 +1,39 @@
+docs/adding-paper-notes.md
+  s_3bab766aaf626e::t_a60f9f914f7260 271,284,289-300
+notes/dm05/index.html
+  s_3bab766aaf626e::t_106e1d9827ad20 40,81,89-144,148,152,186,196,207,219,253,257,304,308-310,315,317,321,323,328,330,334,337,339,343,386,388,428,433,441
+notes/dm05/report.md
+  s_3bab766aaf626e::t_b9d24ff43833b6 1-381
+notes/dm05/source_map.json
+  s_3bab766aaf626e::t_15938937c95a14 1-146
+notes/dyna-2/index.html
+  s_3bab766aaf626e::t_acb25d7859b53d 33,37,41,44,51,56,60,70,72,76,104-166,169,171,175,177,179,183,185,189,191,195,197,201,203,207,209,213,215,219,221,225,227,231,233,237,239,243,247,289,291,295,297,301,303,307,309,313,315,319,321,325,327,331,333,337,339,343,345,350,354,393,398,404
+notes/dyna-2/report.md
+  s_3bab766aaf626e::t_8c651df25a2c14 1-471
+notes/dyna-2/source_map.json
+  s_3bab766aaf626e::t_bfea5387f125e1 1-95
+notes/vpp2/index.html
+  s_3bab766aaf626e::t_b0718b1f4d4731 39,43,46,52,54,58,97-98,100,104,106,112,114,123,125,129,133,144,155,157,161,164-231,233,277,321,323,327,329,333,335,339,341,345,347,352,354,358,360,364,366,370,372,376,380,384,422,429,440
+notes/vpp2/report.md
+  s_3bab766aaf626e::t_ded1f1050a05e9 1-448
+notes/vpp2/source_map.json
+  s_3bab766aaf626e::t_6e717ade64090d 1-156
+scripts/render-paper-note.py
+  s_3bab766aaf626e::t_bdaea395bb06f1 1-68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "caf4e8bfc0e9c4f7fe45b396332b349e1a2c4bcd",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
