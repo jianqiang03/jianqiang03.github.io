@@ -1,28 +1,44 @@
-/* Shared, fluid reading layout for research notes. */
-:root{--reading-width:100%}
-body{font-size:17px;padding-left:224px}
-aside{width:224px;padding:30px 22px}
-main{width:100%;max-width:none;padding:52px 36px 88px}
+/* Taste Skill guided editorial layout: prose measure and evidence width are separate. */
+:root{
+ --reading-width:900px;--evidence-width:1020px;--rail-width:208px;
+ --paper:#fafaf7;--ink:#25312e;--muted:#58675e;--accent:#285c49;
+ --rail:#edf1eb;--surface:#eef2ed;--body-size:18px
+}
+body{padding-left:var(--rail-width);background:var(--paper);color:var(--ink);font-size:var(--body-size);line-height:1.85}
+aside{width:var(--rail-width);padding:32px 20px;background:var(--rail);color:var(--ink);border:0}
+aside b{font-size:24px;letter-spacing:0;color:var(--accent)}
+aside small{color:var(--muted);font-size:13px;line-height:1.7;margin:10px 0 26px}
+aside a{color:var(--muted);font-size:14px;line-height:1.65;margin:4px -8px;padding:11px 8px;border-radius:3px}
+aside a:hover,aside a:focus-visible{background:#dce6da;color:var(--accent)}
+aside .home-link{color:var(--muted);font-size:13px;margin-bottom:28px}
+main{width:100%;max-width:1116px;margin:0 auto;padding:52px 48px 96px}
 main>h1,main>h1+p,main>p,main>h2,main>h3,main>h4,
-main>ul,main>ol,main>pre,main>blockquote,main>footer,
-main>table,main>p:has(>img),main>.training-map{
+main>ul,main>ol,main>pre,main>blockquote,main>footer,main>.training-map{
  max-width:var(--reading-width);margin-left:auto;margin-right:auto
 }
-main>h1{font-size:clamp(29px,2.4vw,38px);line-height:1.5;letter-spacing:-.5px;margin-bottom:18px}
-main>p{line-height:1.9;margin-top:20px;margin-bottom:20px}
-main>h2{font-size:27px;line-height:1.55;margin-top:64px;margin-bottom:26px;padding-top:30px}
-main>h3{font-size:21px;line-height:1.6;margin-top:38px;margin-bottom:18px}
-main>blockquote{padding:12px 22px;margin-top:28px;margin-bottom:32px}
-main>p:has(>img){padding:8px;margin-top:26px;margin-bottom:28px;box-shadow:none;border-radius:8px}
-main img{max-width:100%;height:auto}
-main>table{font-size:14px;line-height:1.75;margin-top:26px;margin-bottom:28px}
-th,td{padding:13px 15px;min-width:140px}
-main>pre{font-size:13px;line-height:1.85;padding:22px 24px}
-main>.training-map{padding:20px 22px;margin-top:28px;margin-bottom:32px}
-.training-map p{font-size:0;margin:10px 0 0}
-.training-map a{display:block;font-size:14px;line-height:1.7;padding:6px 0;text-decoration-thickness:1px}
-@media(min-width:1700px){body{font-size:17px}main{padding-top:60px}}
-@media(max-width:1100px) and (min-width:951px){body{padding-left:208px}aside{width:208px}main{padding:42px 30px 76px}}
-@media(max-width:950px){body{padding-left:0}aside{width:100%;padding:20px 24px}main{padding:36px 28px 70px}}
-@media(max-width:520px){body{font-size:16px}main{padding:30px 22px 60px}main>h1{font-size:28px}main>h2{font-size:24px}main>h3{font-size:20px}main>p{line-height:1.85}main>blockquote{padding:10px 16px}main>pre{font-size:12px;padding:18px 15px}main>p:has(>img){padding:4px}main>.training-map{padding:16px 18px}th,td{padding:11px 12px;font-size:13px}}
-@media print{body{padding:0}main{max-width:none;padding:0}}
+main>h1{font-size:38px;line-height:1.45;letter-spacing:-.6px;margin-bottom:18px;color:var(--ink);text-wrap:balance}
+main>h1+p{font-size:14px;color:var(--muted);line-height:1.8;margin-top:0;margin-bottom:30px}
+main>p{font-size:var(--body-size);line-height:1.85;margin-top:22px;margin-bottom:22px;overflow-wrap:break-word}
+main>h2{font-size:28px;line-height:1.5;border:0;padding-top:0;margin-top:72px;margin-bottom:24px;color:var(--accent)}
+main>h3{font-size:22px;line-height:1.6;margin-top:44px;margin-bottom:16px;color:var(--ink);scroll-margin-top:28px}
+main>h4{font-size:20px;margin-top:32px;margin-bottom:14px}
+main strong{color:var(--ink)}
+main a{color:var(--accent);text-underline-offset:4px;text-decoration-thickness:1px}
+main>blockquote{padding:20px 26px;margin-top:28px;margin-bottom:28px;background:var(--surface);border:0;border-radius:3px}
+main>blockquote p{font-size:17px;line-height:1.85;margin:0}
+main>p:has(>img){max-width:var(--evidence-width);padding:0;margin:28px auto 32px;background:white;border:0;border-radius:0;box-shadow:none}
+main img{width:100%;height:auto;max-width:100%;border:0;border-radius:0}
+main>table{max-width:var(--evidence-width);font-size:15px;line-height:1.75;margin:28px auto 32px;border:0;border-radius:0;background:var(--paper);font-variant-numeric:tabular-nums}
+th,td{padding:15px 18px;min-width:150px;border-bottom:1px solid #dce3da}th{background:var(--surface)}
+main>pre{font-size:14px;line-height:1.8;padding:24px 28px;background:#243f34;border-radius:3px}
+main>.training-map{padding:0;margin-top:28px;margin-bottom:38px;background:none;border:0;border-radius:0}
+.training-map>b{font-size:17px;color:var(--ink)}
+.training-map p{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;row-gap:0;font-size:0;margin:12px 0 0;line-height:1.6}
+.training-map a{display:block;font-size:14px;line-height:1.7;padding:9px 0;min-width:0}
+main>footer{border:0;padding-top:32px;margin-top:64px;color:var(--muted);font-size:14px}
+:focus-visible{outline-color:var(--accent)}
+@media(min-width:1700px){body{font-size:var(--body-size)}main{padding-top:64px}}
+@media(max-width:1100px) and (min-width:951px){body{padding-left:188px}aside{width:188px;padding:28px 18px}main{padding:44px 32px 76px}}
+@media(max-width:950px){body{padding-left:0}aside{position:relative;width:auto;padding:18px 28px}aside .home-link{display:inline-block;font-size:13px;margin:0 22px 8px 0;padding:0}aside b{display:inline;font-size:20px}aside small{display:none}aside>a:not(.home-link){display:inline-block;font-size:13px;padding:10px 8px;margin:4px 4px 0 0;background:none}main{padding:36px 32px 72px}}
+@media(max-width:520px){:root{--body-size:16px}aside{padding:16px 20px}aside b{font-size:19px}aside>a:not(.home-link){font-size:12px;padding:10px 6px;margin:0}main{padding:30px 20px 56px}main>h1{font-size:27px;line-height:1.5;letter-spacing:-.35px}main>h2{font-size:24px;margin-top:52px;margin-bottom:20px}main>h3{font-size:20px;margin-top:34px;margin-bottom:14px}main>p{line-height:1.85;margin:20px auto}main>h1+p{font-size:13px}main>blockquote{padding:18px 20px}main>blockquote p{font-size:16px}main>pre{font-size:12px;padding:18px 16px}main>p:has(>img){margin:24px auto}th,td{font-size:13px;padding:12px;min-width:140px}.training-map p{display:block}.training-map a{font-size:14px;padding:10px 0}main>footer{font-size:13px}}
+@media print{body{padding:0;background:white}main{max-width:none;padding:0}aside{display:none}}
