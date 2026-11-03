@@ -33,7 +33,7 @@ dialog{max-width:1700px;border-radius:10px}dialog img{max-width:100%;object-fit:
 main>h1{text-wrap:balance}main>p{text-wrap:pretty}
 main>h1{font-size:clamp(30px,2.7vw,44px)}main>h4{max-width:880px;margin:30px auto 12px;font-size:20px}main>table{font-size:14px}main img{height:auto}dialog img{max-height:84vh;object-fit:contain}dialog .full-image{display:block;text-align:center;padding:8px;font-size:13px}main .ltx{font-size:14px}
 
-.training-map{max-width:880px;margin:30px auto;padding:22px 26px;border-left:4px solid #287668;background:#e8eee7;border-radius:8px}.training-map p{line-height:2}.training-map a{display:inline}main h3{scroll-margin-top:24px}</style><link href="../reading.css?v=02d9dbe7ad96" rel="stylesheet"/></head><body><aside><a class="home-link" href="../../">← 返回观行主页</a><b>DM0.5</b><small>记忆 × 语义 × 动作<br/>技术博客与代码深读</small><a href="#s1">1 核心思想一句话总结</a><a href="#s2">2 论文背景与动机</a><a href="#s3">3 核心方法/模型详解</a><a href="#s4">4 实验与结果分析</a><a href="#s5">5 论文的贡献与影响</a><a href="#s6">6 结论</a></aside><main><h1>DM0.5 深读：记住过去，理解阶段，对齐动作</h1>
+.training-map{max-width:880px;margin:30px auto;padding:22px 26px;border-left:4px solid #287668;background:#e8eee7;border-radius:8px}.training-map p{line-height:2}.training-map a{display:inline}main h3{scroll-margin-top:24px}</style><link href="../reading.css?v=775b6e9ccfe6" rel="stylesheet"/></head><body><aside><a class="home-link" href="../../">← 返回观行主页</a><b>DM0.5</b><small>记忆 × 语义 × 动作<br/>技术博客与代码深读</small><a href="#s1">1 核心思想一句话总结</a><a href="#s2">2 论文背景与动机</a><a href="#s3">3 核心方法/模型详解</a><a href="#s4">4 实验与结果分析</a><a href="#s5">5 论文的贡献与影响</a><a href="#s6">6 结论</a></aside><main><h1>DM0.5 深读：记住过去，理解阶段，对齐动作</h1>
 <p>Dexmal · 官方技术博客与开源实现解读 · 核验日期：2026-11-02</p>
 <blockquote>
 <p><strong>先看重点</strong>：DM0.5 的三个设计分别改变训练的条件信息、共享表示目标和动作标签对应关系。历史使原本不可区分的样本可区分；具身语义任务给阶段信息更直接的梯度；动态匹配尝试去掉示教速度造成的监督差异。本文重点推导这三条作用链，并解释为什么降低训练损失仍不保证闭环成功。</p>
@@ -49,7 +49,7 @@ main>h1{font-size:clamp(30px,2.7vw,44px)}main>h4{max-width:880px;margin:30px aut
 <p>另一个问题是时间：两名示教者完成同一动作，一个快、一个慢。如果强制第十个预测动作只能匹配第十个示教动作，就可能惩罚运动路径正确、进度不同的预测。第三个问题是语义：同样是伸手接近杯子，可能处于“准备拿走”或“准备放回”的不同任务阶段。视觉相似并不意味着下一步动作相同。</p>
 <h3 id="m3">必要概念与术语</h3>
 <p><strong>VLA（视觉—语言—动作模型）</strong>把图像、文字和机器人状态映射为动作；<strong>VLM（视觉语言模型）</strong>负责联合理解图像与文字；<strong>动作专家</strong>负责生成连续控制量。DM0.5 沿这条路线扩展上下文与监督。它没有像 VPP2 那样把未来视频生成作为主线，因此不能把两者仅按参数量直接比较。</p>
-<table>
+<div aria-label="数据表格，可横向滚动" class="table-scroll" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>旧问题</th>
@@ -74,7 +74,7 @@ main>h1{font-size:clamp(30px,2.7vw,44px)}main>h4{max-width:880px;margin:30px aut
 <td>对齐过于宽松可能掩盖真正的控制错误</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s3">3 核心方法/模型详解</h2>
 <h3 id="m4">图2：先读完整的数据流</h3>
 <p><strong>阅读任务</strong>：从左侧视觉、状态与文本输入出发，沿 VLM 到动作专家的连接读图，再观察历史信息和训练任务的位置。</p>
@@ -109,7 +109,7 @@ main>h1{font-size:clamp(30px,2.7vw,44px)}main>h4{max-width:880px;margin:30px aut
 <h3 id="m10">训练主线：三个机制分别改变学习问题的哪一部分？</h3>
 <p><strong>本文判断</strong>：DM0.5 最有价值的设计逻辑，是把动作监督中的三种混杂因素拆开处理：过去发生了什么、当前处于哪个任务阶段、示教者执行得有多快。前两种往往必须保留，第三种在部分任务中可以容忍变化。它们不是三个独立的“能力插件”，而是在改变模型被要求拟合的条件分布。</p>
 <p>下面是<strong>本文的分析记号，不是作者披露的完整训练公式</strong>。令 c 为当前图像、指令、本体状态等条件，h 为历史，a 为示教动作片段，z 为阶段或事件等语义标签，τ 为动作与示教轨迹的匹配索引。可以把设计差异写成：</p>
-<table>
+<div aria-label="数据表格，可横向滚动" class="table-scroll" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>改动位置</th>
@@ -138,7 +138,7 @@ main>h1{font-size:clamp(30px,2.7vw,44px)}main>h4{max-width:880px;margin:30px aut
 <td>改变哪些标签与预测配对，从而改变误差方向</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>这张表是后面分析的主线。<strong>提供了历史不等于模型使用了历史；能预测阶段不等于阶段表示改善了动作；对齐损失下降也不等于闭环更成功。</strong> 必须分别验证三条因果链。</p>
 <h3 id="m11">历史如何改变梯度：把不可区分的训练样本分开</h3>
 <p>回到杯子复位任务。构造两条示教：一条最初杯子在左边，一条最初在右边，之后两条轨迹都把杯子放在相同的临时位置。若当前图像、机器人状态与指令都相同，最后一步却分别要求向左和向右，那么仅用当前条件的策略无法确定哪一个目标属于这一回合。这首先是缺信息，不是模型容量不足。</p>
@@ -174,7 +174,7 @@ M：满足严格递增等约束的匹配集合
 <p><strong>时间不是总可以忽略。</strong> 静态桌面搬运能容忍部分速度变化；接移动物体、定时按压、保持接触力或等待液体流完则依赖真实时间。对齐把有用的时序也消掉时，可能损害任务。严格单调只保证顺序，不保证采样间隔、速度或接触时长正确；连续性约束是否足以保护这些量，需要专门检查。</p>
 <p>三个模块的互补关系由此更明确：历史保留“这一回合到底发生过什么”，语义监督突出“任务现在要求什么”，动态匹配尝试忽略“不影响任务的示教节奏”。它们也存在冲突：若阶段标签仍按原始时刻定义，而动作目标被匹配到另一阶段，共享表示可能同时收到互不相容的监督。训练必须确保阶段语义与被选动作的关系成立；博客尚未披露这部分配对协议。</p>
 <h3 id="m14">数据：多源覆盖不等于已经披露规模</h3>
-<table>
+<div aria-label="数据表格，可横向滚动" class="table-scroll" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>数据类型</th>
@@ -204,7 +204,7 @@ M：满足严格递增等约束的匹配集合
 <td>保留语义与空间能力；生成、过滤及去重规模未知</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>目前不能确认 DM0.5 的预训练数据达到100k小时。</strong> 博客没有给出足以核验的总小时数、去重后规模、训练样本呈现次数及来源占比。模型大小、支持机型数、训练步数都不能替代数据时长。</p>
 <p>清洗包括物理异常过滤、视觉—状态—动作一致性检查、静止段处理、无关或失败动作筛除、等价关节构型规整及跨模态重标注。它们直接改变监督分布。本文的工程提醒是：有效等待和接触保持也可能是静止段；删除后若不保留时间信息，会改变动作节奏。多个逆运动学解也可能代表有用的避障姿态，去重需要任务条件，不能机械地认为只保留一种一定更好。</p>
 <h3 id="m15">训练与基础设施：已知什么，仍缺什么？</h3>
@@ -213,7 +213,7 @@ M：满足严格递增等约束的匹配集合
 <p>当前代码已有 MEM 微调与推理支持，不应根据较早 issue 说“记忆尚未开源”。但默认入口绑定 DOS-W1/demo 的14维、joint 控制及动作转换，替换数据集名称不足以支持任意机器人。RoboDojo 的 <code>cover_blocks</code> 又是单任务入口，不能把跑通它等同于复现整个 generalist 排行榜。</p>
 <h3 id="m16">数据清洗与混合采样：它们实际上在重写训练分布</h3>
 <p>把清洗理解成“去掉坏数据”太粗糙。模型优化的是采样分布下的平均损失，删除、重复和重加权都会改变哪些梯度出现得最多。下面是本文对博客清洗策略的训练解释，而非作者已报告的消融：</p>
-<table>
+<div aria-label="数据表格，可横向滚动" class="table-scroll" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>数据操作</th>
@@ -254,7 +254,7 @@ M：满足严格递增等约束的匹配集合
 <td>自动标注错误可能系统性复制</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>例如假设100个片段中80个是静止、20个是移动。删除70个静止后，移动片段占比从20%变成约66.7%。即使优化器和模型一行未改，训练目标的有效权重已经变化。这个<strong>假设例子</strong>说明清洗的收益可能来自重采样，而不全是标签正确率提高。因此应比较“删数据”与“保留数据但调整采样权重”，并保留真正需要等待的验证任务。</p>
 <p>动作 mask 也影响损失权重。公开代码先将每条样本的有效动作维度平方误差求和，再除以该样本有效元素数，最后对 batch 平均。这样可避免仅因有效动作维度更多，就让某种本体按元素数获得更大权重；但不同本体的噪声、归一化尺度和采样次数仍不相同。<strong>归一化实际上也选择了误差的度量</strong>：若某维按标准差 σ 缩放，该维平方误差相当于在原单位下乘1/σ²。统计文件不是部署附件，而是训练目标的一部分。</p>
 <p>对于异构数据，设采样到来源 d 的概率为 p_d，用于解释的平均目标是 <code>Σ_d p_d E[L_d]</code>。人类视频未必有机器人动作标签，因此不能假定每种来源都优化同一个动作损失。需要追问每源进入什么任务、更新哪些参数、loss如何归一化。只知道“加入导航和视频数据”，无法判断收益来自更多视觉覆盖、额外语言监督，还是训练预算增加。</p>
@@ -300,7 +300,7 @@ M：满足严格递增等约束的匹配集合
 <p><strong>推理桥</strong>：受测位置没有出现完全失效，支持一定的相机位姿鲁棒性。固定腕部相机可能提供稳定的近场信息，这是合理替代解释，需要关闭腕部视角才能区分。</p>
 <p><strong>证据边界</strong>：九组离散位置不等于任意视角不变性；没有样本量与误差范围，也无法判断10个百分点的差异是否稳定。人手遮挡、移动物体等其他视频同样只是定性案例，不构成系统安全保证。<a href="https://www.dexmal.com/blog/dm0.5">官方结果</a></p>
 <h3 id="m25">把主张与证据强度分开</h3>
-<table>
+<div aria-label="数据表格，可横向滚动" class="table-scroll" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>主张</th>
@@ -340,14 +340,14 @@ M：满足严格递增等约束的匹配集合
 <td>不充分，缺数据与完整训练配置</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="s5">5 论文的贡献与影响</h2>
 <h3 id="m26">可借鉴的不是口号，而是三个接口</h3>
 <p>第一，历史预算应围绕任务的信息需求设计。不是历史帧越多就一定越好：初始目标、关键接触事件、最近运动分别需要不同时间分辨率。第二，任务阶段可以作为监督结构，帮助把语义理解接到动作生成，但必须检查标注噪声。第三，轨迹比较应容许合理的进度差异，同时保留真实控制约束；只让离线误差变小并不够。</p>
 <h3 id="m27">最小验证方案：先回答因果问题</h3>
 <p><strong>建议优先验证历史是否被使用。</strong> 它在公开 MEM 入口中可定位，因果操纵也最直接：固定当前观察、指令、状态与采样噪声，只交换历史。先用配对样本检查动作目标是否按过去条件变化，再做闭环成功率比较，并用多组种子检验稳定性。这比直接启动一个更大规模训练，更早回答“模型有没有利用新增信息”。此处只是研究建议，本次没有启动实验。</p>
 <p>随后验证语义任务与动态匹配。两者完整预训练路径未在当前读取的 SFT forward 中体现，复现前先确定实际损失接口，不能只在现有脚本添加名称相同的开关就声称复现。对历史、语义、匹配做预算一致的组合消融，才能识别互补还是重复；若资源有限，应先做单项，再针对最强假设做二因素交叉。</p>
-<table>
+<div aria-label="数据表格，可横向滚动" class="table-scroll" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>问题</th>
@@ -382,7 +382,7 @@ M：满足严格递增等约束的匹配集合
 <td>稳态及首请求时延、动作差异、闭环成功</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>这些是本文提出的验证方案，没有在本次任务中运行。涉及真实机器人时，先核对动作归一化、坐标与控制模式，再讨论模型能力；数值接口错误会让任何架构比较失去意义。</p>
 <h3 id="m28">复现顺序与缺口</h3>
 <p>先选择目标：基本 SFT、MEM、LIBERO、RoboTwin 或 RoboDojo；不同入口并不共享所有默认值。再固定权重、代码提交、数据fps、历史长度、动作维数、chunk长度和统计文件。先验证输入输出契约，再做小规模闭环与性能测量。</p>

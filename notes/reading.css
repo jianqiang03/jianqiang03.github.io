@@ -1,6 +1,6 @@
 /* Taste Skill guided editorial layout: prose measure and evidence width are separate. */
 :root{
- --reading-width:900px;--evidence-width:1020px;--rail-width:208px;
+ --reading-width:900px;--evidence-width:var(--reading-width);--rail-width:208px;
  --paper:#fafaf7;--ink:#25312e;--muted:#58675e;--accent:#285c49;
  --rail:#edf1eb;--surface:#eef2ed;--body-size:18px
 }
@@ -42,3 +42,9 @@ main>footer{border:0;padding-top:32px;margin-top:64px;color:var(--muted);font-si
 @media(max-width:950px){body{padding-left:0}aside{position:relative;width:auto;padding:18px 28px}aside .home-link{display:inline-block;font-size:13px;margin:0 22px 8px 0;padding:0}aside b{display:inline;font-size:20px}aside small{display:none}aside>a:not(.home-link){display:inline-block;font-size:13px;padding:10px 8px;margin:4px 4px 0 0;background:none}main{padding:36px 32px 72px}}
 @media(max-width:520px){:root{--body-size:16px}aside{padding:16px 20px}aside b{font-size:19px}aside>a:not(.home-link){font-size:12px;padding:10px 6px;margin:0}main{padding:30px 20px 56px}main>h1{font-size:27px;line-height:1.5;letter-spacing:-.35px}main>h2{font-size:24px;margin-top:52px;margin-bottom:20px}main>h3{font-size:20px;margin-top:34px;margin-bottom:14px}main>p{line-height:1.85;margin:20px auto}main>h1+p{font-size:13px}main>blockquote{padding:18px 20px}main>blockquote p{font-size:16px}main>pre{font-size:12px;padding:18px 16px}main>p:has(>img){margin:24px auto}th,td{font-size:13px;padding:12px;min-width:140px}.training-map p{display:block}.training-map a{font-size:14px;padding:10px 0}main>footer{font-size:13px}}
 @media print{body{padding:0;background:white}main{max-width:none;padding:0}aside{display:none}}
+
+/* All reading blocks share one alignment; the wrapper owns table scrolling. */
+main>.table-scroll{width:100%;max-width:var(--reading-width);margin:28px auto 32px;overflow-x:auto;border:0;background:var(--paper)}
+main>.table-scroll>table{display:table;width:100%;max-width:none;margin:0;border-collapse:collapse;border:0;border-radius:0;font-size:15px;line-height:1.75;font-variant-numeric:tabular-nums;background:var(--paper)}
+main>.table-scroll>table th,main>.table-scroll>table td{white-space:normal;overflow-wrap:break-word}
+@media(max-width:520px){main>.table-scroll>table{font-size:13px}}

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="VPP2 v2 中文深读：事件级预训练、单步视频规划、动作学习与泛化证据；区分论文主方法和官方代码配方。" name="description"/><title>VPP2 深读 · 观行</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:#f5f2eb;color:#23323b;font:17px/1.85 system-ui,-apple-system,"Noto Sans CJK SC",sans-serif}aside{position:fixed;width:235px;inset:0 auto 0 0;padding:40px 22px;background:#183d43;color:white;overflow:auto}aside b{font-size:24px}aside small{display:block;color:#bad1cf;margin:12px 0 30px}aside a{display:block;color:#d5e5e2;text-decoration:none;font-size:14px;margin:16px 0}main{max-width:1090px;margin-left:235px;padding:54px 65px 100px}h1{font-size:42px;line-height:1.3;letter-spacing:-1px;margin:0 0 24px}h2{font-size:29px;border-top:2px solid #b7c8c1;padding-top:36px;margin-top:62px;color:#174e50}h3{font-size:22px;margin-top:36px;line-height:1.5}p{margin:18px 0}a{color:#166b76;text-underline-offset:3px}strong{color:#174e50}blockquote{margin:28px 0;padding:12px 24px;border-left:5px solid #bb7a35;background:#f0e7d6}img{max-width:100%;height:auto;display:block;border:1px solid #ddd9cd;border-radius:8px;cursor:zoom-in;margin:24px auto;background:white}table{width:100%;border-collapse:collapse;font-size:15px;display:block;overflow:auto;margin:25px 0}th,td{border-bottom:1px solid #d8ded8;text-align:left;padding:12px;min-width:150px;vertical-align:top}th{background:#e0e9e3}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#183d43;color:#ecf5ef;padding:25px;border-radius:10px;font-size:14px}li{margin:10px 0}dialog{border:0;padding:10px;width:96vw;max-width:1600px;background:white}dialog::backdrop{background:#000b}dialog img{max-height:88vh;width:auto;border:0;margin:auto;cursor:zoom-out}dialog button{float:right;padding:8px 15px}footer{border-top:1px solid #ccc;margin-top:50px;font-size:13px;color:#666}@media(max-width:950px){aside{position:static;width:auto;padding:20px}aside small{margin:5px 0}aside a{display:inline-block;margin:5px 14px 5px 0}main{margin:0;padding:30px 24px}h1{font-size:32px}h2{font-size:25px}}@media print{aside,dialog{display:none}main{margin:0;padding:0;max-width:none}h2,h3{break-after:avoid}img{max-height:70vh;object-fit:contain}body{font-size:11pt;background:white}}
 /* Balanced reading layout */
 body{padding-left:248px;background:#f5f3ed}
@@ -31,7 +32,7 @@ dialog{max-width:1700px;border-radius:10px}dialog img{max-width:100%;object-fit:
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}aside a{transition:none}}
 main>h1{text-wrap:balance}main>p{text-wrap:pretty}
 main>h1{font-size:clamp(30px,2.7vw,44px)}main>h4{max-width:880px;margin:30px auto 12px;font-size:20px}main>table{font-size:14px}main img{height:auto}dialog img{max-height:84vh;object-fit:contain}dialog .full-image{display:block;text-align:center;padding:8px;font-size:13px}main .ltx{font-size:14px}
-</style><link href="../reading.css?v=02d9dbe7ad96" rel="stylesheet"/></head><body><aside><a class="home-link" href="../../">← 返回观行主页</a><b>VPP2</b><small>事件 × 时间 × 动作<br/>arXiv v2 · 研究深读</small><a href="#s1">1 核心思想一句话总结</a><a href="#s2">2 论文背景与动机</a><a href="#s3">3 核心方法/模型详解</a><a href="#s4">4 实验与结果分析</a><a href="#s5">5 论文的贡献与影响</a><a href="#s6">6 结论</a></aside><main><h1>VPP2 深读：先把未来预测对，再把动作学好</h1>
+</style><link href="../reading.css?v=775b6e9ccfe6" rel="stylesheet"/></head><body><aside><a class="home-link" href="../../">← 返回观行主页</a><b>VPP2</b><small>事件 × 时间 × 动作<br/>arXiv v2 · 研究深读</small><a href="#s1">1 核心思想一句话总结</a><a href="#s2">2 论文背景与动机</a><a href="#s3">3 核心方法/模型详解</a><a href="#s4">4 实验与结果分析</a><a href="#s5">5 论文的贡献与影响</a><a href="#s6">6 结论</a></aside><main><h1>VPP2 深读：先把未来预测对，再把动作学好</h1>
 <p>Video Prediction Policy 2: Predict Better, Act Better · Yanjiang Guo 等 · arXiv:2610.10270v2 · 解读模式：explain</p>
 <blockquote>
 <p><strong>先看重点</strong>：VPP2 的关键是训练顺序和监督语义：完整事件让语言和未来对齐，固定时长让视频和动作对齐，单步蒸馏降低推理成本，再尽量保留视频先验地学习动作。最值得借鉴的是这条链，而不是把模型接上动作头之后的平均分。</p>
@@ -55,7 +56,7 @@ main>h1{font-size:clamp(30px,2.7vw,44px)}main>h4{max-width:880px;margin:30px aut
 <p><strong>推理桥</strong>：这意味着作者希望先改善训练问题的可辨识程度，再扩大模型学习的覆盖面。条件更明确时，模型更有机会把语义差异映射到运动差异。</p>
 <p><strong>证据边界</strong>：图中“唯一稳定映射”是直觉示意，并非证明真实操作只有一条合法轨迹。概览右上基准后训练柱图标注 VPP2 为29.47，与RoboDojo正文表4的32.26不对应；部分基线标签/数值也不对应，图中未说明另一套汇总口径。本文性能解读采用正文主表，保留原图并明确这个内部不一致。 <a href="https://arxiv.org/html/2610.10270v2#S0.F1">原文图1</a></p>
 <h3>旧做法到新做法：最小变化在哪里？</h3>
-<table>
+<div aria-label="数据表格，可横向滚动" class="table-scroll" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>环节</th>
@@ -90,7 +91,7 @@ main>h1{font-size:clamp(30px,2.7vw,44px)}main>h4{max-width:880px;margin:30px aut
 <td>保护先验与适配新域之间存在权衡</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>这里有一个容易误读的反转：作者不是始终拒绝固定窗口。它在<strong>建立语义映射的预训练阶段</strong>优先使用事件，在<strong>对齐控制时间的后训练阶段</strong>主动采用固定窗口。<a href="https://arxiv.org/html/2610.10270v2#S3">§3</a></p>
 <h2 id="s3">3 核心方法/模型详解</h2>
 <h3>数据：覆盖哪些来源，比“看起来规模大”更具体</h3>
@@ -165,7 +166,7 @@ L_FM = E[ ||vθ(x_s, s, c) − (x₁ − ε)||² ]
 <h3>速度、资源与代码：不要把不同配方拼成一个模型</h3>
 <p>论文主方法在17×416×240输入、bf16和 torch.compile 下报告视频约0.12秒、动作5次去噪约0.10秒，合计每动作 chunk 约0.22秒。bf16 是节省存储与计算的数值格式，torch.compile 尝试编译优化执行图。0.22秒对应约4.5次 chunk 计算/秒的串行倒数，<strong>不是机械臂控制频率，也不包含所有高层VLM、采集、通信和控制开销</strong>；正文这段没有明确给测试GPU型号。</p>
 <p>公开代码是有价值的补充，但本文固定核对提交 <code>a103a1e1784d3e45014549a82238894d3ed85959</code>，不会将它当作 v2 正文的逐字实现：</p>
-<table>
+<div aria-label="数据表格，可横向滚动" class="table-scroll" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>项目</th>
@@ -200,14 +201,14 @@ L_FM = E[ ||vθ(x_s, s, c) − (x₁ − ε)||² ]
 <td>RoboDojo 的100k指100,000训练步，不是100k小时</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>官方 RoboDojo 文档给出一个历史条件视频阶段：全局 batch 832、10k步、学习率5×10⁻⁶；联合 Video+Action2B 阶段为全局 batch 288、100k步，视频学习率5×10⁻⁶、动作/本体模块10⁻⁴。bf16、DeepSpeed ZeRO-1 和梯度检查点用于控制训练开销：ZeRO-1 分摊优化器状态，梯度检查点以重复计算换激活内存。它们是复现入口中的配置，不是对主预训练 GPU 时长、成本或吞吐的完整披露。</p>
 <p>历史视频窗口包含首帧、七个过去观察、当前帧和十六个未来帧。把历史加入条件，才有机会处理“当前画面相似但之前发生过不同事件”的任务。因此后面看到记忆维度成绩较高时，不能全部解释为无历史单帧模型的能力。</p>
 <p><a href="https://github.com/roboterax/video-prediction-policy-2/blob/a103a1e1784d3e45014549a82238894d3ed85959/docs/video_prediction.md">官方视频推理指南</a> · <a href="https://github.com/roboterax/video-prediction-policy-2/blob/a103a1e1784d3e45014549a82238894d3ed85959/docs/robodojo.md">RoboDojo 配方</a> · <a href="https://github.com/roboterax/video-prediction-policy-2/blob/a103a1e1784d3e45014549a82238894d3ed85959/configs/robodojo/train_100k.yaml">联合配置</a> · <a href="https://github.com/roboterax/video-prediction-policy-2/blob/a103a1e1784d3e45014549a82238894d3ed85959/docs/libero.md">LIBERO 配方</a></p>
 <p>以上仅为代码与文档核对，本次没有运行模型、下载大权重或启动 GPU 训练。</p>
 <h2 id="s4">4 实验与结果分析</h2>
 <h3>先建立证据阶梯，再读平均分</h3>
-<table>
+<div aria-label="数据表格，可横向滚动" class="table-scroll" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>层次</th>
@@ -248,7 +249,7 @@ L_FM = E[ ||vθ(x_s, s, c) − (x₁ − ε)||² ]
 <td>纯粹替换一个推理提示的独立效果</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>总体上，论文提供了有力的受测表现，但对“每项设计分别贡献多少”的因果解释仍是<strong>中等支持</strong>。尤其详细 caption、事件切分、参数保护、数据规模和高层规划不能仅凭最终平均成绩全部单独归因。</p>
 <h3>视频质量：11个百分点是如何算出来的？</h3>
 <p><strong>阅读任务｜表2</strong>：按 Human、Robot 两列读指令遵循成功率；比较 VPP2、64B基线和固定窗口消融，不把这个指标当作机器人闭环成功率。</p>
@@ -314,7 +315,7 @@ L_FM = E[ ||vθ(x_s, s, c) − (x₁ − ε)||² ]
 <p>第二，语义学习与控制时钟可以分阶段解决。先学习完整行为，再固定时长，并不矛盾；两者优化的接口不同。这给数据管线设计一个实用问题：当前模型学不好，是网络不够强，还是任务标签与窗口根本不一致？</p>
 <p>第三，把泛化能力保留下来本身是动作学习的目标。视频主干并非越早全量更新越好，但保护策略是否有效仍需测量。复现时应同时跟踪视频指令遵循与动作闭环表现，防止动作训练损坏前者却暂时未在训练域暴露。</p>
 <h3>对训练与数据工作的启发：先做可检验的小实验</h3>
-<table>
+<div aria-label="数据表格，可横向滚动" class="table-scroll" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>可检验问题</th>
@@ -349,7 +350,7 @@ L_FM = E[ ||vθ(x_s, s, c) − (x₁ − ε)||² ]
 <td>训练改变、任务分解、提示细化各自贡献</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>这些是本文提出的后续实验，并非已执行结果。若重点是速度，先拆分视频编码、视频网络、动作去噪、VLM、通信与控制时延；不要把0.22秒作为没有硬件和配置条件的通用指标。</p>
 <h3>复现优先级与已知缺口</h3>
 <p>第一步先选清目标：验证视频泛化、复现LIBERO，还是复现RoboDojo。三者的权重、输入历史和动作规格不同。先核对checkpoint与编码器、归一化文件是否配套，再检查视角拼接、坐标系和动作维数；仅“能加载权重”不表示数据契约正确。</p>
