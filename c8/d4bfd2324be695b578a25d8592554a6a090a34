@@ -1,0 +1,25 @@
+docs/adding-paper-notes.md
+  s_3bab766aaf626e::t_e5cc5fe5277197 285-286
+notes/dm05/index.html
+  s_3bab766aaf626e::t_340d7b43eeae29 36
+notes/dyna-2/index.html
+  s_3bab766aaf626e::t_45d8cacf03345f 33
+notes/vpp2/index.html
+  s_3bab766aaf626e::t_6e0fa100a72ea8 34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c8d4bfd2324be695b578a25d8592554a6a090a34",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
