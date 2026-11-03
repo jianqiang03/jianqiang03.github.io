@@ -1,0 +1,146 @@
+{
+  "schema_version": 5,
+  "paper": {
+    "title": "DM0.5: 面向开放世界 泛化涌现",
+    "version": "Official blog snapshot 2026-11-02",
+    "sources": [
+      "https://www.dexmal.com/blog/dm0.5"
+    ],
+    "page_convention": "Editorial image numbers; unnumbered original blog"
+  },
+  "reader_profile": {
+    "domain": "computer-science-ai",
+    "audience": "broad-to-expert",
+    "goal": "understand",
+    "depth": "deep",
+    "language": "zh-CN",
+    "selected_lenses": [
+      "computer-science-ai",
+      "engineering-systems"
+    ],
+    "delivery": "explain",
+    "entry_level": "novice",
+    "technical_ceiling": "doctoral"
+  },
+  "explanation": {
+    "strategy": "intuition-to-precision",
+    "define_terms_on_first_use": true,
+    "report_structure": "six-section",
+    "key_visual_policy": "all-key-visuals"
+  },
+  "execution": {
+    "visual_mode": "visual",
+    "visual_verification": "complete",
+    "scope": "5 key static visuals; partial video sampling; no model execution"
+  },
+  "visual_coverage": {
+    "total_numbered": 6,
+    "key": 5,
+    "key_explained": 5
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "记忆、具身监督和动态对齐支持开放任务",
+      "status": "partial",
+      "evidence": [
+        "https://www.dexmal.com/blog/dm0.5"
+      ],
+      "limitations": "缺独立消融和完整训练配方"
+    },
+    {
+      "id": "C2",
+      "claim": "达到100k小时预训练",
+      "status": "unsupported",
+      "evidence": [
+        "https://www.dexmal.com/blog/dm0.5"
+      ],
+      "limitations": "未披露总时长"
+    },
+    {
+      "id": "A1",
+      "claim": "历史可降低条件歧义，而非强制消除动作多模态",
+      "status": "partial",
+      "evidence_type": "interpretive-inference",
+      "evidence": [
+        "Blog Context Abstraction Layer",
+        "dm05_arch.py _compute_prefix_cache"
+      ],
+      "limitations": "条件方差分析是理想回归解释，无配对历史消融"
+    },
+    {
+      "id": "A2",
+      "claim": "语义任务可通过共享梯度塑造阶段表示",
+      "status": "partial",
+      "evidence_type": "interpretive-inference",
+      "evidence": [
+        "Blog Embodiment CoT Tasks"
+      ],
+      "limitations": "示意多任务公式；真实权重与路由未披露"
+    },
+    {
+      "id": "A3",
+      "claim": "动态匹配改变标签对应与梯度，loss下降不自动证明策略改善",
+      "status": "partial",
+      "evidence_type": "interpretive-inference",
+      "evidence": [
+        "Blog Trajectory Alignment Layer"
+      ],
+      "limitations": "抽象目标非作者原式；与流匹配的接入点未知"
+    },
+    {
+      "id": "A4",
+      "claim": "当前动作SFT forward使用masked flow MSE，未在这条路径执行动态规划",
+      "status": "strong",
+      "evidence_type": "code-supported",
+      "evidence": [
+        "dm05_arch.py lines 851–946"
+      ],
+      "limitations": "不推断未公开预训练或其他代码路径"
+    },
+    {
+      "id": "A5",
+      "claim": "多flow样本复用前缀不等于增加独立观测",
+      "status": "partial",
+      "evidence_type": "code-supported-and-inference",
+      "evidence": [
+        "dm05_arch.py lines 868–887"
+      ],
+      "limitations": "未运行吞吐或收敛比较"
+    },
+    {
+      "id": "impl-history",
+      "claim": "LoadHistory以源fps计算向后槽位；历史每图池化16token",
+      "status": "strong",
+      "evidence": [
+        "https://github.com/dexmal/opendm/blob/fe1ed79a22d81cc1bfbeb2b4418bbb79fc75fc50/opendm/data/transforms.py#L230"
+      ],
+      "limitations": "仅限正文明确标注阶段与版本；机制推断和教学例子不代表独立实验验证"
+    },
+    {
+      "id": "impl-fm",
+      "claim": "动作SFT使用噪声端为1的速度目标与每样本有效元素归约",
+      "status": "strong",
+      "evidence": [
+        "https://github.com/dexmal/opendm/blob/fe1ed79a22d81cc1bfbeb2b4418bbb79fc75fc50/opendm/model/dm05/dm05_arch.py#L837"
+      ],
+      "limitations": "仅限正文明确标注阶段与版本；机制推断和教学例子不代表独立实验验证"
+    }
+  ],
+  "code_evidence": {
+    "repo": "dexmal/opendm",
+    "commit": "fe1ed79a22d81cc1bfbeb2b4418bbb79fc75fc50",
+    "files": [
+      "docs/zh/dm05_mem_sft.md",
+      "docs/zh/dm05_inference.md",
+      "opendm/model/dm05/dm05_arch.py"
+    ]
+  },
+  "discrepancies": [],
+  "implementation_review": {
+    "date": "2026-11-03",
+    "scope": "Static source and report reading; no training/inference execution",
+    "reference": "paper-deep-reader/references/implementation-and-training.md",
+    "missing_details_explicit": true
+  }
+}

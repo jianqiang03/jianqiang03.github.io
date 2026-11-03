@@ -1,0 +1,95 @@
+{
+  "schema_version": 5,
+  "paper": {
+    "title": "Dyna-2 and Training Dyna-2 at million-hour scale, repeatably",
+    "sources": [
+      "https://www.dyna.co/dyna-2",
+      "https://www.dyna.co/research/dyna-2-infrastructure"
+    ],
+    "page_convention": "官方HTML分开计数的Figure编号；无PDF页码"
+  },
+  "reader_profile": {
+    "domain": "computer-science-ai",
+    "audience": "broad-to-expert",
+    "goal": "understand",
+    "depth": "deep",
+    "language": "zh-CN",
+    "selected_lenses": [
+      "computer-science-ai",
+      "engineering-systems"
+    ],
+    "delivery": "explain",
+    "entry_level": "novice",
+    "technical_ceiling": "doctoral"
+  },
+  "explanation": {
+    "strategy": "intuition-to-precision",
+    "define_terms_on_first_use": true,
+    "report_structure": "six-section",
+    "key_visual_policy": "all-key-visuals"
+  },
+  "visual_coverage": {
+    "total_numbered": 29,
+    "editorially_numbered_tables": 1,
+    "key": 23,
+    "key_explained": 23
+  },
+  "execution": {
+    "visual_mode": "visual",
+    "visual_verification": "complete",
+    "scope": "截图静态核验；图8仅默认轮播；演示视频不作逐帧审核"
+  },
+  "claims": [
+    {
+      "id": "transfer",
+      "claim": "扩大人类预训练改善受测机器人迁移表现",
+      "status": "partial",
+      "evidence": [
+        "https://www.dyna.co/dyna-2 Figures 7–8"
+      ],
+      "limitations": "任务范围与试验次数有限；离线与闭环定义不同"
+    },
+    {
+      "id": "video",
+      "claim": "额外视频有独立于动作标签的迁移价值",
+      "status": "strong",
+      "evidence": [
+        "https://www.dyna.co/dyna-2 Figures 11–12"
+      ],
+      "limitations": "特定来源和配方"
+    },
+    {
+      "id": "infra",
+      "claim": "系统不同阶段得到显著局部改善",
+      "status": "strong",
+      "evidence": [
+        "https://www.dyna.co/research/dyna-2-infrastructure Figures 3,6,7,9,11"
+      ],
+      "limitations": "局部速度不能合并成端到端训练倍率"
+    },
+    {
+      "id": "impl-implementation",
+      "claim": "样本、掩码与梯度路径重建；未公开默认值保持未知",
+      "status": "partial",
+      "evidence": [
+        "https://www.dyna.co/dyna-2"
+      ],
+      "limitations": "仅限正文明确标注阶段与版本；机制推断和教学例子不代表独立实验验证"
+    },
+    {
+      "id": "impl-systems",
+      "claim": "按数据等待、计算、通信与启动分别解释系统收益",
+      "status": "partial",
+      "evidence": [
+        "https://www.dyna.co/research/dyna-2-infrastructure"
+      ],
+      "limitations": "仅限正文明确标注阶段与版本；机制推断和教学例子不代表独立实验验证"
+    }
+  ],
+  "implementation_review": {
+    "date": "2026-11-03",
+    "scope": "Static source and report reading; no training/inference execution",
+    "reference": "paper-deep-reader/references/implementation-and-training.md",
+    "missing_details_explicit": true
+  }
+}
