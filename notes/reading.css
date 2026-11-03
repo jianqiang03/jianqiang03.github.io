@@ -1,8 +1,8 @@
-/* Shared, restrained reading layout for research notes. */
-:root{--reading-width:840px}
+/* Shared, fluid reading layout for research notes. */
+:root{--reading-width:100%}
 body{font-size:17px;padding-left:224px}
 aside{width:224px;padding:30px 22px}
-main{max-width:960px;padding:52px 40px 88px}
+main{width:100%;max-width:none;padding:52px 36px 88px}
 main>h1,main>h1+p,main>p,main>h2,main>h3,main>h4,
 main>ul,main>ol,main>pre,main>blockquote,main>footer,
 main>table,main>p:has(>img),main>.training-map{
