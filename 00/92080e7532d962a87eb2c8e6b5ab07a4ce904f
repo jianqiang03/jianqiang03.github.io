@@ -1,0 +1,119 @@
+.gitignore
+  s_3bab766aaf626e::t_23f3a7a2078549 1-6
+README.md
+  s_3bab766aaf626e::t_ae493d40fbaffb 55-64
+docs/paper-toolchain.md
+  s_3bab766aaf626e::t_427f397d7aef83 1-71
+requirements.txt
+  s_3bab766aaf626e::t_42aa5ecae209be 1-5
+scripts/vla-pretraining/code-manifest.json
+  s_3bab766aaf626e::t_c56ba4ac07635c 1-28
+scripts/vla-pretraining/code_sources.py
+  s_3bab766aaf626e::t_036ddf22163ad7 1-21
+scripts/vla-pretraining/fetch_sources.py
+  s_3bab766aaf626e::t_972a1497af6cfe 1-11
+scripts/vla-pretraining/render_evidence_pages.py
+  s_3bab766aaf626e::t_d4b2aba0cb0d0b 1-16
+skills/README.md
+  s_3bab766aaf626e::t_930af2c04c87b7 1-32
+skills/paper-deep-reader/.gitignore
+  s_3bab766aaf626e::t_dabb2f0645c7c7 1-6
+skills/paper-deep-reader/.paper-reader.example.yaml
+  s_3bab766aaf626e::t_a230e9d8712f7c 1-22
+skills/paper-deep-reader/CHANGELOG.md
+  s_3bab766aaf626e::t_8e2c792814f9cf 1-50
+skills/paper-deep-reader/DESIGN_NOTES.md
+  s_3bab766aaf626e::t_e9851a0ce13855 1-190
+skills/paper-deep-reader/LICENSE
+  s_3bab766aaf626e::t_833a4380d13a12 1-21
+skills/paper-deep-reader/README.md
+  s_3bab766aaf626e::t_b2713ecc633498 1-348
+skills/paper-deep-reader/SKILL.md
+  s_3bab766aaf626e::t_fc1c8c9848a68b 1-228
+skills/paper-deep-reader/agents/openai.yaml
+  s_3bab766aaf626e::t_28a3f8e07d78f6 1-4
+skills/paper-deep-reader/references/audience-profiles.md
+  s_3bab766aaf626e::t_79e72283b8c5dd 1-222
+skills/paper-deep-reader/references/domain-lenses.md
+  s_3bab766aaf626e::t_4e5cc9dfdaa816 1-337
+skills/paper-deep-reader/references/implementation-and-training.md
+  s_3bab766aaf626e::t_324f64d8fab8b3 1-62
+skills/paper-deep-reader/references/paper-type-lenses.md
+  s_3bab766aaf626e::t_b7722b1b9228a4 1-216
+skills/paper-deep-reader/references/quality-checklist.md
+  s_3bab766aaf626e::t_9b8030427c9ce5 1-141
+skills/paper-deep-reader/references/reading-protocol.md
+  s_3bab766aaf626e::t_47da605e55e3b8 1-282
+skills/paper-deep-reader/references/report-template.md
+  s_3bab766aaf626e::t_9b1994159fdd2d 1-300
+skills/paper-deep-reader/references/source-map-template.json
+  s_3bab766aaf626e::t_aa07941f9c723e 1-63
+skills/paper-deep-reader/references/visual-capability.md
+  s_3bab766aaf626e::t_6e7f1e4bfada05 1-219
+skills/paper-deep-reader/requirements.txt
+  s_3bab766aaf626e::t_0fb72334f6b6b9 1
+skills/paper-deep-reader/scripts/extract_pdf_assets.py
+  s_3bab766aaf626e::t_25857ed0917f2e 1-966
+skills/paper-deep-reader/scripts/validate_report.py
+  s_3bab766aaf626e::t_38dd8c0e39f375 1-1191
+skills/paper-deep-reader/tests/test_validate_report.py
+  s_3bab766aaf626e::t_c399d204d0fc58 1-426
+skills/paper-reading/.gitignore
+  s_3bab766aaf626e::t_4b27203457787d 1-109
+skills/paper-reading/CHANGELOG.md
+  s_3bab766aaf626e::t_fe9680dca372d4 1-39
+skills/paper-reading/LICENSE
+  s_3bab766aaf626e::t_ad9c857a544b19 1-201
+skills/paper-reading/NOTICE.md
+  s_3bab766aaf626e::t_f71c8b063fb75b 1-33
+skills/paper-reading/README.md
+  s_3bab766aaf626e::t_2b9994e9dd0ef1 1-76
+skills/paper-reading/SKILL.md
+  s_3bab766aaf626e::t_8834d39d1f7aac 1-208
+skills/paper-reading/agents/openai.yaml
+  s_3bab766aaf626e::t_4d9d105fc45328 1-4
+skills/paper-reading/assets/minimal-paper.html
+  s_3bab766aaf626e::t_2b3352ff33d065 1-165
+skills/paper-reading/evals/evals.json
+  s_3bab766aaf626e::t_135191b249e26a 1-134
+skills/paper-reading/references/evidence-quality.md
+  s_3bab766aaf626e::t_8d29e4eb6c175b 1-91
+skills/paper-reading/references/html-contract.md
+  s_3bab766aaf626e::t_e59a603b15a734 1-291
+skills/paper-reading/references/html-layout.md
+  s_3bab766aaf626e::t_f75ba959d2d305 1-84
+skills/paper-reading/references/katex.md
+  s_3bab766aaf626e::t_b71e756bafd39f 1-411
+skills/paper-reading/references/mermaid.md
+  s_3bab766aaf626e::t_a02ddbf1052aa8 1-271
+skills/paper-reading/references/output-contracts.md
+  s_3bab766aaf626e::t_90cb6fd3cb9a1a 1-185
+skills/paper-reading/references/reading-workflow.md
+  s_3bab766aaf626e::t_88f926d070cf5b 1-316
+skills/paper-reading/references/remote-sensing.md
+  s_3bab766aaf626e::t_1d867b28272a2c 1-74
+skills/paper-reading/scripts/bridge.py
+  s_3bab766aaf626e::t_3167c5194a1ea6 1-714
+skills/paper-reading/scripts/validate_paper_html.py
+  s_3bab766aaf626e::t_176e182f25c407 1-591
+skills/paper-reading/scripts/validate_skill.py
+  s_3bab766aaf626e::t_286e74150277cb 1-297
+skills/paper-reading/tests/smoke_test.py
+  s_3bab766aaf626e::t_eb9232bac8bc4a 1-100
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0092080e7532d962a87eb2c8e6b5ab07a4ce904f",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
