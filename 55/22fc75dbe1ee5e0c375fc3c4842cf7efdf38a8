@@ -1,0 +1,31 @@
+README.md
+  s_3bab766aaf626e::t_d9f623f0161121 65-70
+index.html
+  s_3bab766aaf626e::t_88860ca158c181 6
+notes/pi07/index.html
+  s_3bab766aaf626e::t_490cd843d206d2 1-255
+notes/pi07/report.md
+  s_3bab766aaf626e::t_a576809f2e3477 1-257
+notes/pi07/source_map.json
+  s_3bab766aaf626e::t_52d8e8ee1c230d 1-141
+notes/pi07/visual_manifest.json
+  s_3bab766aaf626e::t_3e5c1bd37274ea 1-366
+scripts/render-paper-note.py
+  s_3bab766aaf626e::t_22ba477f0935ae 13,57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5522fc75dbe1ee5e0c375fc3c4842cf7efdf38a8",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
