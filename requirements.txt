@@ -1,0 +1,5 @@
+# Python 3.10+; pdftotext is a separate system dependency (Poppler).
+requests>=2.31,<3
+Markdown>=3.5,<4
+beautifulsoup4>=4.12,<5
+PyMuPDF>=1.24,<2

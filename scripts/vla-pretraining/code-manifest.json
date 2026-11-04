@@ -1,0 +1,28 @@
+{
+  "openvla": {
+    "repo": "openvla/openvla",
+    "commit": "c8f03f48af692657d3060c19588038c7220e9af9",
+    "files": [
+      "vla-scripts/train.py",
+      "prismatic/conf/vla.py",
+      "prismatic/vla/datasets/rlds/oxe/mixtures.py"
+    ]
+  },
+  "molmoact2": {
+    "repo": "allenai/molmoact2",
+    "commit": "6070080a20321b4f498ab30f28e1d09ac465edb7",
+    "files": [
+      "experiments/launch_scripts/pretrain.py",
+      "experiments/README.md",
+      "experiments/launch_scripts/train_lerobot.py",
+      "experiments/olmo/nn/action_expert.py"
+    ]
+  },
+  "foundry": {
+    "repo": "TRI-ML/vla_foundry",
+    "commit": "77d2866757b128c77f294d2ad2c5321978943956",
+    "files": [
+      "README.md"
+    ]
+  }
+}

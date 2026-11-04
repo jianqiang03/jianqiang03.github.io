@@ -52,3 +52,13 @@ GitHub Pages 从 `main` 分支的根目录发布。修改文件并推送后，�
 - 编辑 `notes/vla-pretraining/report.md`，运行 `python scripts/render-paper-note.py vla-pretraining`。
 - 论文版本与固定代码提交见 `source_map.json`，所选图页记录见 `visual_manifest.json`。
 - 本专题区分论文事实、代码核对和未执行建议；没有运行训练。
+
+## 论文解读工具与 skills
+
+两个本地阅读 skill 和本次预训练专题辅助脚本现已随仓库发布：
+
+- [skills 与安装说明](skills/README.md)
+- [完整工具链、依赖与使用流程](docs/paper-toolchain.md)
+- [五篇论文材料下载与图页渲染脚本](scripts/vla-pretraining/)
+
+技能保留各自原始许可；阅读与分析由 agent 完成，提取及网页渲染由脚本完成。

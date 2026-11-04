@@ -1,0 +1,109 @@
+# ── Python 编译缓存 ────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.Python
+
+# ── 测试 / 类型检查缓存 ────────────────────────────────
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ── 敏感信息 / API 密钥（绝不入库）─────────────────────
+.env
+.env.*
+!.env.example
+*.secret
+*_api_key*
+*_token*
+credentials.json
+secrets.json
+
+# ── 开发软件配置目录 / IDE ─────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ── 操作系统产生的文件 ─────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE_BIN/
+ehthumbs.db
+
+# ── 日志 / 临时文件 ────────────────────────────────────
+*.log
+.tmp/
+tmp/
+
+# ── 2026-10-27 统一范式补全（与 techdou 仓 .gitignore 标准对齐）──
+
+# ── 私密信息与密钥：绝不入库 ──
+*.key
+*.pem
+*.p12
+*.pfx
+secrets*
+credentials*
+*.token
+_htpasswd
+
+
+# ── 开发软件配置目录：本地工具状态不上传 ──
+.claude/
+.claude.json
+.codex/
+.cursor/
+.gemini/
+.zcode/
+.windsurf/
+.trae/
+.roo/
+.aider*
+continue/
+.aws/
+.ssh/
+
+
+# ── 内部文档与开发状态：不入版本控制，避免泄漏 ──
+# README.md / CHANGELOG.md / SKILL.md / references/ / evals/ 是仓库正式内容，保持跟踪
+drafts/
+notes/
+private/
+internal/
+dev/
+dev-notes/
+.archive/
+.research/
+*.draft.md
+*.local.md
+*.wip.md
+DEVLOG.md
+TODO.md
+STATUS.md
+
+
+# ── Python 运行产物 ──
+.venv/
+venv/
+
+
+# ── Node 前端产物 ──
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+*.tsbuildinfo
+
+
+# ── 系统与临时文件 ──
+desktop.ini
+*.tmp
