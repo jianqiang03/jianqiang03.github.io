@@ -56,5 +56,9 @@
       ]
     }
   },
-  "execution": "No training or inference executed; selective source inspection, not end-to-end reproduction."
+  "execution": "No training or inference executed; selective source inspection, not end-to-end reproduction.",
+  "revision_notes": [
+    "补全问题—作者方案—计算例子—证据—未解决边界；Scaling依据§III-A式4、§IV-A/B、表II与§V-A。频率重采样示例明确为实施建议。",
+    "AXIS依据§IV-A/B/C补全接近奖励与条件化闭环；MolmoAct2依据§4.1/4.2补全优化目标分工；OpenVLA依据§3.2/3.5补全分位离散方案及剩余限制。"
+  ]
 }
