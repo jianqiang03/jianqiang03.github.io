@@ -1,0 +1,37 @@
+{
+  "scope": "Selected pretraining evidence pages; not an exhaustive full-paper figure inventory",
+  "items": [
+    {
+      "paper": "scaling",
+      "pdf_page": 7,
+      "role": "图5与表V：混合和正则负结果",
+      "asset": "assets/scaling-p7.png",
+      "visual_verification": "complete",
+      "crop": "full page; figures and captions preserved"
+    },
+    {
+      "paper": "quality",
+      "pdf_page": 5,
+      "role": "图5与图6：模型依赖的质量学习收益",
+      "asset": "assets/quality-p5.png",
+      "visual_verification": "complete",
+      "crop": "full page; figures and captions preserved"
+    },
+    {
+      "paper": "molmoact2",
+      "pdf_page": 11,
+      "role": "图4：目标遮挡与KV连接",
+      "asset": "assets/molmoact2-p11.png",
+      "visual_verification": "complete",
+      "crop": "full page; figures and captions preserved"
+    },
+    {
+      "paper": "foundry",
+      "pdf_page": 25,
+      "role": "表4：训练曝光与预算",
+      "asset": "assets/foundry-p25.png",
+      "visual_verification": "complete",
+      "crop": "full page; figures and captions preserved"
+    }
+  ]
+}

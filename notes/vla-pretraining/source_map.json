@@ -1,0 +1,60 @@
+{
+  "updated": "2026-11-04",
+  "scope": "five-paper targeted pretraining reading",
+  "papers": {
+    "scaling": {
+      "url": "https://arxiv.org/pdf/2602.09722v1",
+      "sha256": "b383aed3396dff29d1050688bea50d1f81346757fdbd84506f0590c137db414a",
+      "bytes": 5497461
+    },
+    "quality": {
+      "url": "https://arxiv.org/pdf/2610.18869v1",
+      "sha256": "06996bd403478658dd49cabee520f43674cf91ce227182aad22db67760e44f38",
+      "bytes": 2769773
+    },
+    "molmoact2": {
+      "url": "https://arxiv.org/pdf/2605.02881v1",
+      "sha256": "1734fb13d01e8145371f73d0b3b4ec4a55a1ff854720b800b27d7067f40796ce",
+      "bytes": 20730844
+    },
+    "openvla": {
+      "url": "https://arxiv.org/pdf/2406.09246v1",
+      "sha256": "9d44351d8ca2aafc11b28949c99d9a99bd1403598fcf9cca042bbfda2dceb706",
+      "bytes": 13191394
+    },
+    "foundry": {
+      "url": "https://arxiv.org/pdf/2604.19728v1",
+      "sha256": "ccd7f4cde47f0ff00e0561ed895ac8af37f6b8b8d349c9a7e457913553924785",
+      "bytes": 17764190
+    }
+  },
+  "code": {
+    "openvla": {
+      "repo": "openvla/openvla",
+      "commit": "c8f03f48af692657d3060c19588038c7220e9af9",
+      "files": [
+        "vla-scripts/train.py",
+        "prismatic/conf/vla.py",
+        "prismatic/vla/datasets/rlds/oxe/mixtures.py"
+      ]
+    },
+    "molmoact2": {
+      "repo": "allenai/molmoact2",
+      "commit": "6070080a20321b4f498ab30f28e1d09ac465edb7",
+      "files": [
+        "experiments/launch_scripts/pretrain.py",
+        "experiments/README.md",
+        "experiments/launch_scripts/train_lerobot.py",
+        "experiments/olmo/nn/action_expert.py"
+      ]
+    },
+    "foundry": {
+      "repo": "TRI-ML/vla_foundry",
+      "commit": "77d2866757b128c77f294d2ad2c5321978943956",
+      "files": [
+        "README.md"
+      ]
+    }
+  },
+  "execution": "No training or inference executed; selective source inspection, not end-to-end reproduction."
+}

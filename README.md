@@ -45,3 +45,10 @@ GitHub Pages 从 `main` 分支的根目录发布。修改文件并推送后，�
 ## 授权状态
 
 仓库目前公开，尚未添加开源许可证。论文原图和其他第三方内容保留其来源及原作者权利。
+
+## VLA 预训练专题（2026-11-04）
+
+- 页面：`notes/vla-pretraining/`，覆盖 Scaling、AXIS、MolmoAct2、OpenVLA、VLA Foundry。
+- 编辑 `notes/vla-pretraining/report.md`，运行 `python scripts/render-paper-note.py vla-pretraining`。
+- 论文版本与固定代码提交见 `source_map.json`，所选图页记录见 `visual_manifest.json`。
+- 本专题区分论文事实、代码核对和未执行建议；没有运行训练。

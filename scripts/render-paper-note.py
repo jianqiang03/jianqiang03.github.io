@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 FOCUS = {
+    'vla-pretraining': ['数据配方', '梯度分工', '训练协议', '代码入口'],
     'epsilon4p': ['低精度边界', '异任务边界', '采样实现', '梯度机制'],
     'dm05': ['从一条示教追到模型', '历史如何成为 token', '一次训练更新', '推理如何用同一'],
     'vpp2': ['代码路径', '精确到损失', '梯度与冻结', '数据选择本身'],
@@ -52,7 +53,7 @@ for slug in sys.argv[1:]:
     for child in list(body.contents):
         main.append(child.extract())
     footer = shell.new_tag('footer')
-    footer.string = '2026-11-03 · 实现深读更新。论文、报告与固定版本代码分别标注；未运行模型训练或推理。原始图表归作者所有。'
+    footer.string = ('2026-11-04' if slug == 'vla-pretraining' else '2026-11-03') + ' · 实现深读更新。论文、报告与固定版本代码分别标注；未运行模型训练或推理。原始图表归作者所有。'
     main.append(footer)
     aside = shell.select_one('aside')
     for link in list(aside.select('a[href^="#"]')):
