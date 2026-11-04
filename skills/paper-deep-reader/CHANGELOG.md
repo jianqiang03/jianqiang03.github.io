@@ -1,5 +1,11 @@
 # Changelog
 
+## Local narrative update — 2026-11-04
+
+- 根据用户指定的知乎 pi0.7 解读及连续讲解反馈，增加 mechanism-narrative 参考。
+- 强化问题—作者方案闭合、训练与推理对照、参数语义、问题驱动实验；保留一手来源核验。
+- 本地修改涉及 SKILL.md、report-template、quality-checklist 和新增参考；未修改校验器或测试。
+
 ## 4.0.0 — 2026-08-15
 
 - 恢复六部分论文解读结构作为默认 `explain` 契约：一句话总结、背景与动机、核心方法、实验与结果、贡献与影响、结论。

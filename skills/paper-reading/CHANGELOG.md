@@ -37,3 +37,7 @@
 - 建立“快速扫读 → Abstract → 主框架图/Conclusion → Experiment → 阅读决策 → Introduction → Approach → Related Work”的两遍阅读流程。
 - 新增 A/B/C/D 阅读优先级、实验公平性、复现风险和遥感专项检查。
 - 将 HTML 调整为可选交付层。
+
+## Local narrative update — 2026-11-04
+
+Modified SKILL.md to connect problems to author solutions, training to inference, and method claims to question-driven experiments. Reference article is attributed in SKILL.md. No scripts or tests changed.

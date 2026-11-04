@@ -99,6 +99,12 @@ Give an explicit reading decision:
 
 This decision is a reading-priority judgment, not an acceptance recommendation.
 
+### Reader-facing mechanism closure (local modification, 2026-11-04)
+
+For explanatory prose, close each material problem with the authors' concrete operation, how it changes the sample/computation, and supporting evidence before discussing remaining limits. If the paper does not solve it, say so and label any proposed remedy separately. Connect training-time label/condition construction to inference-time availability and settings. Explain parameters at their point of use, including conditional probabilities and physical time. Organize experiments around questions about the method. Preserve evidence attribution without turning every paragraph into an audit-field list.
+
+This local preference draws on the user's feedback and the presentation of 梦落花's [pi0.7 interpretation](https://zhuanlan.zhihu.com/p/2028423606628102667), read on 2026-11-04. It adopts explanatory organization, not unverified technical claims or copied prose; primary-paper verification remains necessary.
+
 ### 4. Deep-read only what the task justifies
 
 For Introduction, reconstruct the argument from importance to prior limitation to proposed solution.
