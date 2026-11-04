@@ -1,0 +1,31 @@
+README.md
+  s_3bab766aaf626e::t_ea00f6c5f26799 48-54
+index.html
+  s_3bab766aaf626e::t_6384e331afd943 6
+notes/vla-pretraining/index.html
+  s_3bab766aaf626e::t_e86bae4d5c17ea 1-517
+notes/vla-pretraining/report.md
+  s_3bab766aaf626e::t_728a3f0949c1e4 1-307
+notes/vla-pretraining/source_map.json
+  s_3bab766aaf626e::t_c740a0d353b56f 1-60
+notes/vla-pretraining/visual_manifest.json
+  s_3bab766aaf626e::t_954ba6ca78c195 1-37
+scripts/render-paper-note.py
+  s_3bab766aaf626e::t_26e6b10ab98c23 13,56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a7bdc8eba33cc8589256c9525d444339a3cea31b",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
