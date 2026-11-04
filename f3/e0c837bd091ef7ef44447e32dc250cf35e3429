@@ -1,0 +1,31 @@
+skills/paper-deep-reader/CHANGELOG.md
+  s_3bab766aaf626e::t_25766e6a426712 3-8
+skills/paper-deep-reader/SKILL.md
+  s_3bab766aaf626e::t_f6e1987963b436 103-104
+skills/paper-deep-reader/references/mechanism-narrative.md
+  s_3bab766aaf626e::t_7269614eeac7e9 1-65
+skills/paper-deep-reader/references/quality-checklist.md
+  s_3bab766aaf626e::t_b9f86eda8dc751 27-30
+skills/paper-deep-reader/references/report-template.md
+  s_3bab766aaf626e::t_a4dcda31b34c1b 33-34
+skills/paper-reading/CHANGELOG.md
+  s_3bab766aaf626e::t_83e7b431450db2 40-43
+skills/paper-reading/SKILL.md
+  s_3bab766aaf626e::t_abdc3cd05f272a 102-107
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f3e0c837bd091ef7ef44447e32dc250cf35e3429",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
