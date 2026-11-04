@@ -1,0 +1,23 @@
+notes/vla-pretraining/index.html
+  s_3bab766aaf626e::t_0547ac40c05d24 39,90-99,102,141,148,153,185-186,188,227,231,235,244-246,258,290,292-293,295,298,337,340,344,348,397,402,441,444,488
+notes/vla-pretraining/report.md
+  s_3bab766aaf626e::t_e79bb3441d0042 31-47,102-105,161-163,202-204,228-229
+notes/vla-pretraining/source_map.json
+  s_3bab766aaf626e::t_5028b7abebf527 59-63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "34295b6f47e251e2653ae4eadb0e6f819682fbfe",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
