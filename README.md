@@ -62,3 +62,9 @@ GitHub Pages 从 `main` 分支的根目录发布。修改文件并推送后，�
 - [五篇论文材料下载与图页渲染脚本](scripts/vla-pretraining/)
 
 技能保留各自原始许可；阅读与分析由 agent 完成，提取及网页渲染由脚本完成。
+
+## π0.7 深读
+
+- 页面：`notes/pi07/`；正文：`notes/pi07/report.md`。
+- 渲染：`python scripts/render-paper-note.py pi07`。
+- 固定官方 PDF 哈希和图表说明见该目录 source_map.json、visual_manifest.json。

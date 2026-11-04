@@ -1,0 +1,141 @@
+{
+  "schema_version": 5,
+  "paper": {
+    "title": "π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities",
+    "authors": [
+      "Physical Intelligence",
+      "Bo Ai et al."
+    ],
+    "venue": "Physical Intelligence technical report",
+    "version": "Official project PDF fetched 2026-11-04; project dated 2026-04-16; URL unversioned",
+    "sources": [
+      {
+        "type": "pdf",
+        "location": "https://www.pi.website/download/pi07.pdf",
+        "sha256": "d718dbcfcf294f87a2179052dcd2e783ea1f542f484d05dfa2ce139bc00d7d5b",
+        "role": "primary"
+      }
+    ],
+    "page_convention": "1-based PDF page numbers"
+  },
+  "reader_profile": {
+    "domain": "robotics / machine learning",
+    "selected_lenses": [
+      "implementation-and-training",
+      "AI/CS"
+    ],
+    "audience": "broad-to-expert",
+    "entry_level": "novice",
+    "technical_ceiling": "doctoral",
+    "goal": "understand",
+    "depth": "deep",
+    "delivery": "explain",
+    "language": "zh-CN"
+  },
+  "explanation": {
+    "strategy": "intuition-to-precision",
+    "define_terms_on_first_use": true,
+    "report_structure": "six-section",
+    "key_visual_policy": "all-key-visuals"
+  },
+  "execution": {
+    "visual_mode": "visual",
+    "visual_verification": "complete",
+    "text_evidence_sources": [
+      "https://www.pi.website/download/pi07.pdf"
+    ],
+    "note": "Selected assets directly reviewed; no training or inference run; no official implementation audited.",
+    "validation": {
+      "strict_validator": "failed: legacy wording-based pedagogy and figure-neighborhood checks do not recognize the natural narrative reliably; not represented as passed",
+      "manual_review": "Reviewed concept definitions, author-solution closure, each included figure group, evidence limitations, future comparisons, and source links. Key figures share whole-page assets.",
+      "model_experiments": "not run"
+    }
+  },
+  "visual_coverage": {
+    "total_numbered": 23,
+    "key": 21,
+    "key_explained": 21
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "条件通过元数据、子任务、图像目标与控制模式区分行为",
+      "status": "strong",
+      "inference": false,
+      "evidence": [
+        {
+          "type": "paper",
+          "locator": "§V, Fig2/3, pp4–6",
+          "note": "直接阅读官方正文与图表"
+        }
+      ],
+      "caveats": [
+        "质量标签不等于测量误差修复"
+      ]
+    },
+    {
+      "id": "C2",
+      "claim": "动作loss与VLM之间使用知识隔离",
+      "status": "strong",
+      "inference": false,
+      "evidence": [
+        {
+          "type": "paper",
+          "locator": "§III, Fig19, pp3/22",
+          "note": "直接阅读官方正文与图表"
+        }
+      ],
+      "caveats": [
+        "未审计完整实现"
+      ]
+    },
+    {
+      "id": "C3",
+      "claim": "有元数据的模型更能利用混合质量扩展",
+      "status": "strong",
+      "inference": false,
+      "evidence": [
+        {
+          "type": "paper",
+          "locator": "§IX-E, Fig18, pp14–15",
+          "note": "直接阅读官方正文与图表"
+        }
+      ],
+      "caveats": [
+        "任务和标签体系限定；非普适噪声定理"
+      ]
+    },
+    {
+      "id": "C4",
+      "claim": "语言coaching可训练高层策略",
+      "status": "strong",
+      "inference": false,
+      "evidence": [
+        {
+          "type": "paper",
+          "locator": "§IX-D, Fig14–16, pp13–14",
+          "note": "直接阅读官方正文与图表"
+        }
+      ],
+      "caveats": [
+        "自主版本仍利用新增高层训练信息"
+      ]
+    },
+    {
+      "id": "C5",
+      "claim": "生成目标图像改善多项复杂指令及迁移任务",
+      "status": "strong",
+      "inference": false,
+      "evidence": [
+        {
+          "type": "paper",
+          "locator": "Fig10–12/17, pp11–13",
+          "note": "直接阅读官方正文与图表"
+        }
+      ],
+      "caveats": [
+        "并非所有任务一致提高"
+      ]
+    }
+  ]
+}
