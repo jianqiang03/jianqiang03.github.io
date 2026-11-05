@@ -1,4 +1,4 @@
 interface:
   display_name: "论文深度解读"
-  short_description: "生成零背景可读、博士级深入且逐关键图表讲解的六部分论文报告"
-  default_prompt: "使用 $paper-deep-reader 精读这篇论文，生成零背景可读、博士级深入并逐一解读所有关键图表的六部分报告。"
+  short_description: "以样本和机制串起数据、训练、推理与实验证据"
+  default_prompt: "使用 $paper-deep-reader 精读这篇论文，先指出核心改动，再沿一条样本讲清数据、模型、损失、梯度与推理，通过关键图表检验证据，区分作者方案与未公开细节。"
