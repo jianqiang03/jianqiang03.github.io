@@ -6,6 +6,8 @@ jianqiang03 的个人研究笔记网站，关注机器人学习、数据与训�
 
 ## 已发布解读
 
+- [MEM：短期视频、长期摘要与记忆预训练](https://jianqiang03.github.io/notes/mem/)
+
 - [ε4P：不同精度的数据，怎样共同训练一个策略？](https://jianqiang03.github.io/notes/epsilon4p/)
 - [DM0.5：记住过去，理解阶段，对齐动作](https://jianqiang03.github.io/notes/dm05/)
 - [VPP2：先把未来预测对，再把动作学好](https://jianqiang03.github.io/notes/vpp2/)
@@ -29,7 +31,7 @@ python -m http.server 8080 --bind 127.0.0.1
 
 | 文件 | 用途 |
 | --- | --- |
-| [index.html](index.html) | 首页内容、导航和 SVG 插画 |
+| [index.html](index.html) | 首页内容、近期阅读和文章索引 |
 | [style.css](style.css) | 首页样式与响应式布局 |
 | [notes/dyna-2/index.html](notes/dyna-2/index.html) | 论文页，CSS 与图片内嵌在 HTML 中 |
 | [docs/github-pages-guide.md](docs/github-pages-guide.md) | 从制作、预览到发布和维护的中文教程 |
@@ -68,3 +70,9 @@ GitHub Pages 从 `main` 分支的根目录发布。修改文件并推送后，�
 - 页面：`notes/pi07/`；正文：`notes/pi07/report.md`。
 - 渲染：`python scripts/render-paper-note.py pi07`。
 - 固定官方 PDF 哈希和图表说明见该目录 source_map.json、visual_manifest.json。
+
+## MEM 深读
+
+- 正文：`notes/mem/report.md`；渲染：`python scripts/render-paper-note.py mem`。
+- 官方 PDF 固定哈希、逐项主张、原图核验见同目录 `source_map.json`、`visual_manifest.json`。
+- 未披露实现与教学损失表达已区分，没有运行模型训练或推理。

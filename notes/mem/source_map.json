@@ -1,0 +1,165 @@
+{
+  "schema_version": 5,
+  "paper": {
+    "title": "MEM: Multi-Scale Embodied Memory for Vision Language Action Models",
+    "version": "User-provided official 15-page PDF, downloaded 2026-11-05",
+    "sha256": "63413aa32bb2b070ae0a0cbc5d5a2eb77686308725e48f15bcaa338bd3d644aa",
+    "sources": [
+      "https://www.pi.website/download/Mem.pdf",
+      "https://www.pi.website/research/memory",
+      "https://arxiv.org/abs/2603.03596"
+    ],
+    "page_convention": "PDF 1-based"
+  },
+  "reader_profile": {
+    "delivery": "explain",
+    "depth": "deep",
+    "language": "zh-CN",
+    "goal": "Mechanisms, training and transfer to UMI/robot pretraining"
+  },
+  "execution": {
+    "visual_mode": "visual",
+    "visual_verification": "complete for 10 selected assets",
+    "model_execution": false,
+    "scope": "Full methods, experiment and appendix reading; nine numbered figures plus appendix equations visually reviewed; no model training/inference; no official MEM training code obtained."
+  },
+  "visual_coverage": {
+    "total_numbered_figures": 10,
+    "key_figures": 9,
+    "additional_key_equation_groups": 1,
+    "embedded_assets": 10
+  },
+  "claims": [
+    {
+      "id": "architecture",
+      "claim": "两种时间尺度通过高层摘要/子任务与低层视频动作分工",
+      "status": "strong",
+      "evidence": [
+        "https://www.pi.website/download/Mem.pdf#page=3",
+        "III-A/B, Figure 2"
+      ],
+      "limitations": "高层观测窗口在III-A与III-B的记号不同，完整共享/独立权重配置未披露"
+    },
+    {
+      "id": "encoder",
+      "claim": "每四层加入时间计算，复用ViT参数并输出当前时刻表示",
+      "status": "strong",
+      "evidence": [
+        "https://www.pi.website/download/Mem.pdf#page=4",
+        "III-C, Figure 4, Appendix C"
+      ],
+      "limitations": "附录3索引与分离注意力描述不完全一致，无法恢复精确算子"
+    },
+    {
+      "id": "latency",
+      "claim": "四路相机单H100测试下16帧推理约0.2秒，对照约3.5秒",
+      "status": "partial",
+      "evidence": [
+        "https://www.pi.website/download/Mem.pdf#page=4",
+        "Figure 3"
+      ],
+      "limitations": "读图约值，非训练吞吐或包括高层通信在内的完整系统时延"
+    },
+    {
+      "id": "summary",
+      "claim": "LLM用子任务语言及成功失败指示生成摘要更新监督",
+      "status": "strong",
+      "evidence": [
+        "https://www.pi.website/download/Mem.pdf#page=3",
+        "III-B"
+      ],
+      "limitations": "没有完整提示、标注LLM、长度和质检协议"
+    },
+    {
+      "id": "gradient",
+      "claim": "FAST和flow专家并行训练，专家梯度不流入VLM骨干",
+      "status": "strong",
+      "evidence": [
+        "https://www.pi.website/download/Mem.pdf#page=5",
+        "III-D"
+      ],
+      "limitations": "教学损失不是作者配方；参数组和任务loss权重未披露"
+    },
+    {
+      "id": "window",
+      "claim": "预训练六观测一秒间隔，后训练报告最多18帧54秒",
+      "status": "strong",
+      "evidence": [
+        "https://www.pi.website/download/Mem.pdf#page=5",
+        "III-D"
+      ],
+      "limitations": "不能由此指定所有任务的stride或padding"
+    },
+    {
+      "id": "long-horizon",
+      "claim": "两种记忆组合优于各自及朴素指令历史",
+      "status": "partial",
+      "evidence": [
+        "https://www.pi.website/download/Mem.pdf#page=6",
+        "Figure 6; Appendix B.1"
+      ],
+      "limitations": "指标为任务进度；没有独立控制摘要长度、语义内容等全部因素"
+    },
+    {
+      "id": "adaptation",
+      "claim": "失败历史帮助策略利用同样的纠正数据",
+      "status": "partial",
+      "evidence": [
+        "https://www.pi.website/download/Mem.pdf#page=7",
+        "IV-B, Figure 7, Appendix B.2"
+      ],
+      "limitations": "两个特定任务；非推理时梯度更新或任意错误自动恢复"
+    },
+    {
+      "id": "memory-pretrain",
+      "claim": "预训练时学习历史优于目标任务后训练才加入历史",
+      "status": "partial",
+      "evidence": [
+        "https://www.pi.website/download/Mem.pdf#page=8",
+        "Figure 9, IV-C"
+      ],
+      "limitations": "未分解视频来源、算力预算、混合任务各自贡献"
+    },
+    {
+      "id": "retention",
+      "claim": "一般操作任务平均能力大致保持",
+      "status": "partial",
+      "evidence": [
+        "https://www.pi.website/download/Mem.pdf#page=9",
+        "Figure 10"
+      ],
+      "limitations": "逐任务有升有降，不证明消除因果混淆"
+    },
+    {
+      "id": "causal-confusion",
+      "claim": "数据多样性是避免因果混淆的原因",
+      "status": "hypothesis",
+      "evidence": [
+        "https://www.pi.website/download/Mem.pdf#page=8",
+        "IV-C discussion"
+      ],
+      "limitations": "作者归因，没有独立数据多样性消融"
+    }
+  ],
+  "discrepancies": [
+    {
+      "location": "III-A vs III-B",
+      "detail": "High-level conditioned on current observation vs short observation history."
+    },
+    {
+      "location": "Appendix C Eq.3 vs III-C",
+      "detail": "Inner attention shows both space/time index sets, while prose emphasizes separable space-time operations; special k(0,0) term insufficiently explained."
+    }
+  ],
+  "teaching_materials": [
+    "F notation to avoid K off-by-one ambiguity",
+    "n=256,F=6 complexity example",
+    "token loss and flow matching equations including stop-gradient are teaching formulations, not released MEM code",
+    "UMI/robot transfer suggestions are proposed, not executed"
+  ],
+  "reading_reference": "https://zhuanlan.zhihu.com/p/2028423606628102667",
+  "code_evidence": {
+    "status": "No matching official MEM implementation/config obtained in checked source scope; third-party reproduction excluded"
+  },
+  "review_date": "2026-11-05"
+}
