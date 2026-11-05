@@ -137,5 +137,33 @@
         "并非所有任务一致提高"
       ]
     }
-  ]
+  ],
+  "revision": {
+    "date": "2026-11-05",
+    "scope": "Mechanism-centered rewrite of method; mixture ablation moved before system benchmarks. Original verified primary PDF and visual assets retained.",
+    "primary_sections_rechecked": [
+      "III",
+      "V-A–E",
+      "VI-A–C",
+      "VII",
+      "IX-E",
+      "Appendix B–D"
+    ],
+    "teaching_derivations": [
+      "Conditional-distribution marginalization explanation; not a paper theorem",
+      "Straight-path flow-matching illustration and scalar example; not a disclosed pi0.7 sampler or loss recipe",
+      "Gradient-path schematic; not executable author code"
+    ],
+    "visual_recheck": [
+      "PDF p14 Fig18",
+      "PDF p22 Fig19"
+    ],
+    "model_experiments_run": false,
+    "validation": {
+      "legacy_strict_validator": "failed: 73 errors and 1 warning before final prose clarification; dominant failures are lexical/figure-neighborhood heuristics; strict pass not claimed",
+      "manual_review": "Core method rechecked against primary sections; boundaries retained; existing full-page multi-figure evidence reused. Fig3 clarified with concrete interface observation and evidence limit.",
+      "artifact_checks": "YAML not applicable; HTML local assets and fragment links checked separately",
+      "behavioral_tests": "not run"
+    }
+  }
 }
