@@ -1,0 +1,13 @@
+/* Article-specific rhythm; other notes keep their existing presentation. */
+body{--reading-width:860px;--ink:#252525;--heading:#202020;--accent:#175e8c;--surface:#f6f6f6;--body-size:18px}
+main>h1{font-size:36px;line-height:1.45;font-weight:750}
+main>h2{font-size:28px;margin-top:64px;margin-bottom:24px;color:#171717}
+main>h3{font-size:22px;margin-top:38px;margin-bottom:16px;color:#252525}
+main>p{line-height:1.95;margin-top:20px;margin-bottom:20px}
+main>p:has(>img){margin:28px auto 16px}
+main>p:has(>img[data-column="single"]){max-width:640px}
+main img{display:block;margin:auto}
+main>.table-scroll>table thead th{background:#f0f2f4;color:#222}
+main>pre{background:#f6f7f8;color:#263445;border:1px solid #e9ecef;font-size:14px}
+main>hr{max-width:860px;margin:40px auto;border:0;border-top:1px solid #e5e5e5}
+@media(max-width:520px){main>h1{font-size:27px}main>h2{font-size:24px}main>h3{font-size:20px}main>p{line-height:1.9}}

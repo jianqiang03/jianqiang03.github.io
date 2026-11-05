@@ -27,7 +27,7 @@
   "explanation": {
     "strategy": "intuition-to-precision",
     "define_terms_on_first_use": true,
-    "report_structure": "six-section",
+    "report_structure": "four thematic chapters plus conclusion",
     "key_visual_policy": "all-key-visuals"
   },
   "execution": {
@@ -152,5 +152,12 @@
     "scope": "Static source and report reading; no training/inference execution",
     "reference": "paper-deep-reader/references/implementation-and-training.md",
     "missing_details_explicit": true
+  },
+  "revision": {
+    "date": "2026-11-05",
+    "scope": "Original article-style rewrite with sample/target/gradient explanations; retained verified v2 evidence and pinned code recipe; all 15 key visuals retained.",
+    "code_commit": "a103a1e1784d3e45014549a82238894d3ed85959",
+    "model_execution": false,
+    "validation": "Article asset check passed: 15 key figures/tables embedded; figure4 and tables3/8 enlarged for recheck; source figure2 gripper wording corrected. No training or inference run."
   }
 }

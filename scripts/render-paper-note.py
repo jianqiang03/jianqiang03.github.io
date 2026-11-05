@@ -42,7 +42,7 @@ for slug in sys.argv[1:]:
         link.string = label
         nav.append(link)
     first = body.select_one('blockquote')
-    if first is not None and slug != 'pi07':
+    if first is not None and slug not in {'pi07', 'vpp2'}:
         first.insert_after(nav)
     for table in body.select('table'):
         table.wrap(body.new_tag('div', attrs={'class': 'table-scroll', 'tabindex': '0', 'role': 'region', 'aria-label': '数据表格，可横向滚动'}))
@@ -57,7 +57,7 @@ for slug in sys.argv[1:]:
     for child in list(body.contents):
         main.append(child.extract())
     footer = shell.new_tag('footer')
-    footer.string = ('2026-11-05' if slug == 'pi07' else '2026-11-04' if slug == 'vla-pretraining' else '2026-11-03') + ' · 实现深读更新。论文、报告与固定版本代码分别标注；未运行模型训练或推理。原始图表归作者所有。'
+    footer.string = ('2026-11-05' if slug in {'pi07', 'vpp2'} else '2026-11-04' if slug == 'vla-pretraining' else '2026-11-03') + ' · 实现深读更新。论文、报告与固定版本代码分别标注；未运行模型训练或推理。原始图表归作者所有。'
     main.append(footer)
     aside = shell.select_one('aside')
     for link in list(aside.select('a[href^="#"]')):
