@@ -1,4 +1,4 @@
 interface:
   display_name: "论文深度解读"
-  short_description: "以样本和机制串起数据、训练、推理与实验证据"
-  default_prompt: "使用 $paper-deep-reader 精读这篇论文，先指出核心改动，再沿一条样本讲清数据、模型、损失、梯度与推理，通过关键图表检验证据，区分作者方案与未公开细节。"
+  short_description: "四章文章式精读，连续讲解机制并穿插论文原图"
+  default_prompt: "使用 $paper-deep-reader 精读这篇论文，采用导语、模型定位、核心机制、训练推理、实验证据和总结的文章式组织，沿样本讲透实现，将独立裁切的论文原图穿插在对应段落旁。正文原创，区分作者方案、教学推导与未公开细节。"
