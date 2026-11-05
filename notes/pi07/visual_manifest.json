@@ -25,10 +25,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-4.png",
+      "selected_asset": "assets/figure-2.png",
       "report_role": "mechanism",
       "selection_reason": "定义三个模型与条件的数据流",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -41,10 +41,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-6.png",
+      "selected_asset": "assets/figure-3.png",
       "report_role": "mechanism",
       "selection_reason": "展示训练样本条件与任务阶段",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -57,10 +57,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-7.png",
+      "selected_asset": "assets/figure-4.png",
       "report_role": "evidence",
       "selection_reason": "机器人形态与跨身体边界；随算法页保留",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -85,10 +85,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-9.png",
+      "selected_asset": "assets/figure-6.png",
       "report_role": "evidence",
       "selection_reason": "通用模型对照任务专家",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -101,10 +101,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-9.png",
+      "selected_asset": "assets/figure-7.png",
       "report_role": "evidence",
       "selection_reason": "元数据与自主数据的消融",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -117,10 +117,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-10.png",
+      "selected_asset": "assets/figure-8.png",
       "report_role": "evidence",
       "selection_reason": "记忆任务能力与对照边界",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -133,10 +133,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-11.png",
+      "selected_asset": "assets/figure-9.png",
       "report_role": "evidence",
       "selection_reason": "陌生环境指令泛化",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -149,10 +149,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-11.png",
+      "selected_asset": "assets/figure-10.png",
       "report_role": "evidence",
       "selection_reason": "目标图像对复杂指代的作用",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -165,10 +165,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-11.png",
+      "selected_asset": "assets/figure-11.png",
       "report_role": "evidence",
       "selection_reason": "反数据偏好检验",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -181,10 +181,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-12.png",
+      "selected_asset": "assets/figure-12.png",
       "report_role": "evidence",
       "selection_reason": "跨身体迁移的量化结果",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -197,10 +197,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-12.png",
+      "selected_asset": "assets/figure-13.png",
       "report_role": "evidence",
       "selection_reason": "不同身体采用不同策略的具体例子",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -213,10 +213,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-13.png",
+      "selected_asset": "assets/figure-14.png",
       "report_role": "evidence",
       "selection_reason": "语言coaching的输入示例",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -229,10 +229,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-13.png",
+      "selected_asset": "assets/figure-15.png",
       "report_role": "evidence",
       "selection_reason": "长程任务依赖指导的证据",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -245,10 +245,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-13.png",
+      "selected_asset": "assets/figure-16.png",
       "report_role": "evidence",
       "selection_reason": "训练高层语言策略后的自主执行",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -261,10 +261,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-13.png",
+      "selected_asset": "assets/figure-17.png",
       "report_role": "evidence",
       "selection_reason": "短程未见任务与GC并非一致获益",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -277,10 +277,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-14.png",
+      "selected_asset": "assets/figure-18.png",
       "report_role": "evidence",
       "selection_reason": "混合质量和任务多样性的受控证据",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -293,10 +293,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-22.png",
+      "selected_asset": "assets/figure-19.png",
       "report_role": "mechanism",
       "selection_reason": "动作标签与CFG分支的注意力隔离",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -309,10 +309,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-23.png",
+      "selected_asset": "assets/figure-20.png",
       "report_role": "evidence",
       "selection_reason": "基线控制空间的比较",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -325,10 +325,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-23.png",
+      "selected_asset": "assets/figure-21.png",
       "report_role": "evidence",
       "selection_reason": "人工基线经验与公平条件",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "figure",
@@ -341,10 +341,10 @@
       "selected_for_report": true,
       "visual_verification": "complete",
       "crop_review_required": false,
-      "selected_asset": "assets/page-23.png",
+      "selected_asset": "assets/figure-22.png",
       "report_role": "evidence",
       "selection_reason": "人与模型成功率及任务进度对照",
-      "review_notes": "已打开整页核对图表、图例及图注，使用整页避免截断；多图页共享同一资产。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     },
     {
       "kind": "algorithm",
@@ -355,12 +355,12 @@
       "key": true,
       "classification_reason": "异步子目标与实时动作循环",
       "selected_for_report": true,
-      "selected_asset": "assets/page-7.png",
+      "selected_asset": "assets/algorithm-1.png",
       "visual_verification": "complete",
       "crop_review_required": false,
       "report_role": "mechanism",
       "selection_reason": "解释两个刷新周期和实时执行",
-      "review_notes": "整页算法已直接核对。"
+      "review_notes": "2026-11-05：从同版官方 PDF 裁出独立图表及原图注，查看裁图联系表核查内容边界，移除无关正文。"
     }
   ]
 }

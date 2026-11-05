@@ -35,7 +35,7 @@
   "explanation": {
     "strategy": "intuition-to-precision",
     "define_terms_on_first_use": true,
-    "report_structure": "six-section",
+    "report_structure": "four thematic chapters plus conclusion (explicit user preference)",
     "key_visual_policy": "all-key-visuals"
   },
   "execution": {
@@ -140,7 +140,7 @@
   ],
   "revision": {
     "date": "2026-11-05",
-    "scope": "Mechanism-centered rewrite of method; mixture ablation moved before system benchmarks. Original verified primary PDF and visual assets retained.",
+    "scope": "Reorganized to reference article chapter order with original prose; 21 individually cropped primary-paper visuals interleaved with explanations.",
     "primary_sections_rechecked": [
       "III",
       "V-A–E",
@@ -160,7 +160,7 @@
     ],
     "model_experiments_run": false,
     "validation": {
-      "legacy_strict_validator": "failed: 73 errors and 1 warning before final prose clarification; dominant failures are lexical/figure-neighborhood heuristics; strict pass not claimed",
+      "legacy_strict_validator": "Not applicable to user-requested four-chapter structure; legacy validator requires six sections. Prior run retained as history only.",
       "manual_review": "Core method rechecked against primary sections; boundaries retained; existing full-page multi-figure evidence reused. Fig3 clarified with concrete interface observation and evidence limit.",
       "artifact_checks": "YAML not applicable; HTML local assets and fragment links checked separately",
       "behavioral_tests": "not run"

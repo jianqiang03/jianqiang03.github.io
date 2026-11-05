@@ -42,10 +42,13 @@ for slug in sys.argv[1:]:
         link.string = label
         nav.append(link)
     first = body.select_one('blockquote')
-    first.insert_after(nav)
+    if first is not None and slug != 'pi07':
+        first.insert_after(nav)
     for table in body.select('table'):
         table.wrap(body.new_tag('div', attrs={'class': 'table-scroll', 'tabindex': '0', 'role': 'region', 'aria-label': '数据表格，可横向滚动'}))
     for im in body.select('img'):
+        if slug == 'pi07' and im.get('src', '').split('/')[-1] in {'figure-4.png', 'figure-8.png', 'figure-10.png', 'figure-11.png', 'figure-13.png', 'figure-15.png', 'figure-16.png', 'figure-17.png', 'figure-19.png', 'figure-21.png', 'figure-22.png', 'algorithm-1.png'}:
+            im['data-column'] = 'single'
         im['loading'] = 'lazy'
         im['tabindex'] = '0'
         im['title'] = '点击放大；Esc 关闭'
