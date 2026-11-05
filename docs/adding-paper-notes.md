@@ -298,3 +298,11 @@ python scripts/render-paper-note.py dyna-2 vpp2 dm05 epsilon4p
 ```
 
 同时提交正文、证据映射、生成的 HTML 和新增图片。外部旧版生成器只作为历史工作材料，仓库中的 Markdown 与此渲染器是后续维护入口。
+
+## 首页文章索引（2026-11-05 更新）
+
+首页现在使用紧凑文章卡片，每页最多 6 篇；搜索、主题计数与分页由 `library.js` 从 HTML 自动生成，无需维护第二份 JSON。禁用 JavaScript 时所有文章链接仍可阅读。
+
+新增文章时，在 `index.html` 的 `#note-grid` 内添加一个 `a.note-card`，填写链接、标题、简介和主题标签。`data-topics` 可含多个空格分隔主题：`world`（模型与策略）、`data`（数据与预训练）、`systems`（训练与实现）。卡片在 HTML 中的顺序就是默认展示顺序，推荐将最近更新的文章放在前面。同步更新无 JavaScript 时显示的 `#note-total` 数量与卡片序号。
+
+请沿用现有卡片结构，不再向首页追加 `.featured` 大幅推荐卡。无需为新文章修改 JavaScript；新增主题分类时才需要同步筛选按钮与标签。
