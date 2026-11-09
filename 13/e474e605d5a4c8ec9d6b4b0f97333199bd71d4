@@ -1,0 +1,33 @@
+README.md
+  s_3bab766aaf626e::t_96bb5f73ed6787 9-10,81-86
+index.html
+  s_3bab766aaf626e::t_156ec7480192c3 5-6,8
+notes/dreamx/article.css
+  s_3bab766aaf626e::t_d8b4274eb235c8 1-13
+notes/dreamx/assets/visual_manifest.json
+  s_3bab766aaf626e::t_63bf9de767a5b6 1-1671
+notes/dreamx/index.html
+  s_3bab766aaf626e::t_72701f1d55bc4d 1-203
+notes/dreamx/report.md
+  s_3bab766aaf626e::t_fb42e0a3c86a74 1-223
+notes/dreamx/source_map.json
+  s_3bab766aaf626e::t_dceef6b922ef09 1-106
+scripts/render-paper-note.py
+  s_3bab766aaf626e::t_f9f9cf8e3d24e6 13,47,56-57,66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "13e474e605d5a4c8ec9d6b4b0f97333199bd71d4",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
