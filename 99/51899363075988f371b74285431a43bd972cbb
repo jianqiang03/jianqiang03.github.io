@@ -1,0 +1,19 @@
+notes/dreamx/assets/visual_manifest.json
+  s_3bab766aaf626e::t_c542bf5a1d99b2 28,45,62,79,96,113,130,147,164,181,198,215,232,249,288,305,322,339,356,373,390,407,424,441,458,460-461
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9951899363075988f371b74285431a43bd972cbb",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
