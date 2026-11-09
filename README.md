@@ -6,6 +6,8 @@ jianqiang03 的个人研究笔记网站，关注机器人学习、数据与训�
 
 ## 已发布解读
 
+- [DreamX：视频先验、潜在动作与人类视频策略监督](https://jianqiang03.github.io/notes/dreamx/)
+
 - [MEM：短期视频、长期摘要与记忆预训练](https://jianqiang03.github.io/notes/mem/)
 
 - [ε4P：不同精度的数据，怎样共同训练一个策略？](https://jianqiang03.github.io/notes/epsilon4p/)
@@ -76,3 +78,9 @@ GitHub Pages 从 `main` 分支的根目录发布。修改文件并推送后，�
 - 正文：`notes/mem/report.md`；渲染：`python scripts/render-paper-note.py mem`。
 - 官方 PDF 固定哈希、逐项主张、原图核验见同目录 `source_map.json`、`visual_manifest.json`。
 - 未披露实现与教学损失表达已区分，没有运行模型训练或推理。
+
+## DreamX 深读（2026-11-09）
+
+- 正文：`notes/dreamx/report.md`；生成：`python scripts/render-paper-note.py dreamx`。
+- 来源：`notes/dreamx/source_map.json`；图表清单：`notes/dreamx/assets/visual_manifest.json`。
+- 13 张已核验原图，26 个编号对象阅读清单；按 v1 正文与附录区分论文事实、推导与迁移建议。

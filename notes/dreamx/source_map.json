@@ -1,0 +1,106 @@
+{
+  "schema_version": 5,
+  "paper": {
+    "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
+    "arxiv": "2611.05377",
+    "version": "v1",
+    "date": "2026-11-03",
+    "sha256": "f9b8e34b2f3d965bdbf30134f763073ad1a82714e930734893dc383790c6b332",
+    "pages": 25,
+    "sources": [
+      "https://arxiv.org/pdf/2611.05377v1",
+      "https://arxiv.org/html/2611.05377v1",
+      "https://cvlab-kaist.github.io/DreamX/"
+    ]
+  },
+  "review_date": "2026-11-09",
+  "reading_profile": "explain; 全文、附录、26个编号对象清单、13个关键原图裁图",
+  "claims": [
+    {
+      "topic": "表示、mask与损失",
+      "location": "§3.1–3.2",
+      "pdf_pages": [
+        3,
+        4,
+        5
+      ],
+      "boundary": "全局因果性不可由query→video前缀mask推出；端到端并非全参数更新。"
+    },
+    {
+      "topic": "压缩与策略接口",
+      "location": "§3.4；A.3–A.4",
+      "pdf_pages": [
+        5,
+        6,
+        14,
+        15
+      ],
+      "boundary": "Q是完整示范标签；Z均值固定；动作头任务阶段加入。"
+    },
+    {
+      "topic": "数据与训练配方",
+      "location": "A.1–A.4；Fig9",
+      "pdf_pages": [
+        14,
+        15
+      ],
+      "boundary": "数据时长不等于采样权重；未公开完整原始训练算力。"
+    },
+    {
+      "topic": "表示性能",
+      "location": "Table1；Table4；B.4",
+      "pdf_pages": [
+        6,
+        9,
+        16,
+        17
+      ],
+      "boundary": "两帧/视频的信息预算不同；监督消融来自子集。"
+    },
+    {
+      "topic": "迁移评估",
+      "location": "§4；B.2；B.5",
+      "pdf_pages": [
+        7,
+        8,
+        9,
+        16,
+        17
+      ],
+      "boundary": "成对视频仅作评估参考；真机动作迁移开环。"
+    },
+    {
+      "topic": "关抽屉计分",
+      "location": "Table3；B.3；C.1 Tables5–6",
+      "pdf_pages": [
+        8,
+        16,
+        17
+      ],
+      "boundary": "96.7为子目标平均；93.3为本文由Push列计算；上层人类-only不等于系统无机器人数据。"
+    },
+    {
+      "topic": "消融与表征分析",
+      "location": "C.2–C.3 Tables7–8",
+      "pdf_pages": [
+        18,
+        19
+      ],
+      "boundary": "CALVIN为内部消融；扰动8片段2种子；聚类为中心化均值。"
+    }
+  ],
+  "official_code": {
+    "status": "项目页Code soon；未取得官方实现",
+    "verified_commit": null
+  },
+  "execution": {
+    "training": false,
+    "inference": false,
+    "asset_review": true
+  },
+  "interpretations": [
+    "query交流可能引入非因果路径属于依据信息图的分析",
+    "93.3%为附录Push列的等权计算",
+    "UMI混训、未来特征对照与历史组合均为迁移建议，不是论文结果"
+  ]
+}
