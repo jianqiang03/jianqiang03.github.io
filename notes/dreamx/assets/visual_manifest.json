@@ -17,40 +17,7 @@
       "number": "1",
       "page": 1,
       "caption": "DreamX learns a shared action interface from egocentric human videos and robot videos. Compact, embodiment-agnostic latent actions extracted from a pretrained video diffusion model capture motion consistently across changes in embodiment and scene appearance. The same representation enables transferring motion from a source video to a target video, decoding hu- man motion into executable robot actions without paired human–robot training data, and training a lightweight latent policy that jointly predicts latent actions and robot actions.",
-      "raw_text": "Figure 1: DreamX learns a shared action interface from egocentric human videos and robot videos. Compact, embodiment-agnostic latent actions extracted from a pretrained video diffusion model capture motion consistently across changes in embodiment and scene appearance. The same representation enables transferring motion from a source video to a target video, decoding hu- man motion into executable robot actions without paired human–robot training data, and training a lightweight latent policy that jointly predicts latent actions and robot actions.",
-      "caption_bbox_points": [
-        108.0,
-        429.538,
-        504.003,
-        494.385
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1074,
-        1260,
-        1236
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        172.611,
-        514.003,
-        504.385
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        432,
-        1285,
-        1261
-      ],
-      "candidate_crop": "crops/figure-1-p001.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        1041,
-        830
-      ],
-      "source_page_image": "pages/page-001.png",
-      "source_page_text": "text/pages/page-001.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -58,20 +25,7 @@
       "classification_reason": "总览与图2、图3的机制图重复。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "总览与图2、图3的机制图重复。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-1-p001.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "总览与图2、图3的机制图重复。"
     },
     {
       "id": "figure-2",
@@ -80,40 +34,7 @@
       "number": "2",
       "page": 4,
       "caption": "DreamX architecture and attention masks. (a) Learnable queries read out the pretrained video backbone’s spatiotemporal representations to encode latent actions. A decoder initialized from the same pretrained backbone reconstructs future video from the latent actions and the initial frame, with auxiliary action supervision when labels are available. (b) Encoder and decoder attention masks control information flow among video, query, and action tokens. In the decoder, video and action tokens read the latent-action queries but do not attend to one another.",
-      "raw_text": "Figure 2: DreamX architecture and attention masks. (a) Learnable queries read out the pretrained video backbone’s spatiotemporal representations to encode latent actions. A decoder initialized from the same pretrained backbone reconstructs future video from the latent actions and the initial frame, with auxiliary action supervision when labels are available. (b) Encoder and decoder attention masks control information flow among video, query, and action tokens. In the decoder, video and action tokens read the latent-action queries but do not attend to one another.",
-      "caption_bbox_points": [
-        108.0,
-        196.547,
-        504.003,
-        261.396
-      ],
-      "caption_bbox_pixels": [
-        270,
-        491,
-        1260,
-        653
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        71.859,
-        514.003,
-        271.396
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        180,
-        1285,
-        678
-      ],
-      "candidate_crop": "crops/figure-2-p004.png",
       "selected_asset": "assets/figure-2.png",
-      "candidate_crop_size_pixels": [
-        1041,
-        500
-      ],
-      "source_page_image": "pages/page-004.png",
-      "source_page_text": "text/pages/page-004.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -121,21 +42,7 @@
       "classification_reason": "编码与解码的信息路径及掩码",
       "selected_for_report": true,
       "report_role": "mechanism",
-      "selection_reason": "编码与解码的信息路径及掩码",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-2-p004.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "编码与解码的信息路径及掩码"
     },
     {
       "id": "figure-3",
@@ -144,40 +51,7 @@
       "number": "3",
       "page": 5,
       "caption": "Downstream applications of DreamX. (a) Motion transfer. Source latent actions con- dition the DreamX decoder to generate video from a target initial frame or low-level actions from a target robot state, without paired source–target training data. (b) DreamX policy. A variational bot- tleneck compresses latent actions into compact codes while preserving the token layout. Conditioned on the current observation and instruction, the policy generates these codes alongside low-level ac- tions through a separate DiT action head.",
-      "raw_text": "Figure 3: Downstream applications of DreamX. (a) Motion transfer. Source latent actions con- dition the DreamX decoder to generate video from a target initial frame or low-level actions from a target robot state, without paired source–target training data. (b) DreamX policy. A variational bot- tleneck compresses latent actions into compact codes while preserving the token layout. Conditioned on the current observation and instruction, the policy generates these codes alongside low-level ac- tions through a separate DiT action head.",
-      "caption_bbox_points": [
-        108.0,
-        191.265,
-        504.003,
-        256.113
-      ],
-      "caption_bbox_pixels": [
-        270,
-        478,
-        1260,
-        640
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        71.862,
-        514.005,
-        266.113
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        180,
-        1285,
-        665
-      ],
-      "candidate_crop": "crops/figure-3-p005.png",
       "selected_asset": "assets/figure-3.png",
-      "candidate_crop_size_pixels": [
-        1041,
-        487
-      ],
-      "source_page_image": "pages/page-005.png",
-      "source_page_text": "text/pages/page-005.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -185,21 +59,7 @@
       "classification_reason": "压缩、迁移与在线策略接口",
       "selected_for_report": true,
       "report_role": "mechanism",
-      "selection_reason": "压缩、迁移与在线策略接口",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-3-p005.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "压缩、迁移与在线策略接口"
     },
     {
       "id": "figure-4",
@@ -208,40 +68,7 @@
       "number": "4",
       "page": 7,
       "caption": "Qualitative Any-to-Any video transfer. Each example shows a source motion and the corresponding transferred video generated from a target-domain initial observation. These results demonstrate that the learned latent action transfers motion across substantial changes in embodiment and scene appearance. Blue dots indicate the end-effector trajectory throughout the video frames.",
-      "raw_text": "Figure 4: Qualitative Any-to-Any video transfer. Each example shows a source motion and the corresponding transferred video generated from a target-domain initial observation. These results demonstrate that the learned latent action transfers motion across substantial changes in embodiment and scene appearance. Blue dots indicate the end-effector trajectory throughout the video frames.",
-      "caption_bbox_points": [
-        108.0,
-        444.709,
-        504.003,
-        487.639
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1112,
-        1260,
-        1219
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        71.86,
-        514.009,
-        497.639
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        180,
-        1285,
-        1244
-      ],
-      "candidate_crop": "crops/figure-4-p007.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        1041,
-        1066
-      ],
-      "source_page_image": "pages/page-007.png",
-      "source_page_text": "text/pages/page-007.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -249,21 +76,7 @@
       "classification_reason": "更多迁移示例，主要机制和对照由图5、图6覆盖。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "更多迁移示例，主要机制和对照由图5、图6覆盖。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-4-p007.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "更多迁移示例，主要机制和对照由图5、图6覆盖。"
     },
     {
       "id": "figure-5",
@@ -272,40 +85,7 @@
       "number": "5",
       "page": 8,
       "caption": "Zero-shot human-to-robot video transfer on the H&R benchmark. DreamX preserves the source motion and target robot appearance, while the baselines exhibit visual degradation or human-hand leakage.",
-      "raw_text": "Figure 5: Zero-shot human-to-robot video transfer on the H&R benchmark. DreamX preserves the source motion and target robot appearance, while the baselines exhibit visual degradation or human-hand leakage.",
-      "caption_bbox_points": [
-        108.0,
-        302.349,
-        504.004,
-        334.319
-      ],
-      "caption_bbox_pixels": [
-        270,
-        756,
-        1260,
-        836
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        71.86,
-        514.004,
-        344.319
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        180,
-        1285,
-        861
-      ],
-      "candidate_crop": "crops/figure-5-p008.png",
       "selected_asset": "assets/figure-5.png",
-      "candidate_crop_size_pixels": [
-        1041,
-        682
-      ],
-      "source_page_image": "pages/page-008.png",
-      "source_page_text": "text/pages/page-008.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -313,21 +93,7 @@
       "classification_reason": "跨主体视频迁移的定性对照",
       "selected_for_report": true,
       "report_role": "evidence",
-      "selection_reason": "跨主体视频迁移的定性对照",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-5-p008.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "跨主体视频迁移的定性对照"
     },
     {
       "id": "figure-6",
@@ -336,40 +102,7 @@
       "number": "6",
       "page": 9,
       "caption": "Qualitative human-to-robot action transfer. Given a human demonstration, DreamX extracts a latent action and decodes it into low-level robot actions without paired human–robot train- ing data. We show diverse transferred behaviors spanning writing, single-arm pushing, and bimanual manipulation. Across substantial embodiment differences, the robot reproduces the motion structure of the human demonstration.",
-      "raw_text": "Figure 6: Qualitative human-to-robot action transfer. Given a human demonstration, DreamX extracts a latent action and decodes it into low-level robot actions without paired human–robot train- ing data. We show diverse transferred behaviors spanning writing, single-arm pushing, and bimanual manipulation. Across substantial embodiment differences, the robot reproduces the motion structure of the human demonstration.",
-      "caption_bbox_points": [
-        108.0,
-        309.229,
-        504.003,
-        363.118
-      ],
-      "caption_bbox_pixels": [
-        270,
-        773,
-        1260,
-        908
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        71.862,
-        514.003,
-        373.118
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        180,
-        1285,
-        933
-      ],
-      "candidate_crop": "crops/figure-6-p009.png",
       "selected_asset": "assets/figure-6.png",
-      "candidate_crop_size_pixels": [
-        1041,
-        754
-      ],
-      "source_page_image": "pages/page-009.png",
-      "source_page_text": "text/pages/page-009.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -377,20 +110,7 @@
       "classification_reason": "开环机器人动作迁移的范围",
       "selected_for_report": true,
       "report_role": "evidence",
-      "selection_reason": "开环机器人动作迁移的范围",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-6-p009.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "开环机器人动作迁移的范围"
     },
     {
       "id": "figure-7",
@@ -399,40 +119,7 @@
       "number": "7",
       "page": 9,
       "caption": "Sensitivity analysis. Per- turbing latent actions alters motion while preserving scene appearance.",
-      "raw_text": "Figure 7: Sensitivity analysis. Per- turbing latent actions alters motion while preserving scene appearance.",
-      "caption_bbox_points": [
-        349.56,
-        700.294,
-        504.0,
-        732.265
-      ],
-      "caption_bbox_pixels": [
-        874,
-        1751,
-        1260,
-        1831
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        511.345,
-        514.0,
-        742.265
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        1278,
-        1285,
-        1856
-      ],
-      "candidate_crop": "crops/figure-7-p009.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        1040,
-        578
-      ],
-      "source_page_image": "pages/page-009.png",
-      "source_page_text": "text/pages/page-009.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -440,21 +127,7 @@
       "classification_reason": "扰动定性示例，关键量化证据已用表8展开。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "扰动定性示例，关键量化证据已用表8展开。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-7-p009.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "扰动定性示例，关键量化证据已用表8展开。"
     },
     {
       "id": "figure-8",
@@ -463,40 +136,7 @@
       "number": "8",
       "page": 10,
       "caption": "Query-to-video attention. We visualize attention maps from latent queries to video tokens during encoding. Across human and robot demonstrations, latent queries attend to dynamic regions, such as moving hands and grippers, capturing the underlying actions in each video.",
-      "raw_text": "Figure 8: Query-to-video attention. We visualize attention maps from latent queries to video tokens during encoding. Across human and robot demonstrations, latent queries attend to dynamic regions, such as moving hands and grippers, capturing the underlying actions in each video.",
-      "caption_bbox_points": [
-        108.0,
-        403.374,
-        504.003,
-        435.345
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1008,
-        1260,
-        1088
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        71.861,
-        514.003,
-        445.345
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        180,
-        1285,
-        1113
-      ],
-      "candidate_crop": "crops/figure-8-p010.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        1041,
-        935
-      ],
-      "source_page_image": "pages/page-010.png",
-      "source_page_text": "text/pages/page-010.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -504,21 +144,7 @@
       "classification_reason": "注意力可视化为相关性线索，不独立证明机制，正文说明边界。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "注意力可视化为相关性线索，不独立证明机制，正文说明边界。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-8-p010.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "注意力可视化为相关性线索，不独立证明机制，正文说明边界。"
     },
     {
       "id": "figure-9",
@@ -527,40 +153,7 @@
       "number": "9",
       "page": 15,
       "caption": "Pretraining data composition. DreamX learns from six datasets spanning human and robot demonstrations. Sector areas represent video duration, with human datasets highlighted in warm colors.",
-      "raw_text": "Figure 9: Pretraining data composition. DreamX learns from six datasets spanning human and robot demonstrations. Sector areas represent video duration, with human datasets highlighted in warm colors.",
-      "caption_bbox_points": [
-        108.0,
-        283.554,
-        504.003,
-        315.525
-      ],
-      "caption_bbox_pixels": [
-        270,
-        709,
-        1260,
-        789
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        71.86,
-        514.003,
-        325.525
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        180,
-        1285,
-        814
-      ],
-      "candidate_crop": "crops/figure-9-p015.png",
       "selected_asset": "assets/figure-9.png",
-      "candidate_crop_size_pixels": [
-        1041,
-        635
-      ],
-      "source_page_image": "pages/page-015.png",
-      "source_page_text": "text/pages/page-015.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -568,20 +161,7 @@
       "classification_reason": "数据时长与来源占比",
       "selected_for_report": true,
       "report_role": "evidence",
-      "selection_reason": "数据时长与来源占比",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-9-p015.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "数据时长与来源占比"
     },
     {
       "id": "figure-10",
@@ -590,40 +170,7 @@
       "number": "10",
       "page": 16,
       "caption": "BimanualYAM setup.",
-      "raw_text": "Figure 10: BimanualYAM setup.",
-      "caption_bbox_points": [
-        366.59,
-        192.727,
-        502.809,
-        202.78
-      ],
-      "caption_bbox_pixels": [
-        916,
-        482,
-        1257,
-        507
-      ],
-      "suggested_crop_bbox_points": [
-        356.59,
-        74.588,
-        512.809,
-        212.78
-      ],
-      "suggested_crop_bbox_pixels": [
-        891,
-        186,
-        1282,
-        532
-      ],
-      "candidate_crop": "crops/figure-10-p016.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        392,
-        346
-      ],
-      "source_page_image": "pages/page-016.png",
-      "source_page_text": "text/pages/page-016.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -631,20 +178,7 @@
       "classification_reason": "硬件示意，正文已说明双臂YAM与D405配置。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "硬件示意，正文已说明双臂YAM与D405配置。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-10-p016.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "硬件示意，正文已说明双臂YAM与D405配置。"
     },
     {
       "id": "figure-11",
@@ -653,40 +187,7 @@
       "number": "11",
       "page": 16,
       "caption": "Real-world drawer-closing setup. Initial observations for the three task configurations, all conditioned on close the drawer. When both drawers are open, the robot must close the upper drawer before the lower drawer.",
-      "raw_text": "Figure 11: Real-world drawer-closing setup. Initial observations for the three task configurations, all conditioned on close the drawer. When both drawers are open, the robot must close the upper drawer before the lower drawer.",
-      "caption_bbox_points": [
-        108.0,
-        517.223,
-        504.003,
-        549.194
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1293,
-        1260,
-        1373
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        203.78,
-        514.003,
-        559.194
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        509,
-        1285,
-        1398
-      ],
-      "candidate_crop": "crops/figure-11-p016.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        1041,
-        889
-      ],
-      "source_page_image": "pages/page-016.png",
-      "source_page_text": "text/pages/page-016.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -694,21 +195,7 @@
       "classification_reason": "抽屉配置示意，正文逐项说明评估设置。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "抽屉配置示意，正文逐项说明评估设置。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-11-p016.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "抽屉配置示意，正文逐项说明评估设置。"
     },
     {
       "id": "figure-12",
@@ -717,40 +204,7 @@
       "number": "12",
       "page": 18,
       "caption": "visualizes 60 direction- conditioned latent-action centroids using t-SNE. Centroids for the same direction exhibit similar organization across robot types. This aggregate analysis supports shared directional structure across embodiments.",
-      "raw_text": "Figure 12 visualizes 60 direction- conditioned latent-action centroids using t-SNE. Centroids for the same direction exhibit similar organization across robot types. This aggregate analysis supports shared directional structure across embodiments.",
-      "caption_bbox_points": [
-        108.0,
-        406.591,
-        268.318,
-        482.307
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1016,
-        671,
-        1206
-      ],
-      "suggested_crop_bbox_points": [
-        21.42,
-        73.951,
-        590.58,
-        492.307
-      ],
-      "suggested_crop_bbox_pixels": [
-        54,
-        185,
-        1476,
-        1231
-      ],
-      "candidate_crop": "crops/figure-12-p018.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        1424,
-        1047
-      ],
-      "source_page_image": "pages/page-018.png",
-      "source_page_text": "text/pages/page-018.txt",
-      "crop_confidence": "low",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -758,20 +212,7 @@
       "classification_reason": "中心化方向中心的探索可视化，正文说明不能外推至单轨迹聚类。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "中心化方向中心的探索可视化，正文说明不能外推至单轨迹聚类。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-12-p018.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "中心化方向中心的探索可视化，正文说明不能外推至单轨迹聚类。"
     },
     {
       "id": "figure-13",
@@ -780,40 +221,7 @@
       "number": "13",
       "page": 19,
       "caption": "Distribution of perturbation effects. Motion ratio, flow deviation, and RGB change for the same eight clips and two decoder seeds as Ta- ble 8. Boxes show quartiles and medians; whiskers extend to observations within 1.5 times the interquar- tile range, with outliers shown individually.",
-      "raw_text": "Figure 13: Distribution of perturbation effects. Motion ratio, flow deviation, and RGB change for the same eight clips and two decoder seeds as Ta- ble 8. Boxes show quartiles and medians; whiskers extend to observations within 1.5 times the interquar- tile range, with outliers shown individually.",
-      "caption_bbox_points": [
-        294.12,
-        201.878,
-        504.002,
-        266.726
-      ],
-      "caption_bbox_pixels": [
-        735,
-        505,
-        1260,
-        667
-      ],
-      "suggested_crop_bbox_points": [
-        284.12,
-        120.68,
-        514.002,
-        276.726
-      ],
-      "suggested_crop_bbox_pixels": [
-        710,
-        302,
-        1285,
-        692
-      ],
-      "candidate_crop": "crops/figure-13-p019.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        576,
-        391
-      ],
-      "source_page_image": "pages/page-019.png",
-      "source_page_text": "text/pages/page-019.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -821,20 +229,7 @@
       "classification_reason": "扰动分布补充，正文以表8的均值与样本范围分析。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "扰动分布补充，正文以表8的均值与样本范围分析。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-13-p019.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "扰动分布补充，正文以表8的均值与样本范围分析。"
     },
     {
       "id": "figure-14",
@@ -843,40 +238,7 @@
       "number": "14",
       "page": 20,
       "caption": "Additional qualitative Any-to-Any video transfer results. Each example shows a source motion and the corresponding transferred sequence generated from a target-domain initial frame.",
-      "raw_text": "Figure 14: Additional qualitative Any-to-Any video transfer results. Each example shows a source motion and the corresponding transferred sequence generated from a target-domain initial frame.",
-      "caption_bbox_points": [
-        108.0,
-        673.426,
-        504.003,
-        705.397
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1684,
-        1260,
-        1763
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        95.444,
-        514.003,
-        715.397
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        239,
-        1285,
-        1788
-      ],
-      "candidate_crop": "crops/figure-14-p020.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        1041,
-        1551
-      ],
-      "source_page_image": "pages/page-020.png",
-      "source_page_text": "text/pages/page-020.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -884,20 +246,7 @@
       "classification_reason": "额外同机器人新场景定性迁移，未新增核心定量对照。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "额外同机器人新场景定性迁移，未新增核心定量对照。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-14-p020.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "额外同机器人新场景定性迁移，未新增核心定量对照。"
     },
     {
       "id": "figure-15",
@@ -906,40 +255,7 @@
       "number": "15",
       "page": 21,
       "caption": "Additional zero-shot human-to-robot video transfer results on the HumanAn- dRobot benchmark (continued).",
-      "raw_text": "Figure 15: Additional zero-shot human-to-robot video transfer results on the HumanAn- dRobot benchmark (continued).",
-      "caption_bbox_points": [
-        108.0,
-        634.997,
-        504.003,
-        655.918
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1587,
-        1260,
-        1640
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        144.827,
-        514.003,
-        665.918
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        362,
-        1285,
-        1665
-      ],
-      "candidate_crop": "crops/figure-15-p023.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        1041,
-        1303
-      ],
-      "source_page_image": "pages/page-023.png",
-      "source_page_text": "text/pages/page-023.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -948,19 +264,6 @@
       "selected_for_report": false,
       "report_role": null,
       "selection_reason": "多页跨主体迁移示例，与主文图5、图6论证重叠。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-15-p023.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      },
       "pages": [
         21,
         22,
@@ -974,40 +277,7 @@
       "number": "16",
       "page": 24,
       "caption": "Additional qualitative human-to-robot action transfer results. DreamX transfers hu- man demonstrations into executable robot actions while preserving task-specific trajectory structure and temporal ordering across writing and single-arm manipulation examples.",
-      "raw_text": "Figure 16: Additional qualitative human-to-robot action transfer results. DreamX transfers hu- man demonstrations into executable robot actions while preserving task-specific trajectory structure and temporal ordering across writing and single-arm manipulation examples.",
-      "caption_bbox_points": [
-        108.0,
-        615.794,
-        504.003,
-        647.765
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1539,
-        1260,
-        1619
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        153.079,
-        514.003,
-        657.765
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        383,
-        1285,
-        1644
-      ],
-      "candidate_crop": "crops/figure-16-p024.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        1041,
-        1263
-      ],
-      "source_page_image": "pages/page-024.png",
-      "source_page_text": "text/pages/page-024.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -1015,20 +285,7 @@
       "classification_reason": "更多H&R视频迁移示例，主图5和表2已承载对照。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "更多H&R视频迁移示例，主图5和表2已承载对照。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-16-p024.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "更多H&R视频迁移示例，主图5和表2已承载对照。"
     },
     {
       "id": "figure-17",
@@ -1037,40 +294,7 @@
       "number": "17",
       "page": 25,
       "caption": "Real-world drawer-closing rollouts. Six frames are sampled at equal fractions of each rollout’s duration.",
-      "raw_text": "Figure 17: Real-world drawer-closing rollouts. Six frames are sampled at equal fractions of each rollout’s duration.",
-      "caption_bbox_points": [
-        108.0,
-        405.897,
-        504.003,
-        426.908
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1015,
-        1260,
-        1067
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        82.288,
-        514.003,
-        436.908
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        206,
-        1285,
-        1092
-      ],
-      "candidate_crop": "crops/figure-17-p025.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        1041,
-        888
-      ],
-      "source_page_image": "pages/page-025.png",
-      "source_page_text": "text/pages/page-025.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -1078,20 +302,7 @@
       "classification_reason": "更多扰动定性图，正文由表8量化分析。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "更多扰动定性图，正文由表8量化分析。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-17-p025.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "更多扰动定性图，正文由表8量化分析。"
     },
     {
       "id": "figure-18",
@@ -1100,40 +311,7 @@
       "number": "18",
       "page": 25,
       "caption": "Query-to-video attention across time. Human demonstrations (left) and robot demon- strations (right), each shown with the input frame beside its attention overlay. Rows follow temporal order and highlight attention around the acting embodiment and objects.",
-      "raw_text": "Figure 18: Query-to-video attention across time. Human demonstrations (left) and robot demon- strations (right), each shown with the input frame beside its attention overlay. Rows follow temporal order and highlight attention around the acting embodiment and objects.",
-      "caption_bbox_points": [
-        108.0,
-        686.586,
-        504.003,
-        718.557
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1716,
-        1260,
-        1796
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        427.908,
-        514.003,
-        728.557
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        1070,
-        1285,
-        1821
-      ],
-      "candidate_crop": "crops/figure-18-p025.png",
       "selected_asset": null,
-      "candidate_crop_size_pixels": [
-        1041,
-        753
-      ],
-      "source_page_image": "pages/page-025.png",
-      "source_page_text": "text/pages/page-025.txt",
-      "crop_confidence": "medium",
       "crop_review_required": true,
       "visual_verification": "not-performed",
       "review_notes": "依据原文图注与正文定位阅读，未选入正文，不声称逐张像素核验。",
@@ -1141,20 +319,7 @@
       "classification_reason": "更多注意力可视化，不构成独立因果证据。",
       "selected_for_report": false,
       "report_role": null,
-      "selection_reason": "更多注意力可视化，不构成独立因果证据。",
-      "claim_ids": [],
-      "text_asset": "text/visuals/figure-18-p025.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "更多注意力可视化，不构成独立因果证据。"
     },
     {
       "id": "table-1",
@@ -1163,40 +328,7 @@
       "number": "1",
       "page": 6,
       "caption": "LARYBench action regression and classification. Regression reports normalized action MSE and classification reports accuracy. Bold and underline denote the best and second-best results.",
-      "raw_text": "Table 1: LARYBench action regression and classification. Regression reports normalized action MSE and classification reports accuracy. Bold and underline denote the best and second-best results.",
-      "caption_bbox_points": [
-        108.0,
-        81.887,
-        504.003,
-        102.899
-      ],
-      "caption_bbox_pixels": [
-        270,
-        205,
-        1260,
-        257
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        71.887,
-        514.008,
-        439.261
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        180,
-        1285,
-        1098
-      ],
-      "candidate_crop": "crops/table-1-p006.png",
       "selected_asset": "assets/table-1.png",
-      "candidate_crop_size_pixels": [
-        1041,
-        920
-      ],
-      "source_page_image": "pages/page-006.png",
-      "source_page_text": "text/pages/page-006.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -1204,21 +336,7 @@
       "classification_reason": "冻结表示及压缩损失",
       "selected_for_report": true,
       "report_role": "evidence",
-      "selection_reason": "冻结表示及压缩损失",
-      "claim_ids": [],
-      "text_asset": "text/visuals/table-1-p006.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "冻结表示及压缩损失"
     },
     {
       "id": "table-2",
@@ -1227,40 +345,7 @@
       "number": "2",
       "page": 7,
       "caption": "Zero-shot human-to- robot video transfer on H&R. DreamX outperforms baselines across all metrics without paired human–robot training data.",
-      "raw_text": "Table 2: Zero-shot human-to- robot video transfer on H&R. DreamX outperforms baselines across all metrics without paired human–robot training data.",
-      "caption_bbox_points": [
-        366.582,
-        633.947,
-        503.996,
-        687.835
-      ],
-      "caption_bbox_pixels": [
-        916,
-        1585,
-        1260,
-        1720
-      ],
-      "suggested_crop_bbox_points": [
-        356.582,
-        623.947,
-        513.996,
-        740.406
-      ],
-      "suggested_crop_bbox_pixels": [
-        891,
-        1560,
-        1285,
-        1851
-      ],
-      "candidate_crop": "crops/table-2-p007.png",
       "selected_asset": "assets/table-2.png",
-      "candidate_crop_size_pixels": [
-        394,
-        293
-      ],
-      "source_page_image": "pages/page-007.png",
-      "source_page_text": "text/pages/page-007.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -1268,21 +353,7 @@
       "classification_reason": "视频迁移定量指标",
       "selected_for_report": true,
       "report_role": "evidence",
-      "selection_reason": "视频迁移定量指标",
-      "claim_ids": [],
-      "text_asset": "text/visuals/table-2-p007.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "视频迁移定量指标"
     },
     {
       "id": "table-3",
@@ -1291,40 +362,7 @@
       "number": "3",
       "page": 8,
       "caption": "reports an average subgoal success rate of 96.7% for DreamX, averaging reaching and pushing completion",
-      "raw_text": "Table 3 reports an average subgoal success rate of 96.7% for DreamX, averaging reaching and pushing completion",
-      "caption_bbox_points": [
-        108.0,
-        711.347,
-        338.176,
-        732.269
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1778,
-        845,
-        1831
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        701.347,
-        348.176,
-        772.157
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        1753,
-        870,
-        1930
-      ],
-      "candidate_crop": "crops/table-3-p008.png",
       "selected_asset": "assets/table-3.png",
-      "candidate_crop_size_pixels": [
-        626,
-        178
-      ],
-      "source_page_image": "pages/page-008.png",
-      "source_page_text": "text/pages/page-008.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -1332,21 +370,7 @@
       "classification_reason": "子目标得分与真实延迟",
       "selected_for_report": true,
       "report_role": "evidence",
-      "selection_reason": "子目标得分与真实延迟",
-      "claim_ids": [],
-      "text_asset": "text/visuals/table-3-p008.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "子目标得分与真实延迟"
     },
     {
       "id": "table-4",
@@ -1355,40 +379,7 @@
       "number": "4",
       "page": 9,
       "caption": "Encoder supervision abla- tion. LARYBench regression MSE and classification accuracy.",
-      "raw_text": "Table 4: Encoder supervision abla- tion. LARYBench regression MSE and classification accuracy.",
-      "caption_bbox_points": [
-        349.56,
-        478.374,
-        504.0,
-        510.345
-      ],
-      "caption_bbox_pixels": [
-        874,
-        1196,
-        1260,
-        1276
-      ],
-      "suggested_crop_bbox_points": [
-        337.8,
-        468.374,
-        514.0,
-        701.909
-      ],
-      "suggested_crop_bbox_pixels": [
-        845,
-        1171,
-        1285,
-        1755
-      ],
-      "candidate_crop": "crops/table-4-p009.png",
       "selected_asset": "assets/table-4.png",
-      "candidate_crop_size_pixels": [
-        441,
-        585
-      ],
-      "source_page_image": "pages/page-009.png",
-      "source_page_text": "text/pages/page-009.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -1396,21 +387,7 @@
       "classification_reason": "动作标签监督的子集消融",
       "selected_for_report": true,
       "report_role": "evidence",
-      "selection_reason": "动作标签监督的子集消融",
-      "claim_ids": [],
-      "text_asset": "text/visuals/table-4-p009.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "动作标签监督的子集消融"
     },
     {
       "id": "table-5",
@@ -1419,40 +396,7 @@
       "number": "5",
       "page": 17,
       "caption": "Reaching and pushing completion rates (%) for real-world drawer closing. Each subgoal contributes equally to the SR reported in the main table.",
-      "raw_text": "Table 5: Reaching and pushing completion rates (%) for real-world drawer closing. Each subgoal contributes equally to the SR reported in the main table.",
-      "caption_bbox_points": [
-        108.0,
-        489.168,
-        504.003,
-        510.181
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1223,
-        1260,
-        1275
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        479.168,
-        514.003,
-        654.281
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        1198,
-        1285,
-        1636
-      ],
-      "candidate_crop": "crops/table-5-p017.png",
       "selected_asset": "assets/table-5.png",
-      "candidate_crop_size_pixels": [
-        1041,
-        439
-      ],
-      "source_page_image": "pages/page-017.png",
-      "source_page_text": "text/pages/page-017.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -1460,21 +404,7 @@
       "classification_reason": "主表计分的关键解释",
       "selected_for_report": true,
       "report_role": "evidence",
-      "selection_reason": "主表计分的关键解释",
-      "claim_ids": [],
-      "text_asset": "text/visuals/table-5-p017.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "主表计分的关键解释"
     },
     {
       "id": "table-6",
@@ -1483,40 +413,7 @@
       "number": "6",
       "page": 17,
       "caption": "Policy learning with human-only demonstrations of the upper-only configuration. Task columns report approach/push completion rates (%); SR denotes subgoal success rate (%), averaged equally over reaching and pushing and across the three configurations.",
-      "raw_text": "Table 6: Policy learning with human-only demonstrations of the upper-only configuration. Task columns report approach/push completion rates (%); SR denotes subgoal success rate (%), averaged equally over reaching and pushing and across the three configurations.",
-      "caption_bbox_points": [
-        108.0,
-        656.01,
-        504.003,
-        687.982
-      ],
-      "caption_bbox_pixels": [
-        270,
-        1640,
-        1260,
-        1720
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        646.01,
-        514.003,
-        772.157
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        1615,
-        1285,
-        1930
-      ],
-      "candidate_crop": "crops/table-6-p017.png",
       "selected_asset": "assets/table-6.png",
-      "candidate_crop_size_pixels": [
-        1041,
-        316
-      ],
-      "source_page_image": "pages/page-017.png",
-      "source_page_text": "text/pages/page-017.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -1524,21 +421,7 @@
       "classification_reason": "人类视频策略监督的适用边界",
       "selected_for_report": true,
       "report_role": "evidence",
-      "selection_reason": "人类视频策略监督的适用边界",
-      "claim_ids": [],
-      "text_asset": "text/visuals/table-6-p017.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "人类视频策略监督的适用边界"
     },
     {
       "id": "table-7",
@@ -1547,40 +430,7 @@
       "number": "7",
       "page": 18,
       "caption": "CALVIN policy ablation with and without latent-action conditioning. Columns ≥k report success rates (%) for completing at least k consecutive tasks; Avg. Len. is the average completed sequence length.",
-      "raw_text": "Table 7: CALVIN policy ablation with and without latent-action conditioning. Columns ≥k report success rates (%) for completing at least k consecutive tasks; Avg. Len. is the average completed sequence length.",
-      "caption_bbox_points": [
-        143.639,
-        192.808,
-        468.37,
-        224.779
-      ],
-      "caption_bbox_pixels": [
-        359,
-        482,
-        1171,
-        562
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        182.808,
-        499.084,
-        409.617
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        457,
-        1248,
-        1024
-      ],
-      "candidate_crop": "crops/table-7-p018.png",
       "selected_asset": "assets/table-7.png",
-      "candidate_crop_size_pixels": [
-        1003,
-        568
-      ],
-      "source_page_image": "pages/page-018.png",
-      "source_page_text": "text/pages/page-018.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -1588,21 +438,7 @@
       "classification_reason": "动作头读取潜在特征的消融",
       "selected_for_report": true,
       "report_role": "evidence",
-      "selection_reason": "动作头读取潜在特征的消融",
-      "claim_ids": [],
-      "text_asset": "text/visuals/table-7-p018.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text",
-        "body-references"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "动作头读取潜在特征的消融"
     },
     {
       "id": "table-8",
@@ -1611,40 +447,7 @@
       "number": "8",
       "page": 19,
       "caption": "Sensitivity to latent-action pertur- bations. Means over eight clips and two de- coder seeds. Flow deviation (pixels/frame) and RGB L1 are measured against unper- turbed reconstructions. Motion ratio is av- eraged per clip and seed; no perturbation has ratio 1.",
-      "raw_text": "Table 8: Sensitivity to latent-action pertur- bations. Means over eight clips and two de- coder seeds. Flow deviation (pixels/frame) and RGB L1 are measured against unper- turbed reconstructions. Motion ratio is av- eraged per clip and seed; no perturbation has ratio 1.",
-      "caption_bbox_points": [
-        108.0,
-        206.607,
-        286.201,
-        282.413
-      ],
-      "caption_bbox_pixels": [
-        270,
-        517,
-        716,
-        706
-      ],
-      "suggested_crop_bbox_points": [
-        98.0,
-        74.268,
-        514.003,
-        292.413
-      ],
-      "suggested_crop_bbox_pixels": [
-        245,
-        186,
-        1285,
-        731
-      ],
-      "candidate_crop": "crops/table-8-p019.png",
       "selected_asset": "assets/table-8.png",
-      "candidate_crop_size_pixels": [
-        1041,
-        547
-      ],
-      "source_page_image": "pages/page-019.png",
-      "source_page_text": "text/pages/page-019.txt",
-      "crop_confidence": "medium",
       "crop_review_required": false,
       "visual_verification": "complete",
       "review_notes": "逐张打开裁图确认面板、数值与原图注完整；表2核对VideoWorld2 FVD为241.92。",
@@ -1652,20 +455,8 @@
       "classification_reason": "潜在动作扰动证据",
       "selected_for_report": true,
       "report_role": "evidence",
-      "selection_reason": "潜在动作扰动证据",
-      "claim_ids": [],
-      "text_asset": "text/visuals/table-8-p019.md",
-      "available_text_sources": [
-        "caption",
-        "suggested-region-text"
-      ],
-      "text_extraction_status": "partial",
-      "text_review": {
-        "status": "pending",
-        "sources": [],
-        "notes": "",
-        "limitations": ""
-      }
+      "selection_reason": "潜在动作扰动证据"
     }
-  ]
+  ],
+  "inventory_render_dpi": 180
 }
