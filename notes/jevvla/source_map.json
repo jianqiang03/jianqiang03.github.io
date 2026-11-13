@@ -1,0 +1,78 @@
+{
+  "schema_version": 5,
+  "paper": {
+    "title": "JevVLA: Jev-Inspired Energy-Based Adaptation for Vision-Language-Action Policies",
+    "arxiv": "2610.35010",
+    "version": "v1",
+    "date": "2026-10-26",
+    "pages": 30,
+    "sha256": "74baac4ee95831da8089b994bed6a371614374824166588ad2224a746a954447",
+    "sources": [
+      "https://arxiv.org/pdf/2610.35010v1"
+    ]
+  },
+  "review_date": "2026-11-13",
+  "code": {
+    "repository": "https://github.com/ZJU4EmbodiedAI/JevVLA",
+    "commit": "a8d9f138446467c35e6ff017263a08bf0e9f5e9c",
+    "files": [
+      "src/jevvla/model.py",
+      "src/jevvla/losses.py",
+      "src/jevvla/inference.py",
+      "src/jevvla/training.py",
+      "src/jevvla/profiles.py",
+      "src/jevvla/adapters/metaworld.py",
+      "src/jevvla/adapters/libero.py",
+      "src/jevvla/adapters/language_table.py"
+    ],
+    "scope": "静态阅读；未运行训练或推理"
+  },
+  "claims": [
+    {
+      "topic": "能量结构、偏好及梯度监督",
+      "location": "§3.1–3.4",
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "boundary": "相同架构、各基准独立权重；学习能量下降不保证任务成功"
+    },
+    {
+      "topic": "主结果与消融",
+      "location": "§4 Tables 1–7 Figures 3–8",
+      "pdf_pages": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "boundary": "1–2pp平均收益；低秩消融改变训练目标；有任务退化；五seed平均取整计数"
+    },
+    {
+      "topic": "超参数与监督来源",
+      "location": "Appendix A Table 8",
+      "pdf_pages": [
+        23
+      ],
+      "boundary": "适配器训练配方，不是基础VLA预训练；缺完整端到端成本"
+    },
+    {
+      "topic": "编码、梯度符号和mask",
+      "location": "固定提交 model/losses/training/adapters",
+      "boundary": "raw_energy输出utility；MetaWorld仅8×4段并屏蔽第一步；LIBERO为PCA编码"
+    },
+    {
+      "topic": "XR1迁移",
+      "location": "本文总结",
+      "boundary": "作者未实验；明确为建议，未修改XR1训练代码"
+    }
+  ]
+}
