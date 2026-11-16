@@ -1,0 +1,390 @@
+{
+  "schema_version": 4,
+  "generated_at": "2026-11-16T07:39:53.906180+00:00",
+  "source_pdf": "https://arxiv.org/pdf/2610.40401v1",
+  "source_sha256": "4df0bb2938b7116755dbc3444ad5d4913c57947bdf19b75fa1d0d9824c9eeb60",
+  "page_count": 12,
+  "render_dpi": 180,
+  "selected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "analysis_mode": "visual",
+  "text_layer_available": true,
+  "text_layer_characters": 65809,
+  "automatic_crops_are_unverified": false,
+  "selection_policy": "all-key-visuals-in-explain-and-audit",
+  "pages": [],
+  "visuals": [
+    {
+      "id": "figure-1-p002",
+      "label": "Figure 1",
+      "kind": "figure",
+      "number": "1",
+      "page": 2,
+      "caption": "Overview of continuous action-function learning and deployment. Training Stage A learns shared spatiotemporal priors from typed trajectories across embodiments and temporal sampling grids. Training Stage B connects observation-conditioned latent prediction to the learned function space using latent and physical reconstruction supervision. At inference, current multimodal observations and visual features condition latent prediction; the function decoder combines the predicted latent with physical query times and observed context to produce embodiment-specific control commands.",
+      "raw_text": "Figure 1. Overview of continuous action-function learning and deployment. Training Stage A learns shared spatiotemporal priors from typed trajectories across embodiments and temporal sampling grids. Training Stage B connects observation-conditioned latent prediction to the learned function space using latent and physical reconstruction supervision. At inference, current multimodal observations and visual features condition latent prediction; the function decoder combines the predicted latent with physical query times and observed context to produce embodiment-specific control commands.",
+      "caption_bbox_points": [
+        58.5,
+        646.923,
+        553.499,
+        699.725
+      ],
+      "caption_bbox_pixels": [
+        146,
+        1617,
+        1384,
+        1749
+      ],
+      "suggested_crop_bbox_points": [
+        48.5,
+        72.149,
+        563.51,
+        709.725
+      ],
+      "suggested_crop_bbox_pixels": [
+        121,
+        180,
+        1409,
+        1774
+      ],
+      "selected_asset": "assets/figure-1.png",
+      "candidate_crop_size_pixels": [
+        1288,
+        1595
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": false,
+      "visual_verification": "complete",
+      "review_notes": "直接打开原始裁图，核对完整面板、坐标、单位、数字与原图注；Figure 3适度收窄展示。",
+      "key": true,
+      "classification_reason": "定义两阶段训练、视觉世界分支和部署接口",
+      "selected_for_report": true,
+      "report_role": "mechanism",
+      "selection_reason": "定义两阶段训练、视觉世界分支和部署接口",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-2-p004",
+      "label": "Figure 2",
+      "kind": "figure",
+      "number": "2",
+      "page": 4,
+      "caption": "An action interval and its sampling grid are different objects. Schematic of a continuous scalar position reference. The first two panels query the same function over the same physical duration with different grids. The third changes the duration: the geometric progression is preserved, but its velocity and acceleration change. A reusable function representation must retain physical timing while allowing the execution grid to vary.",
+      "raw_text": "Figure 2. An action interval and its sampling grid are different objects. Schematic of a continuous scalar position reference. The first two panels query the same function over the same physical duration with different grids. The third changes the duration: the geometric progression is preserved, but its velocity and acceleration change. A reusable function representation must retain physical timing while allowing the execution grid to vary.",
+      "caption_bbox_points": [
+        58.5,
+        202.357,
+        553.499,
+        244.282
+      ],
+      "caption_bbox_pixels": [
+        146,
+        506,
+        1384,
+        611
+      ],
+      "suggested_crop_bbox_points": [
+        48.5,
+        62.0,
+        563.524,
+        254.282
+      ],
+      "suggested_crop_bbox_pixels": [
+        121,
+        155,
+        1409,
+        636
+      ],
+      "selected_asset": "assets/figure-2.png",
+      "candidate_crop_size_pixels": [
+        1288,
+        481
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": false,
+      "visual_verification": "complete",
+      "review_notes": "直接打开原始裁图，核对完整面板、坐标、单位、数字与原图注；Figure 3适度收窄展示。",
+      "key": true,
+      "classification_reason": "区分物理运动时间与查询采样网格",
+      "selected_for_report": true,
+      "report_role": "mechanism",
+      "selection_reason": "区分物理运动时间与查询采样网格",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-3-p007",
+      "label": "Figure 3",
+      "kind": "figure",
+      "number": "3",
+      "page": 7,
+      "caption": "Mean position and rotation reconstruction errors of the function autoencoder on 8,192 held-out evaluation windows used for model selection.",
+      "raw_text": "Figure 3. Mean position and rotation reconstruction errors of the function autoencoder on 8,192 held-out evaluation windows used for model selection.",
+      "caption_bbox_points": [
+        317.25,
+        156.072,
+        553.497,
+        186.956
+      ],
+      "caption_bbox_pixels": [
+        793,
+        390,
+        1384,
+        467
+      ],
+      "suggested_crop_bbox_points": [
+        307.25,
+        61.999,
+        563.504,
+        196.956
+      ],
+      "suggested_crop_bbox_pixels": [
+        768,
+        155,
+        1409,
+        492
+      ],
+      "selected_asset": "assets/figure-3.png",
+      "candidate_crop_size_pixels": [
+        641,
+        339
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": false,
+      "visual_verification": "complete",
+      "review_notes": "直接打开原始裁图，核对完整面板、坐标、单位、数字与原图注；Figure 3适度收窄展示。",
+      "key": true,
+      "classification_reason": "动作函数表示精度及模型选择集边界",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "动作函数表示精度及模型选择集边界",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-4-p008",
+      "label": "Figure 4",
+      "kind": "figure",
+      "number": "4",
+      "page": 8,
+      "caption": "Initial execution quality during the first 1 s across 800 paired trials in 16 tasks. The highlighted percentages show the reduction in translation jerk RMS, the reduction in rotation jerk RMS, and the retained translation speed RMS relative to LaWAM, respectively. Metrics describe actual end-effector motion, with equal task weighting and both arms pooled.",
+      "raw_text": "Figure 4. Initial execution quality during the first 1 s across 800 paired trials in 16 tasks. The highlighted percentages show the reduction in translation jerk RMS, the reduction in rotation jerk RMS, and the retained translation speed RMS relative to LaWAM, respectively. Metrics describe actual end-effector motion, with equal task weighting and both arms pooled.",
+      "caption_bbox_points": [
+        58.5,
+        269.292,
+        553.499,
+        300.176
+      ],
+      "caption_bbox_pixels": [
+        146,
+        673,
+        1384,
+        750
+      ],
+      "suggested_crop_bbox_points": [
+        48.5,
+        62.0,
+        563.519,
+        310.176
+      ],
+      "suggested_crop_bbox_pixels": [
+        121,
+        155,
+        1409,
+        775
+      ],
+      "selected_asset": "assets/figure-4.png",
+      "candidate_crop_size_pixels": [
+        1288,
+        621
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": false,
+      "visual_verification": "complete",
+      "review_notes": "直接打开原始裁图，核对完整面板、坐标、单位、数字与原图注；Figure 3适度收窄展示。",
+      "key": true,
+      "classification_reason": "最核心的初始平滑性与速度对照",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "最核心的初始平滑性与速度对照",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-5-p008",
+      "label": "Figure 5",
+      "kind": "figure",
+      "number": "5",
+      "page": 8,
+      "caption": "(a) CoAWM success rates at six execution frequencies, evaluated with 150 trials per frequency across 50 tasks (three trials per task), with the execution segment and replanning period fixed at 1.2 s. (b) Five selected tasks from a separate 16-task evaluation with 50 trials per task. The panels therefore use different evaluation cohorts and denominators.",
+      "raw_text": "Figure 5. (a) CoAWM success rates at six execution frequencies, evaluated with 150 trials per frequency across 50 tasks (three trials per task), with the execution segment and replanning period fixed at 1.2 s. (b) Five selected tasks from a separate 16-task evaluation with 50 trials per task. The panels therefore use different evaluation cohorts and denominators.",
+      "caption_bbox_points": [
+        58.5,
+        538.596,
+        553.499,
+        569.48
+      ],
+      "caption_bbox_pixels": [
+        146,
+        1346,
+        1384,
+        1424
+      ],
+      "suggested_crop_bbox_points": [
+        48.5,
+        301.176,
+        563.519,
+        579.48
+      ],
+      "suggested_crop_bbox_pixels": [
+        121,
+        753,
+        1409,
+        1449
+      ],
+      "selected_asset": "assets/figure-5.png",
+      "candidate_crop_size_pixels": [
+        1288,
+        697
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": false,
+      "visual_verification": "complete",
+      "review_notes": "直接打开原始裁图，核对完整面板、坐标、单位、数字与原图注；Figure 3适度收窄展示。",
+      "key": true,
+      "classification_reason": "跨频率执行及不同评估分母",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "跨频率执行及不同评估分母",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-6-p009",
+      "label": "Figure 6",
+      "kind": "figure",
+      "number": "6",
+      "page": 9,
+      "caption": "Estimated positive mechanical work for the 13 jointly successful scenes among 16 prespecified scenes, computed from PD torque estimates and measured joint velocities. Open blue points denote LaWAM and filled red points denote CoAWM; connecting segments identify paired scenes. The two time columns report physical execution duration in seconds using the same method colors.",
+      "raw_text": "Figure 6. Estimated positive mechanical work for the 13 jointly successful scenes among 16 prespecified scenes, computed from PD torque estimates and measured joint velocities. Open blue points denote LaWAM and filled red points denote CoAWM; connecting segments identify paired scenes. The two time columns report physical execution duration in seconds using the same method colors.",
+      "caption_bbox_points": [
+        58.5,
+        442.183,
+        553.499,
+        473.067
+      ],
+      "caption_bbox_pixels": [
+        146,
+        1105,
+        1384,
+        1183
+      ],
+      "suggested_crop_bbox_points": [
+        48.5,
+        62.0,
+        563.519,
+        483.067
+      ],
+      "suggested_crop_bbox_pixels": [
+        121,
+        155,
+        1409,
+        1208
+      ],
+      "selected_asset": "assets/figure-6.png",
+      "candidate_crop_size_pixels": [
+        1288,
+        1053
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": false,
+      "visual_verification": "complete",
+      "review_notes": "直接打开原始裁图，核对完整面板、坐标、单位、数字与原图注；Figure 3适度收窄展示。",
+      "key": true,
+      "classification_reason": "共同成功条件下的机械功和耗时边界",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "共同成功条件下的机械功和耗时边界",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    }
+  ]
+}

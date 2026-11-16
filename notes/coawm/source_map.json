@@ -1,0 +1,82 @@
+{
+  "schema_version": 5,
+  "paper": {
+    "title": "Continuous-Action World Models: Learning Cross-Embodiment Spatiotemporal Dynamics Priors",
+    "arxiv": "2610.40401",
+    "version": "v1",
+    "date": "2026-10-29",
+    "pages": 12,
+    "sha256": "4df0bb2938b7116755dbc3444ad5d4913c57947bdf19b75fa1d0d9824c9eeb60",
+    "sources": [
+      "https://arxiv.org/pdf/2610.40401v1",
+      "https://arxiv.org/abs/2610.40401"
+    ]
+  },
+  "review_date": "2026-11-16",
+  "code": {
+    "status": "未找到可确认的官方实现",
+    "search_scope": "论文全文链接与标题/CoAWM/GitHub网页检索",
+    "boundary": "不声称作者没有实现；未借用相关工作的配置补全本论文"
+  },
+  "claims": [
+    {
+      "topic": "函数空间、MoT、独立时间查询、锚定及夹爪读出",
+      "location": "§3.1–3.2 Eq.1–4 Figures 1–2",
+      "pdf_pages": [
+        4,
+        5
+      ],
+      "boundary": "时间查询不保证动力学约束；锚定不保证跨块速度连续"
+    },
+    {
+      "topic": "动作预训练",
+      "location": "§3.3 Eq.5–7",
+      "pdf_pages": [
+        5,
+        6
+      ],
+      "boundary": "源与网格各自mask归约；数据规模、采样分布和网格真值构造未充分披露"
+    },
+    {
+      "topic": "视觉条件、损失及冻结路径",
+      "location": "§3.4 Eq.8–14",
+      "pdf_pages": [
+        6
+      ],
+      "boundary": "原LaWAM潜在动作与函数latent不同；adapter种类未明确；物理梯度穿过冻结decoder"
+    },
+    {
+      "topic": "执行时钟",
+      "location": "§3.2 Eq.2；§3.5 Eq.15",
+      "pdf_pages": [
+        5,
+        7
+      ],
+      "boundary": "外部网格与物理网格支持区间不同，缺少边界目标细节"
+    },
+    {
+      "topic": "实验",
+      "location": "§4 Figures 3–6",
+      "pdf_pages": [
+        7,
+        8,
+        9
+      ],
+      "boundary": "初始1秒；8192窗口用于模型选择；机械功仅共同成功13场景；频率评估与精选任务不同分母"
+    },
+    {
+      "topic": "规模与跨机器人",
+      "location": "§5–6",
+      "pdf_pages": [
+        8,
+        9
+      ],
+      "boundary": "扩数据和全量微调列为后续工作；没有完整留出机器人迁移证据"
+    },
+    {
+      "topic": "XR1方案",
+      "location": "本文总结",
+      "boundary": "原创建议；未运行实验或改动训练实现"
+    }
+  ]
+}
