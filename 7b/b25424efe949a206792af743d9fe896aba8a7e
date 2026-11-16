@@ -1,0 +1,31 @@
+index.html
+  s_3bab766aaf626e::t_58abcce1b5f67c 5,8
+notes/coawm/article.css
+  s_3bab766aaf626e::t_55e3a0866befeb 1-15
+notes/coawm/assets/visual_manifest.json
+  s_3bab766aaf626e::t_47ea443279234f 1-390
+notes/coawm/index.html
+  s_3bab766aaf626e::t_302717f0cd9215 1-268
+notes/coawm/report.md
+  s_3bab766aaf626e::t_ac29dbdc1fcd2f 1-297
+notes/coawm/source_map.json
+  s_3bab766aaf626e::t_7af75208d6a470 1-82
+scripts/render-paper-note.py
+  s_3bab766aaf626e::t_acea71a075440c 13,49,68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7bb25424efe949a206792af743d9fe896aba8a7e",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
