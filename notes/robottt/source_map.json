@@ -1,0 +1,52 @@
+{
+  "schema_version": 5,
+  "paper": {
+    "title": "RoboTTT: Context Scaling for Robot Policies",
+    "arxiv": "2607.15275",
+    "version": "official PDF dated 2026-07-15 / arXiv v1 dated 2026-07-16",
+    "pages": 22,
+    "sha256": "0f9f0542f8a0a09ee3eb4bd03beafae6cbe7d5e52d65f6cd7ecb49b65a53cf65",
+    "sources": [
+      "https://research.nvidia.com/labs/gear/robottt/robottt.pdf",
+      "https://arxiv.org/html/2607.15275v1",
+      "https://research.nvidia.com/labs/gear/robottt/"
+    ]
+  },
+  "review_date": "2026-11-17",
+  "code": {
+    "repository": null,
+    "scope": "论文及附录阅读；未核对官方实现，未运行训练或推理"
+  },
+  "claims": [
+    {
+      "topic": "快权重与门控",
+      "location": "§2–3.1; Figures 2–3; Appendix A.1",
+      "boundary": "推理只更新快权重；内层目标不直接判断任务成功"
+    },
+    {
+      "topic": "序列训练",
+      "location": "§3.2; Figure 4; Eq.4–5",
+      "boundary": "独立噪声等级；TBPTT保持状态但截断梯度；片段长度未充分披露"
+    },
+    {
+      "topic": "上下文与监督",
+      "location": "§3.3; Figures 6,9–11",
+      "boundary": "视频与纠正需配对/连续过程；屏蔽直接损失不等于无间接梯度"
+    },
+    {
+      "topic": "配置与供数",
+      "location": "Appendix A; Figure A.1",
+      "boundary": "新增层预训练与全参数后训练分开；未公开完整数据比例"
+    },
+    {
+      "topic": "实验",
+      "location": "§4; Figures 7–12; Tables 1–3",
+      "boundary": "得分与成功率区分；上下文对照非等算力；扰动用额外训练数据；摘要62%与正文63%差异"
+    },
+    {
+      "topic": "XR1建议",
+      "location": "本文总结",
+      "boundary": "迁移建议未执行；未上传私有数据或训练配置"
+    }
+  ]
+}

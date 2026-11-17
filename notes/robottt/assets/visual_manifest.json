@@ -1,0 +1,335 @@
+{
+  "schema_version": 4,
+  "source_pdf": "https://research.nvidia.com/labs/gear/robottt/robottt.pdf",
+  "source_sha256": "0f9f0542f8a0a09ee3eb4bd03beafae6cbe7d5e52d65f6cd7ecb49b65a53cf65",
+  "page_count": 22,
+  "analysis_mode": "visual",
+  "inventory_notes": "自动检测15项；手工补入4个附录编号对象，共19项。14项关键图表原图进入正文。",
+  "visuals": [
+    {
+      "id": "figure-2",
+      "label": "Figure 2",
+      "page": 4,
+      "key": true,
+      "classification_reason": "架构和训练推理状态传递",
+      "selected_for_report": true,
+      "report_role": "mechanism",
+      "selection_reason": "架构和训练推理状态传递",
+      "selected_asset": "assets/figure-2.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        58,
+        78,
+        540,
+        340
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "figure-3",
+      "label": "Figure 3",
+      "page": 4,
+      "key": true,
+      "classification_reason": "门控保护预训练表示",
+      "selected_for_report": true,
+      "report_role": "mechanism",
+      "selection_reason": "门控保护预训练表示",
+      "selected_asset": "assets/figure-3.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        340,
+        590,
+        540,
+        773
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "figure-4",
+      "label": "Figure 4",
+      "page": 5,
+      "key": true,
+      "classification_reason": "跨片段状态与梯度边界",
+      "selected_for_report": true,
+      "report_role": "mechanism",
+      "selection_reason": "跨片段状态与梯度边界",
+      "selected_asset": "assets/figure-4.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        343,
+        537,
+        540,
+        697
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "figure-6",
+      "label": "Figure 6",
+      "page": 6,
+      "key": true,
+      "classification_reason": "失败上下文与纠正监督分离",
+      "selected_for_report": true,
+      "report_role": "mechanism",
+      "selection_reason": "失败上下文与纠正监督分离",
+      "selected_asset": "assets/figure-6.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        340,
+        520,
+        540,
+        657
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "figure-7",
+      "label": "Figure 7",
+      "page": 7,
+      "key": true,
+      "classification_reason": "主实验的完成得分",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "主实验的完成得分",
+      "selected_asset": "assets/figure-7.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        60,
+        86,
+        540,
+        267
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "figure-8",
+      "label": "Figure 8",
+      "page": 8,
+      "key": true,
+      "classification_reason": "上下文长度收益及预算边界",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "上下文长度收益及预算边界",
+      "selected_asset": "assets/figure-8.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        58,
+        86,
+        540,
+        369
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "figure-9",
+      "label": "Figure 9",
+      "page": 9,
+      "key": true,
+      "classification_reason": "视频演示与机器人执行配对",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "视频演示与机器人执行配对",
+      "selected_asset": "assets/figure-9.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        60,
+        85,
+        540,
+        282
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "figure-10",
+      "label": "Figure 10",
+      "page": 10,
+      "key": true,
+      "classification_reason": "相同纠正数据的不同使用方法",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "相同纠正数据的不同使用方法",
+      "selected_asset": "assets/figure-10.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        58,
+        85,
+        540,
+        284
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "figure-11",
+      "label": "Figure 11",
+      "page": 10,
+      "key": true,
+      "classification_reason": "纠错行为的定性证据",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "纠错行为的定性证据",
+      "selected_asset": "assets/figure-11.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        60,
+        290,
+        540,
+        507
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "figure-12",
+      "label": "Figure 12",
+      "page": 11,
+      "key": true,
+      "classification_reason": "噪声、容量与token组件消融",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "噪声、容量与token组件消融",
+      "selected_asset": "assets/figure-12.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        297,
+        86,
+        540,
+        297
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "figure-a1",
+      "label": "Figure A.1",
+      "page": 20,
+      "key": true,
+      "classification_reason": "预训练数据长轨迹分布",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "预训练数据长轨迹分布",
+      "selected_asset": "assets/figure-a1.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        60,
+        399,
+        540,
+        538
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "table-1",
+      "label": "Table 1",
+      "page": 8,
+      "key": true,
+      "classification_reason": "完整成功与部分完成区分",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "完整成功与部分完成区分",
+      "selected_asset": "assets/table-1.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        342,
+        522,
+        540,
+        645
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "table-2",
+      "label": "Table 2",
+      "page": 9,
+      "key": true,
+      "classification_reason": "视频模仿定量证据",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "视频模仿定量证据",
+      "selected_asset": "assets/table-2.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        343,
+        532,
+        540,
+        623
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "id": "table-3",
+      "label": "Table 3",
+      "page": 9,
+      "key": true,
+      "classification_reason": "扰动恢复及GDN持平条件",
+      "selected_for_report": true,
+      "report_role": "evidence",
+      "selection_reason": "扰动恢复及GDN持平条件",
+      "selected_asset": "assets/table-3.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "crop_bbox_points": [
+        343,
+        642,
+        540,
+        754
+      ],
+      "review_notes": "逐张打开裁图并对照整页核查，修正截断；保留原始图注、图例及表头。"
+    },
+    {
+      "label": "Figure 1",
+      "page": 1,
+      "key": false,
+      "classification_reason": "能力概览蒙太奇；架构、视频、恢复的承重证据分别由图2、9、11呈现",
+      "selected_for_report": false,
+      "visual_verification": "not-performed",
+      "crop_review_required": true
+    },
+    {
+      "label": "Figure 5",
+      "page": 6,
+      "key": false,
+      "classification_reason": "三任务场景概览；正文交代任务与数据，具体定量证据由表1及图7承载",
+      "selected_for_report": false,
+      "visual_verification": "not-performed",
+      "crop_review_required": true
+    },
+    {
+      "label": "Figure A.2",
+      "page": 21,
+      "key": false,
+      "classification_reason": "Pup Go Car阶段示意；任务评分规则已在主结果说明，非额外对照",
+      "selected_for_report": false,
+      "visual_verification": "not-performed",
+      "crop_review_required": true
+    },
+    {
+      "label": "Figure A.3",
+      "page": 21,
+      "key": false,
+      "classification_reason": "Gear Bot阶段示意；十阶段评分及完整成功边界已说明",
+      "selected_for_report": false,
+      "visual_verification": "not-performed",
+      "crop_review_required": true
+    },
+    {
+      "label": "Figure A.4",
+      "page": 22,
+      "key": false,
+      "classification_reason": "Circuit阶段示意；配置信息及顺序评分规则已说明",
+      "selected_for_report": false,
+      "visual_verification": "not-performed",
+      "crop_review_required": true
+    }
+  ]
+}
