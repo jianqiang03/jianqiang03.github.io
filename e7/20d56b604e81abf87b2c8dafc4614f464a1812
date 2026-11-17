@@ -1,0 +1,31 @@
+index.html
+  s_3bab766aaf626e::t_99c0c22ad89aa6 5,8
+notes/robottt/article.css
+  s_3bab766aaf626e::t_9114b0ded13712 1-17
+notes/robottt/assets/visual_manifest.json
+  s_3bab766aaf626e::t_8e90a633eb3776 1-335
+notes/robottt/index.html
+  s_3bab766aaf626e::t_91cce260283c03 1-242
+notes/robottt/report.md
+  s_3bab766aaf626e::t_ecf268636a3cad 1-240
+notes/robottt/source_map.json
+  s_3bab766aaf626e::t_75dfce8c137b6c 1-52
+scripts/render-paper-note.py
+  s_3bab766aaf626e::t_425736cd19de56 13,51,70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e720d56b604e81abf87b2c8dafc4614f464a1812",
+  "prompts": {},
+  "sessions": {
+    "s_3bab766aaf626e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a2c-b65d-7ad2-aa08-169da893f2e9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang03 <39948898+jianqiang03@users.noreply.github.com>"
+    }
+  }
+}
