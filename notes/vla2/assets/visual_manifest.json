@@ -1,0 +1,639 @@
+{
+  "schema_version": 4,
+  "generated_at": "2026-11-16T12:48:16.847526+00:00",
+  "source_pdf": "https://arxiv.org/pdf/2510.14902v1",
+  "source_sha256": "7bd86141c839428aa7c1133b96df185656715326c8264161ed93471a8172a233",
+  "page_count": 18,
+  "render_dpi": 180,
+  "selected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "analysis_mode": "visual",
+  "text_layer_available": true,
+  "text_layer_characters": 81185,
+  "automatic_crops_are_unverified": false,
+  "selection_policy": "all-key-visuals-in-explain-and-audit",
+  "pages": [],
+  "visuals": [
+    {
+      "id": "figure-1-p001",
+      "label": "Figure 1",
+      "kind": "figure",
+      "number": "1",
+      "page": 1,
+      "caption": "Evaluation result on our custom Hard-level bench- mark. In evaluation involving unseen concepts (i.e., object textures and language descriptions outside the dataset), our proposed framework surpasses other state-of-the-art models finetuned on the original LIBERO dataset. In contrast, the reproduced Agentic Robot framework [17] using our model exhibits a significantly noticeable performance degradation in this task.",
+      "raw_text": "Fig. 1: Evaluation result on our custom Hard-level bench- mark. In evaluation involving unseen concepts (i.e., object textures and language descriptions outside the dataset), our proposed framework surpasses other state-of-the-art models finetuned on the original LIBERO dataset. In contrast, the reproduced Agentic Robot framework [17] using our model exhibits a significantly noticeable performance degradation in this task.",
+      "caption_bbox_points": [
+        313.2,
+        325.596,
+        558.001,
+        419.335
+      ],
+      "caption_bbox_pixels": [
+        783,
+        814,
+        1395,
+        1048
+      ],
+      "suggested_crop_bbox_points": [
+        303.2,
+        195.499,
+        568.001,
+        429.335
+      ],
+      "suggested_crop_bbox_pixels": [
+        758,
+        489,
+        1420,
+        1073
+      ],
+      "selected_asset": null,
+      "candidate_crop_size_pixels": [
+        663,
+        586
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": true,
+      "visual_verification": "not-performed",
+      "review_notes": "",
+      "key": false,
+      "classification_reason": "Hard结果由Table II完整覆盖",
+      "selected_for_report": false,
+      "report_role": null,
+      "selection_reason": "",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-2-p002",
+      "label": "Figure 2",
+      "kind": "figure",
+      "number": "2",
+      "page": 2,
+      "caption": "Framework overview. The proposed framework comprises three components: A. preliminary processing, B. cognition and memory, and C. Judgment and execution. During task running, preliminary processing and cognition (except video object segmentation as VOS) are invoked only once at the start of each task.",
+      "raw_text": "Fig. 2: Framework overview. The proposed framework comprises three components: A. preliminary processing, B. cognition and memory, and C. Judgment and execution. During task running, preliminary processing and cognition (except video object segmentation as VOS) are invoked only once at the start of each task.",
+      "caption_bbox_points": [
+        54.0,
+        289.148,
+        557.998,
+        323.112
+      ],
+      "caption_bbox_pixels": [
+        135,
+        723,
+        1395,
+        808
+      ],
+      "suggested_crop_bbox_points": [
+        44.0,
+        40.08,
+        567.998,
+        333.112
+      ],
+      "suggested_crop_bbox_pixels": [
+        110,
+        100,
+        1420,
+        833
+      ],
+      "selected_asset": "assets/figure-2.png",
+      "candidate_crop_size_pixels": [
+        1310,
+        733
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": false,
+      "visual_verification": "complete",
+      "review_notes": "直接打开核对所有面板、箭头与原图注；Figure 7保留同页解释段落以保持完整。",
+      "key": true,
+      "classification_reason": "完整系统和模块调用路径",
+      "selected_for_report": true,
+      "report_role": "mechanism",
+      "selection_reason": "完整系统和模块调用路径",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-3-p003",
+      "label": "Figure 3",
+      "kind": "figure",
+      "number": "3",
+      "page": 3,
+      "caption": "Vision framework. This figure illustrates the whole structure and contents within Vision.",
+      "raw_text": "Fig. 3: Vision framework. This figure illustrates the whole structure and contents within Vision.",
+      "caption_bbox_points": [
+        313.2,
+        269.996,
+        558.001,
+        292.005
+      ],
+      "caption_bbox_pixels": [
+        783,
+        675,
+        1395,
+        730
+      ],
+      "suggested_crop_bbox_points": [
+        303.2,
+        40.081,
+        568.001,
+        302.005
+      ],
+      "suggested_crop_bbox_pixels": [
+        758,
+        100,
+        1420,
+        755
+      ],
+      "selected_asset": null,
+      "candidate_crop_size_pixels": [
+        663,
+        656
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": true,
+      "visual_verification": "not-performed",
+      "review_notes": "",
+      "key": false,
+      "classification_reason": "抽象视觉流程由具体样本Figure 7覆盖",
+      "selected_for_report": false,
+      "report_role": null,
+      "selection_reason": "",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-4-p004",
+      "label": "Figure 4",
+      "kind": "figure",
+      "number": "4",
+      "page": 4,
+      "caption": "language framework. This figure illustrates the whole structure and contents within Language.",
+      "raw_text": "Fig. 4: language framework. This figure illustrates the whole structure and contents within Language.",
+      "caption_bbox_points": [
+        54.0,
+        281.984,
+        298.801,
+        303.992
+      ],
+      "caption_bbox_pixels": [
+        135,
+        705,
+        747,
+        760
+      ],
+      "suggested_crop_bbox_points": [
+        44.0,
+        40.084,
+        308.801,
+        313.992
+      ],
+      "suggested_crop_bbox_pixels": [
+        110,
+        100,
+        772,
+        785
+      ],
+      "selected_asset": null,
+      "candidate_crop_size_pixels": [
+        663,
+        685
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": true,
+      "visual_verification": "not-performed",
+      "review_notes": "",
+      "key": false,
+      "classification_reason": "抽象语言流程由具体样本Figure 8覆盖",
+      "selected_for_report": false,
+      "report_role": null,
+      "selection_reason": "",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-5-p005",
+      "label": "Figure 5",
+      "kind": "figure",
+      "number": "5",
+      "page": 5,
+      "caption": "Comparison between origin and new environments. In this figure, we illustrate the differences between the new and original environments. We present a single rendered scene to highlight the modified objects; the novel items appearing in the other scenes share the same appearance.",
+      "raw_text": "Fig. 5: Comparison between origin and new environments. In this figure, we illustrate the differences between the new and original environments. We present a single rendered scene to highlight the modified objects; the novel items appearing in the other scenes share the same appearance.",
+      "caption_bbox_points": [
+        54.0,
+        223.344,
+        557.998,
+        257.308
+      ],
+      "caption_bbox_pixels": [
+        135,
+        558,
+        1395,
+        643
+      ],
+      "suggested_crop_bbox_points": [
+        44.0,
+        40.082,
+        567.998,
+        267.308
+      ],
+      "suggested_crop_bbox_pixels": [
+        110,
+        100,
+        1420,
+        668
+      ],
+      "selected_asset": "assets/figure-5.png",
+      "candidate_crop_size_pixels": [
+        1310,
+        569
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": false,
+      "visual_verification": "complete",
+      "review_notes": "直接打开核对所有面板、箭头与原图注；Figure 7保留同页解释段落以保持完整。",
+      "key": true,
+      "classification_reason": "自建测试集偏移类型与外推边界",
+      "selected_for_report": true,
+      "report_role": "boundary",
+      "selection_reason": "自建测试集偏移类型与外推边界",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-6-p009",
+      "label": "Figure 6",
+      "kind": "figure",
+      "number": "6",
+      "page": 9,
+      "caption": "Transformation pipeline. This figure demonstrates how external information is progressively converted into knowledge available to the VLA via the system described in the main text.",
+      "raw_text": "Fig. 6: Transformation pipeline. This figure demonstrates how external information is progressively converted into knowledge available to the VLA via the system described in the main text.",
+      "caption_bbox_points": [
+        54.0,
+        585.632,
+        557.998,
+        607.64
+      ],
+      "caption_bbox_pixels": [
+        135,
+        1464,
+        1395,
+        1519
+      ],
+      "suggested_crop_bbox_points": [
+        44.0,
+        154.346,
+        567.998,
+        617.64
+      ],
+      "suggested_crop_bbox_pixels": [
+        110,
+        386,
+        1420,
+        1544
+      ],
+      "selected_asset": "assets/figure-6.png",
+      "candidate_crop_size_pixels": [
+        1310,
+        1160
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": false,
+      "visual_verification": "complete",
+      "review_notes": "直接打开核对所有面板、箭头与原图注；Figure 7保留同页解释段落以保持完整。",
+      "key": true,
+      "classification_reason": "同一样本从原始输入到执行条件",
+      "selected_for_report": true,
+      "report_role": "mechanism",
+      "selection_reason": "同一样本从原始输入到执行条件",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-7-p010",
+      "label": "Figure 7",
+      "kind": "figure",
+      "number": "7",
+      "page": 10,
+      "caption": "Vision processing for unknown blue white porcelain bowl. The vision memory adopts the same format and similar content as shown in the gray dotted box, for which the equal sign denotes equivalence in structure and content. The system generated the keywords and stored the images here automatically during the evaluation in Table II.",
+      "raw_text": "Fig. 7: Vision processing for unknown blue white porcelain bowl. The vision memory adopts the same format and similar content as shown in the gray dotted box, for which the equal sign denotes equivalence in structure and content. The system generated the keywords and stored the images here automatically during the evaluation in Table II.",
+      "caption_bbox_points": [
+        54.0,
+        381.633,
+        557.998,
+        415.596
+      ],
+      "caption_bbox_pixels": [
+        135,
+        954,
+        1395,
+        1039
+      ],
+      "suggested_crop_bbox_points": [
+        44.0,
+        43.25,
+        567.998,
+        425.596
+      ],
+      "suggested_crop_bbox_pixels": [
+        110,
+        108,
+        1420,
+        1064
+      ],
+      "selected_asset": "assets/figure-7.png",
+      "candidate_crop_size_pixels": [
+        1310,
+        956
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": false,
+      "visual_verification": "complete",
+      "review_notes": "直接打开核对所有面板、箭头与原图注；Figure 7保留同页解释段落以保持完整。",
+      "key": true,
+      "classification_reason": "图像检索和重新检测的具体接口",
+      "selected_for_report": true,
+      "report_role": "mechanism",
+      "selection_reason": "图像检索和重新检测的具体接口",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-8-p011",
+      "label": "Figure 8",
+      "kind": "figure",
+      "number": "8",
+      "page": 11,
+      "caption": "Language processing for unknown blue white porcelain bowl. The equals sign and the gray dotted box denote the same meaning of reference as in Fig. 7.",
+      "raw_text": "Fig. 8: Language processing for unknown blue white porcelain bowl. The equals sign and the gray dotted box denote the same meaning of reference as in Fig. 7.",
+      "caption_bbox_points": [
+        54.0,
+        222.216,
+        557.998,
+        244.225
+      ],
+      "caption_bbox_pixels": [
+        135,
+        556,
+        1395,
+        611
+      ],
+      "suggested_crop_bbox_points": [
+        44.0,
+        40.078,
+        567.998,
+        254.225
+      ],
+      "suggested_crop_bbox_pixels": [
+        110,
+        100,
+        1420,
+        636
+      ],
+      "selected_asset": "assets/figure-8.png",
+      "candidate_crop_size_pixels": [
+        1310,
+        536
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": false,
+      "visual_verification": "complete",
+      "review_notes": "直接打开核对所有面板、箭头与原图注；Figure 7保留同页解释段落以保持完整。",
+      "key": true,
+      "classification_reason": "受限词汇替换及记忆",
+      "selected_for_report": true,
+      "report_role": "mechanism",
+      "selection_reason": "受限词汇替换及记忆",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "figure-9-p012",
+      "label": "Figure 9",
+      "kind": "figure",
+      "number": "9",
+      "page": 12,
+      "caption": "Modules runtime across tasks. This figure shows the average computation time of each module in the agent framework for each task.",
+      "raw_text": "Fig. 9: Modules runtime across tasks. This figure shows the average computation time of each module in the agent framework for each task.",
+      "caption_bbox_points": [
+        54.0,
+        396.183,
+        557.998,
+        418.191
+      ],
+      "caption_bbox_pixels": [
+        135,
+        990,
+        1395,
+        1045
+      ],
+      "suggested_crop_bbox_points": [
+        44.0,
+        113.971,
+        567.998,
+        428.191
+      ],
+      "suggested_crop_bbox_pixels": [
+        110,
+        285,
+        1420,
+        1070
+      ],
+      "selected_asset": null,
+      "candidate_crop_size_pixels": [
+        1310,
+        787
+      ],
+      "crop_confidence": "medium",
+      "crop_review_required": true,
+      "visual_verification": "not-performed",
+      "review_notes": "",
+      "key": false,
+      "classification_reason": "运行时趋势由Table IV及冷启动分析覆盖",
+      "selected_for_report": false,
+      "report_role": null,
+      "selection_reason": "",
+      "claim_ids": [],
+      "available_text_sources": [
+        "caption",
+        "suggested-region-text",
+        "body-references"
+      ],
+      "text_extraction_status": "partial",
+      "text_review": {
+        "status": "pending",
+        "sources": [],
+        "notes": "",
+        "limitations": ""
+      }
+    },
+    {
+      "id": "table-1-p006",
+      "label": "Table I",
+      "kind": "table",
+      "number": "1",
+      "page": 6,
+      "key": true,
+      "classification_reason": "域内平均改善与Object退化",
+      "selected_for_report": true,
+      "selection_reason": "域内平均改善与Object退化",
+      "report_role": "evidence",
+      "selected_asset": "assets/table-1.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "review_notes": "自动清单漏检罗马数字表格；手工从PDF补录和裁切，直接打开核对标题、列名、脚注与数值。"
+    },
+    {
+      "id": "table-2-p006",
+      "label": "Table II",
+      "kind": "table",
+      "number": "2",
+      "page": 6,
+      "key": true,
+      "classification_reason": "OOD主结果及百分点口径",
+      "selected_for_report": true,
+      "selection_reason": "OOD主结果及百分点口径",
+      "report_role": "evidence",
+      "selected_asset": "assets/table-2.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "review_notes": "自动清单漏检罗马数字表格；手工从PDF补录和裁切，直接打开核对标题、列名、脚注与数值。"
+    },
+    {
+      "id": "table-3-p007",
+      "label": "Table III",
+      "kind": "table",
+      "number": "3",
+      "page": 7,
+      "key": true,
+      "classification_reason": "逐任务与消融证据及组合改变",
+      "selected_for_report": true,
+      "selection_reason": "逐任务与消融证据及组合改变",
+      "report_role": "evidence",
+      "selected_asset": "assets/table-3.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "review_notes": "自动清单漏检罗马数字表格；手工从PDF补录和裁切，直接打开核对标题、列名、脚注与数值。"
+    },
+    {
+      "id": "table-4-p011",
+      "label": "Table IV",
+      "kind": "table",
+      "number": "4",
+      "page": 11,
+      "key": true,
+      "classification_reason": "累计计算耗时与缓存边界",
+      "selected_for_report": true,
+      "selection_reason": "累计计算耗时与缓存边界",
+      "report_role": "evidence",
+      "selected_asset": "assets/table-4.png",
+      "visual_verification": "complete",
+      "crop_review_required": false,
+      "review_notes": "自动清单漏检罗马数字表格；手工从PDF补录和裁切，直接打开核对标题、列名、脚注与数值。"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 5,
+  "paper": {
+    "title": "VLA²: Empowering Vision-Language-Action Models with an Agentic Framework for Unseen Concept Manipulation",
+    "arxiv": "2510.14902",
+    "version": "v1",
+    "date": "2025-10-16",
+    "pages": 18,
+    "sha256": "7bd86141c839428aa7c1133b96df185656715326c8264161ed93471a8172a233",
+    "sources": [
+      "https://arxiv.org/pdf/2510.14902v1",
+      "https://vla-2.github.io/"
+    ]
+  },
+  "review_date": "2026-11-17",
+  "code": {
+    "repository": "https://github.com/OpenHelix-Team/VLA-2",
+    "commit": "d9e76bbd2bd95ca4389ab2274d160b047ccbf28e",
+    "scope": "静态核对main_agent_clean.py、finetune.py及prompt模板；未运行训练或推理"
+  },
+  "claims": [
+    {
+      "topic": "检索、掩码和词汇替换",
+      "location": "§III; Figures 2–4,6–8; appendix prompts",
+      "boundary": "检索记忆不是参数更新；训练和部署接口都改变"
+    },
+    {
+      "topic": "训练与执行",
+      "location": "§III-C, IV-A；官方finetune/main_agent_clean",
+      "boundary": "论文lr=3e-4，脚本默认5e-4，不拼接为主实验配置；阶段标注细节不足"
+    },
+    {
+      "topic": "实验收益",
+      "location": "Tables I–III",
+      "boundary": "Hard+44.2pp；Object退化；表中平均差20.3pp与摘要20.2口径有差异；w/o web同时关闭记忆"
+    },
+    {
+      "topic": "时间",
+      "location": "Table IV与附录效率分析",
+      "boundary": "每任务累计计算，不是单步延迟；首次理解与缓存复用不同"
+    },
+    {
+      "topic": "XR1迁移",
+      "location": "本文总结",
+      "boundary": "未执行建议；不解决动作噪声和时间坐标对齐"
+    }
+  ]
+}
