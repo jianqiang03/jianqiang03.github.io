@@ -6,6 +6,8 @@ jianqiang03 的个人研究笔记网站，关注机器人学习、数据与训�
 
 ## 已发布解读
 
+- [Knowledge Insulation：VLA 的梯度分工与快速连续控制](https://jianqiang03.github.io/notes/knowledge-insulation/)
+
 - [DreamX：视频先验、潜在动作与人类视频策略监督](https://jianqiang03.github.io/notes/dreamx/)
 
 - [MEM：短期视频、长期摘要与记忆预训练](https://jianqiang03.github.io/notes/mem/)

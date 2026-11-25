@@ -1,0 +1,26 @@
+{
+  "title": "Knowledge Insulating Vision-Language-Action Models: Train Fast, Run Fast, Generalize Better",
+  "version": "arXiv:2505.23705v1",
+  "requested_pdf": "https://www.pi.website/download/pi05_KI.pdf",
+  "downloaded_pdf": "https://arxiv.org/pdf/2505.23705v1",
+  "sha256": "105da140f08f71c2e896bfabe7a016e485e519c4f7ebdbfb29199831b37ea071",
+  "claims": [
+    {
+      "claim": "Discrete and continuous training with isolated K/V gradients",
+      "source": "§5, Eqs.4–6, Appendix B"
+    },
+    {
+      "claim": "7.5x steps, not general wall-clock multiplier",
+      "source": "Fig.6b, §7"
+    },
+    {
+      "claim": "Not uniformly best in LIBERO",
+      "source": "Table 1"
+    },
+    {
+      "claim": "DROID initialization ambiguity",
+      "source": "§6 vs Appendix A.1"
+    }
+  ],
+  "training_executed": false
+}
