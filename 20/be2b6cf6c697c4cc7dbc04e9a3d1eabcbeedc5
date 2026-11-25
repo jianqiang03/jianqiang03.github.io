@@ -1,0 +1,29 @@
+README.md
+  s_b341ae7cfead1f::t_1deaaf4cfb9a5c 9-10
+index.html
+  s_b341ae7cfead1f::t_e70e98881e2941 6,8
+notes/knowledge-insulation/index.html
+  s_b341ae7cfead1f::t_79461478f3453b 1-181
+notes/knowledge-insulation/report.md
+  s_b341ae7cfead1f::t_e599f013857402 1-162
+notes/knowledge-insulation/source_map.json
+  s_b341ae7cfead1f::t_9eefac09098ce1 1-26
+notes/knowledge-insulation/visual_manifest.json
+  s_b341ae7cfead1f::t_6de32b0ee2cc05 1-67
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "20be2b6cf6c697c4cc7dbc04e9a3d1eabcbeedc5",
+  "prompts": {},
+  "sessions": {
+    "s_b341ae7cfead1f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a21205-a536-72f2-b8fc-1c21f04790d9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "jianqiang <lijianqiang07@gmail.com>"
+    }
+  }
+}
